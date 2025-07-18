@@ -20,6 +20,7 @@
   + Forrest Williamson:
 
 4. Operational efficiencies in non-traditional trial settings (e.g., DCTs, PCTs) 
+Jun Xing: How can we design and implement decentralized, pragmatic, and observational trials in a way that optimally balances operational feasibility, gap between trail design assumptions between efficacy and effectiveness, and struggle to maintain high data quality, while aligning with real-world clinical practice?
 
 5. Ensuring representativeness of trial populations and generalizability
 
