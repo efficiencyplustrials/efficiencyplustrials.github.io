@@ -7,31 +7,32 @@
   |-----------------+-------+---------------------------+------------|
 
  - Members
-  |----+-----------------------+-------------+----------------------------------+-------------------------------|
-  |    | Who                   | Where       | Email                            | Interests                     |
-  |----+-----------------------+-------------+----------------------------------+-------------------------------|
-  |  1 | Xin Wang              | Abbvie      | xin.wang@abbvie.com              | Site selection                |
-  |  2 | Vlad Anisimov         | Amgen       | vanisimo@amgen.com               | Methodology                   |
-  |  3 | Christi Kleoudis      | AZ          | christi.kleoudis@astrazeneca.com |                               |
-  |  4 | Gabriel Abreu         | AZ          | gabriel.abreu@astrazeneca.com    |                               |
-  |  5 | Andrew Chen           | Bayer       | andrew.chen@bayer.com            | Site selection and assessment |
-  |  6 | Clara Cali Mella      | Bayer       | clara.calimella@bayer.com        | Recruitment monitoring        |
-  |  7 | Tobias Straubinger    | Bayer       | tobias.straubinger@bayer.com     | Forecasting                   |
-  |  8 | Kaifeng Lu            | Beonemed    | kaifeng.lu@beonemed.com          | Drug demand forecasting       |
-  |  9 | Haoyu Wang            | BMS         | haoyu.wang2@bms.com              |                               |
-  | 10 | Inna Perevozskaya     | BMS         | inna.perevozskaya@bms.com        | Methodology                   |
-  | 11 | Oleksandr Savenkov    | BMS         | oleksandr.savenkov@bms.com       |                               |
-  | 12 | Palanikumar Ravindran | BMS         | palanikumar.ravindran@bms.com    | AI/ML/Viz                     |
-  | 13 | Zhuoxin Yu            | BMS         | zhuoxin.yu@bms.com               | AI/ML/Viz                     |
-  | 14 | Kyle Wathen           | Cytel       | kyle.wathen@cytel.com            | Software                      |
-  | 15 | -Robert Abugov-       | FDA         | robert.abugov@fda.hhs.gov        |                               |
-  | 16 | Bhargava Reddy        | JJIM        | breddy1@its.jnj.com              | Operations                    |
-  | 17 | Forrest Williamson    | Lilly       | forrest_williamson@lilly.com     | Pediatric                     |
-  | 18 | Jun Xing              | Sanofi      | Jun.Xing@sanofi.com              |                               |
-  | 19 | Benjamin Hofner       | PEI         | benjamin.hofner@pei.de           | Group Advisor                 |
-  | 20 | Cristiana Mayer       | JNJ MedTech | CMayer1@its.jnj.com              |                               |
-  | 21 | Bochao Jia            | Lilly       | jia_bochao@lilly.com             | Operational Analytics         |
-  |----+-----------------------+-------------+----------------------------------+-------------------------------|
+  |----+-----------------------+-----------+----------------------------------+-------------------------------|
+  |    | Who                   | Where     | Email                            | Interests                     |
+  |----+-----------------------+-----------+----------------------------------+-------------------------------|
+  |  1 | Xin Wang              | Abbvie    | xin.wang@abbvie.com              | Site selection                |
+  |  2 | Vlad Anisimov         | Amgen     | vanisimo@amgen.com               | Methodology                   |
+  |  3 | Christi Kleoudis      | AZ        | christi.kleoudis@astrazeneca.com |                               |
+  |  4 | Gabriel Abreu         | AZ        | gabriel.abreu@astrazeneca.com    |                               |
+  |  5 | Andrew Chen           | Bayer     | andrew.chen@bayer.com            | Site selection and assessment |
+  |  6 | Clara Cali Mella      | Bayer     | clara.calimella@bayer.com        | Recruitment monitoring        |
+  |  7 | Tobias Straubinger    | Bayer     | tobias.straubinger@bayer.com     | Forecasting                   |
+  |  8 | Kaifeng Lu            | Beonemed  | kaifeng.lu@beonemed.com          | Drug demand forecasting       |
+  |  9 | Haoyu Wang            | BMS       | haoyu.wang2@bms.com              |                               |
+  | 10 | Inna Perevozskaya     | BMS       | inna.perevozskaya@bms.com        | Methodology                   |
+  | 11 | Oleksandr Savenkov    | BMS       | oleksandr.savenkov@bms.com       |                               |
+  | 12 | Palanikumar Ravindran | BMS       | palanikumar.ravindran@bms.com    | AI/ML/Viz                     |
+  | 13 | Zhuoxin Yu            | BMS       | zhuoxin.yu@bms.com               | AI/ML/Viz                     |
+  | 14 | Kyle Wathen           | Cytel     | kyle.wathen@cytel.com            | Software                      |
+  | 15 | -Robert Abugov-       | FDA       | robert.abugov@fda.hhs.gov        |                               |
+  | 16 | Bhargava Reddy        | JJIM      | breddy1@its.jnj.com              | Operations                    |
+  | 17 | Forrest Williamson    | Lilly     | forrest_williamson@lilly.com     | Pediatric                     |
+  | 18 | Jun Xing              | Sanofi    | Jun.Xing@sanofi.com              |                               |
+  | 19 | Benjamin Hofner       | PEI       | benjamin.hofner@pei.de           | Group Advisor                 |
+  | 20 | Cristiana Mayer       | JJ Vision | CMayer1@its.jnj.com              |                               |
+  | 21 | Bochao Jia            | Lilly     | jia_bochao@lilly.com             | Operational Analytics         |
+  | 22 | Jessica Cannon-Hill   | JJ Vision | jcannon4@ITS.JNJ.COM             |                               |
+  |----+-----------------------+-----------+----------------------------------+-------------------------------|
   #+TBLFM: $1=@#-1
 
 * Expertise
