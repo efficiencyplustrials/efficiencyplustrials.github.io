@@ -63,8 +63,8 @@
     clinical trials (e.g., site/patient anomalies, protocol
     deviations)?
 ** Regulatory perspectives
-** [[https://www.ema.europa.eu/en/ich-e20-adaptive-designs-clinical-trials-scientific-guideline][ICH E20 Adaptive Design]]
-  + Fei Chen: recommend more rigorous operational planning into study design
+  + Fei Chen: push regulatory to promote rigorous operational planning into study design
+   - [[https://www.ema.europa.eu/en/ich-e20-adaptive-designs-clinical-trials-scientific-guideline][ICH E20 Adaptive Design]]
     - 5.6:855 Operational Considerations
       - Use of an adaptive design can add challenges to the operational execution of a clinical trial and these should be addressed at the trial planning stage.
     - Propose to add the following paragraph to section
