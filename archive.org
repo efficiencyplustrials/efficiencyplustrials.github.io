@@ -54,34 +54,32 @@
  focus areas and promote collaboration
 * General Meeting <August 14, 2025>
 ** Attendance
-  |----+---+-----------------------+-----------+-------------------------------|
-  |    | @ | Who                   | Where     | Interests                     |
-  |----+---+-----------------------+-----------+-------------------------------|
-  |  1 |   | Xin Wang              | Abbvie    | Site selection                |
-  |  2 |   | Vlad Anisimov         | Amgen     | Methodology                   |
-  |  3 |   | Christi Kleoudis      | AZ        |                               |
-  |  4 |   | Gabriel Abreu         | AZ        |                               |
-  |  5 |   | Andrew Chen           | Bayer     | Site selection and assessment |
-  |  6 | Y | Bohdana Ratitch       | Bayer     | Outreach                      |
-  |  7 |   | Clara Cali Mella      | Bayer     | Recruitment monitoring        |
-  |  8 |   | Tobias Straubinger    | Bayer     | Forecasting                   |
-  |  9 |   | Kaifeng Lu            | Beonemed  | Drug demand forecasting       |
-  | 10 |   | Haoyu Wang            | BMS       |                               |
-  | 11 |   | Inna Perevozskaya     | BMS       | Methodology                   |
-  | 12 |   | Oleksandr Savenkov    | BMS       |                               |
-  | 13 |   | Palanikumar Ravindran | BMS       | AI/ML/Viz                     |
-  | 14 |   | Zhuoxin Yu            | BMS       | AI/ML/Viz                     |
-  | 15 |   | Kyle Wathen           | Cytel     | Software                      |
-  | 16 |   | Robert Abugov         | FDA       |                               |
-  | 17 |   | Bhargava Reddy        | JJIM      | Operations                    |
-  | 18 | Y | Fei Chen              | JJIM      | Regulatory                    |
-  | 19 |   | Forrest Williamson    | Lilly     | Pediatric                     |
-  | 20 |   | Jun Xing              | Sanofi    |                               |
-  | 21 |   | Benjamin Hofner       | PEI       | Group Advisor                 |
-  | 22 |   | Cristiana Mayer       | JJ Vision |                               |
-  | 23 |   | Bochao Jia            | Lilly     | Site selection and assessment |
-  | 24 |   | Jessica Cannon-Hill   | JJ Vision |                               |
-  |----+---+-----------------------+-----------+-------------------------------|
+  |----+---+-----------------------+-----------+-----------------------------------------------------|
+  |    | @ | Who                   | Where     | Interests                                           |
+  |----+---+-----------------------+-----------+-----------------------------------------------------|
+  |  1 |   | Xin Wang              | Abbvie    | Site selection                                      |
+  |  2 | Y | Vlad Anisimov         | Amgen     | Methodology                                         |
+  |  3 |   | Christi Kleoudis      | AZ        |                                                     |
+  |  4 | Y | Gabriel Abreu         | AZ        |                                                     |
+  |  5 | Y | Andrew Chen           | Bayer     | Site selection and assessment                       |
+  |  6 | Y | Bohdana Ratitch       | Bayer     | Outreach                                            |
+  |  7 | Y | Clara Cali Mella      | Bayer     | Recruitment monitoring                              |
+  |  8 | Y | Tobias Straubinger    | Bayer     | Forecasting                                         |
+  |  9 | Y | Kaifeng Lu            | Beonemed  | Drug demand forecasting                             |
+  | 10 | Y | Haoyu Wang            | BMS       |                                                     |
+  | 11 |   | Inna Perevozskaya     | BMS       | Methodology                                         |
+  | 12 |   | Oleksandr Savenkov    | BMS       |                                                     |
+  | 13 | Y | Palanikumar Ravindran | BMS       | AI/ML/Viz                                           |
+  | 14 | Y | Zhuoxin Yu            | BMS       | AI/ML/Viz                                           |
+  | 15 |   | Kyle Wathen           | Cytel     | Software                                            |
+  | 16 | Y | Fei Chen              | JJIM      | Regulatory                                          |
+  | 17 | Y | Cristiana Mayer       | JJ Vision |                                                     |
+  | 18 | Y | Jessica Cannon-Hill   | JJ Vision |                                                     |
+  | 19 |   | Forrest Williamson    | Lilly     | Pediatric                                           |
+  | 20 | Y | Bochao Jia            | Lilly     | Operational analytics                               |
+  | 21 | Y | Benjamin Hofner       | PEI       | Group Advisor                                       |
+  | 22 | Y | Jun Xing              | Sanofi    | Operational efficiency and data quality improvement |
+  |----+---+-----------------------+-----------+-----------------------------------------------------|
   #+TBLFM: $1=@#-1
 
 ** Member Changes
@@ -151,15 +149,6 @@
  | Society for Clinical Trials (SCT) Annual Meeting | Clinical trial design, implementation             | Oct 2026  |
  | Clinical Trials Methodology Conference           | Advanced clinical trial design, methodology       | Feb 2026  |
  | Conference on Statistical Practice (CSP)         | Practical statistical approaches in pharma trials | Sept 2025 |
-** Teams and Github
- Teams chat works?
-** Media
-*** Web
- https://efficiencyplustrials.github.io
-*** Linkedin
- https://www.linkedin.com/groups/13353006/
-*** X
- [[https://x.com/efficiencyplus][@efficiencyplus]]
 ** Collaboration with Other SWGs
  - Centralized Statistical Monitoring and Quality Tolerance Limits
    - Cannot find any information
@@ -167,4 +156,12 @@
 
 
  
-** Notes
+** Media
+*** Web
+ https://efficiencyplustrials.github.io
+*** Linkedin
+ https://www.linkedin.com/groups/13353006/
+*** X
+ [[https://x.com/efficiencyplus][@efficiencyplus]]
+** Teams and Github
+ Teams chat works?
