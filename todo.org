@@ -10,6 +10,7 @@
   + Palani Ravindran:
      - How do data privacy or access limitations impact the effectiveness of above?
      - How to use RWD or external data sources to identify additional sites
+  + Zhuoxin Yu: What public available data or commercially available database could be leveraged to select sites, investigators, and study committee members? How to utilize these data? 
   + Bochao Jia: may need to evaluate site performance in different perspectives: operational performance (i.e focus on key risk indication and QTLs) and data quality (i.e     identify odds data pattern and anomalies). 
 
 ** Recruitment monitoring and forecasting: best practices and tools
@@ -63,6 +64,8 @@
     are most predictive and reliable for emerging risks in ongoing
     clinical trials (e.g., site/patient anomalies, protocol
     deviations)?
+  + Zhuoxin Yu: How to better predict and monitor events and dropouts, both at study level and at region/site level?
+
 ** Regulatory perspectives
 ** [[https://www.ema.europa.eu/en/ich-e20-adaptive-designs-clinical-trials-scientific-guideline][ICH E20 Adaptive Design]]
   + Fei Chen: recommend more rigorous operational planning into study design
@@ -97,8 +100,18 @@
   + Fei Chen: how to demonstrate value through retrospective
     counter-factual analysis based on existing workflow?
 
+** Strategic data collection and analysis planning for alignment with Target Product Profile
+  + Zhuoxin Yu: What is the best blood sample collection strategy for PK, ADA, biomarkers, to reduce the total amount of blood needed from patients while maintain the quality of data analyses. 
+
+* Please enter a new focus area if the above list does not represent your key interests
+
+** Patient engagement: and best practices for evaluating participant satisfaction
+
+** Analysis implementation efficiency
+=======
 ** Please enter a new focus area if the above list does not represent your key interests
- - Strategic data collection and analysis planning for alignment with Target Product Profile
+
  - Patient engagement: and best practices for evaluating participant satisfaction
  - Analysis implementation efficiency
+
 
