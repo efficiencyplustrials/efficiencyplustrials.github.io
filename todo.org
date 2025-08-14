@@ -1,18 +1,20 @@
 * Workstream Topics
 
-  Please enter ONE key question that would be most important for you to address under the focus area
-  that you would like to contribute to.
+ - Please enter ONE key question that would be most important for you to address under the focus area that you would like to contribute to.
   
 ** Site selection and performance modeling using data-driven approaches
 
   + Bohdana Ratitch: Which predictive analytics and ML approaches are the most suitable and effective 
     for data-driven site performance modeling?
+    initial site selection + probability of site enrolling patients
   + Palani Ravindran:
      - How do data privacy or access limitations impact the effectiveness of above?
      - How to use RWD or external data sources to identify additional sites
   + Zhuoxin Yu: What public available data or commercially available database could be leveraged to select sites, investigators, and study committee members? How to utilize these data? 
   + Bochao Jia: may need to evaluate site performance in different perspectives: operational performance (i.e focus on key risk indication and QTLs) and data quality (i.e     identify odds data pattern and anomalies). 
 
+    profile of candidate sites
+   
 ** Recruitment monitoring and forecasting: best practices and tools
   + Haoyu Wang: How best to predict enrollment given too slow/too fast
     scenarios are not uncommon at all?
@@ -24,7 +26,18 @@
     forecast, with what weight? Sources of information include:
     actuals, historical projections on sites, expecations of local
     teams, baseline plan
+
+    missing data problem?
+    small trials, sites with few patients
+    non-performing sites
+    
   + Bochao Jia: We may need to differentiate the screening projection, enrollment (randomization projection) and the projection of time for enrollment completion may be       more interested.
+    minimize over-enrollment
+    better estimate of screening failure
+    
+** Forecasting and cost-efficient designing restricted recruitment in clinical trials
+ + Vlad Anisimov: Including using restrictions on recruitment in
+   countries/regions as country caps or subject minimum and optimal enrollment design  
 
 ** Study design and its impact on operations
   + Haoyu Wang: How to further facilitate/simplify/remove hurdles when
@@ -103,13 +116,14 @@
 ** Strategic data collection and analysis planning for alignment with Target Product Profile
   + Zhuoxin Yu: What is the best blood sample collection strategy for PK, ADA, biomarkers, to reduce the total amount of blood needed from patients while maintain the quality of data analyses. 
 
-* Please enter a new focus area if the above list does not represent your key interests
 
-** Patient engagement: and best practices for evaluating participant satisfaction
-
-** Analysis implementation efficiency
-=======
 ** Please enter a new focus area if the above list does not represent your key interests
+
+**** Patient engagement: and best practices for evaluating participant satisfaction
+
+**** Analysis implementation efficiency
+=======
+**** Please enter a new focus area if the above list does not represent your key interests
 
  - Patient engagement: and best practices for evaluating participant satisfaction
  - Analysis implementation efficiency
