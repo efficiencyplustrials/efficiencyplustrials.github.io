@@ -12,7 +12,7 @@
      - How to use RWD or external data sources to identify additional sites
   + Zhuoxin Yu: What public available data or commercially available database could be leveraged to select sites, investigators, and study committee members? How to utilize these data? 
   + Bochao Jia: may need to evaluate site performance in different perspectives: operational performance (i.e focus on key risk indication and QTLs) and data quality (i.e     identify odds data pattern and anomalies). 
-
+  + Vlad Anisimov: Data-driven centralized statistical monitoring of clinical trial enrollment performance, detecting high and low performing sites/country/regions and unusual recruitment patterns
     profile of candidate sites
    
 ** Recruitment monitoring and forecasting: best practices and tools
@@ -34,15 +34,23 @@
   + Bochao Jia: We may need to differentiate the screening projection, enrollment (randomization projection) and the projection of time for enrollment completion may be       more interested.
     minimize over-enrollment
     better estimate of screening failure
-    
-** Forecasting and cost-efficient designing restricted recruitment in clinical trials
- + Vlad Anisimov: Including using restrictions on recruitment in
-   countries/regions as country caps or subject minimum and optimal enrollment design  
+
+  + Vlad Anisimov: Advanced data-driven statistical technologies for modeling, forecasting and optimal designing patient recruitment and clinical trial operations. 
+    - Advanced technologies to maximize patient recruitment predictability at different stages and on different levels (site/country/region) by utilizing Poisson-gamma model
+    - Data-driven re-projection and optimal adjustment of recruitment to return back on track
+    - Modeling and forecasting restricted recruitment given upper and low patients bounds in countries, regions,..
+    - Forecasting other operational characteristics, e.g. predicting multiple visits, events, costs, etc.  
+    - Predicting event counts in event-driven trials with focus on oncology
+    - Expanding Poisson-gamma model to model time-dependent rates, developing some criteria for testing on time-dependence, etc. 
+    - Hierarchic stochastic models for joint modelling of screened/randomized patients for multiple screening/randomization stages and decision rules for optimal stopping time to reduce oversampling 
 
 ** Study design and its impact on operations
   + Haoyu Wang: How to further facilitate/simplify/remove hurdles when
     implementing innovative designs (e.g., inferential seamless) given
     current operational challenges/complexities?
+ + Vlad Anisimov:
+    - Including using restrictions on recruitment in  countries/regions as country caps or subject minimum and optimal enrollment design  
+    - Optimal time-cost efficient recruitment design, sites/countries selection to minimize operational cost given time restrictions, e.g. PoS (probability to complete in time) is no less than a given value. The optimal design should account for real-world constrains such as restrictions on the number of sites in countries, upper and low patients bounds in countries, regions, etc. 
   + Forrest Williamson:
 
 ** Operational efficiencies in non-traditional trial settings (e.g., DCTs, PCTs) 
@@ -59,7 +67,7 @@
     characteristics of the target population and provide site
     enrollment targets for an ongoing trial to meet population
     representativeness objectives?
-
+  + Vlad Anisimov: Monitoring/forecasting different cohorts of patients in different regions 
 ** Clinical drug supply optimization
    + Kaifeng Lu: Improving drug supply assumptions and forecasts by
      providing more accurate discontinuation/loss-to-follow
@@ -78,7 +86,9 @@
     clinical trials (e.g., site/patient anomalies, protocol
     deviations)?
   + Zhuoxin Yu: How to better predict and monitor events and dropouts, both at study level and at region/site level?
-
+  + Vlad Anisimov: 
+    - Data-driven re-projection and optimal adjustment of recruitment to return on track
+    - Predicting events in event-driven trials
 ** Regulatory perspectives
   + Fei Chen: push regulatory to promote rigorous operational planning into study design
    - [[https://www.ema.europa.eu/en/ich-e20-adaptive-designs-clinical-trials-scientific-guideline][ICH E20 Adaptive Design]]
