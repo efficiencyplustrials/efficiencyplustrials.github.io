@@ -1,0 +1,62 @@
+EFFICIENCY+ TRIALS WORKSTREAM INTEREST SURVEY
+
+Name: ________________
+
+Please choose top 3 questions you would like to work on from the
+following list, organized into main focus areas (1=highest priority):
+
+More details can be found here
+
+https://github.com/efficiencyplustrials/efficiencyplustrials.github.io/blob/main/todo.org
+
+1. ________________
+2. ________________
+3. ________________
+
+FOCUS AREA 1: SITE SELECTION AND PERFORMANCE MODELING
+□ Predictive analytics/ML for site performance modeling
+□ Impact of data privacy limitations on site selection
+□ Using RWD/external data for site identification
+□ Evaluating operational vs data quality performance
+□ Centralized statistical monitoring of enrollment
+
+FOCUS AREA 2: RECRUITMENT MONITORING AND FORECASTING
+□ Predicting enrollment in slow/fast scenarios
+□ Best models for recruitment forecasting
+□ Mixing information sources in forecasts
+□ Screening vs enrollment projections
+□ Advanced Poisson-gamma modeling approaches
+
+FOCUS AREA 3: STUDY DESIGN AND OPERATIONS IMPACT
+□ Implementing innovative designs (seamless trials)
+□ Country caps and enrollment restrictions
+□ Time-cost efficient recruitment design
+
+FOCUS AREA 4: NON-TRADITIONAL TRIAL SETTINGS
+□ DCT/PCT operational feasibility optimization
+
+FOCUS AREA 5: TRIAL POPULATION REPRESENTATIVENESS
+□ Dynamic monitoring of participant characteristics
+□ Cohort monitoring across regions
+
+FOCUS AREA 6: CLINICAL DRUG SUPPLY OPTIMIZATION
+□ Discontinuation/dropout modeling for supply
+□ 4C software workflow improvements
+□ Simulation-based supply platforms
+□ Demonstrating statistical value in supply
+
+FOCUS AREA 7: DYNAMIC TRIAL MONITORING
+□ AI/ML for emerging risk prediction
+□ Event and dropout prediction
+□ Data-driven recruitment adjustments
+
+FOCUS AREA 8: REGULATORY PERSPECTIVES
+□ Promoting operational planning in guidelines
+
+FOCUS AREA 9: STAKEHOLDER ENGAGEMENT
+□ Cross-functional collaboration strategies
+□ Demonstrating value through analysis
+
+FOCUS AREA 10: STRATEGIC DATA COLLECTION
+□ Optimizing blood sample collection strategies
+
