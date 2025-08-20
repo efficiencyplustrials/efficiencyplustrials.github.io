@@ -89,6 +89,7 @@
   + Vlad Anisimov: 
     - Data-driven re-projection and optimal adjustment of recruitment to return on track
     - Predicting events in event-driven trials
+  + Bochao Jia: ultilize predictive modelling to identify patients with high risk of drop out. Then, team can proactively reach out to patients before they drop in order to reduce the drop-out rate.
 ** Regulatory perspectives
   + Fei Chen: push regulatory to promote rigorous operational planning into study design
    - [[https://www.ema.europa.eu/en/ich-e20-adaptive-designs-clinical-trials-scientific-guideline][ICH E20 Adaptive Design]]
