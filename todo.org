@@ -15,7 +15,7 @@
   + Vlad Anisimov: Data-driven centralized statistical monitoring of clinical trial enrollment performance, detecting high and low performing sites/country/regions and unusual recruitment patterns
     profile of candidate sites
    
-** Recruitment monitoring and forecasting: best practices and tools
+** Recruitment monitoring and forecasting: best practices and tools (1)
   + Haoyu Wang: How best to predict enrollment given too slow/too fast
     scenarios are not uncommon at all?
   + Tobias Straubinger: What are the best-suited models for
@@ -35,6 +35,7 @@
     minimize over-enrollment
     better estimate of screening failure
 
+** Recruitment monitoring and forecasting: best practices and tools (2)
   + Vlad Anisimov: Advanced data-driven statistical technologies for modeling, forecasting and optimal designing patient recruitment and clinical trial operations. 
     - Advanced technologies to maximize patient recruitment predictability at different stages and on different levels (site/country/region) by utilizing Poisson-gamma model
     - Data-driven re-projection and optimal adjustment of recruitment to return back on track
