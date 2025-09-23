@@ -79,6 +79,7 @@
   | 20 | Y | Bochao Jia            | Lilly     | Operational analytics                               |
   | 21 | Y | Benjamin Hofner       | PEI       | Group Advisor                                       |
   | 22 | Y | Jun Xing              | Sanofi    | Operational efficiency and data quality improvement |
+  | 23 |   | Guohui Wu             | Regeneron |                                                     |
   |----+---+-----------------------+-----------+-----------------------------------------------------|
   #+TBLFM: $1=@#-1
 

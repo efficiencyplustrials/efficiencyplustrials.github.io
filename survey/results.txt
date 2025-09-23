@@ -1,0 +1,48 @@
+** Bochao
+1 SITE SELECTION AND PERFORMANCE MODELING
+2 RECRUITMENT MONITORING AND FORECASTING
+7 TRIAL MONITORING
+** Jessica Cannon-Hill
+3 Study design and its impact on operations – implementing innovative designs
+3 Study design and its impact on operations - Time-cost efficient recruitment design
+5 TRIAL POPULATION REPRESENTATIVENESS  - Dynamic monitoring of participant characteristics
+** Vlad Anisimov
+2 RECRUITMENT MONITORING AND FORECASTING
+3 STUDY DESIGN AND OPERATIONS IMPACT
+1 SITE SELECTION AND PERFORMANCE MODELING
+** Palani Ravindran
+1 SITE SELECTION AND PERFORMANCE MODELING: Predictive analytics/ML for site performance modeling and Using RWD/external data for site identification
+7 DYNAMIC TRIAL MONITORING: AI/ML for emerging risk prediction
+2 RECRUITMENT MONITORING AND FORECASTING: Advanced Poisson-gamma modeling approaches
+** Haoyu Wang
+3 Implementing innovative designs (seamless trials)
+2 Predicting enrollment in slow/fast scenarios
+7 AI/ML for emerging risk prediction
+** Oleksandr Savenkov
+7 DYNAMIC TRIAL MONITORING
+1 SITE SELECTION AND PERFORMANCE MODELING
+2 RECRUITMENT MONITORING AND FORECASTING
+** Bohdana Ratitch
+1 SITE SELECTION AND PERFORMANCE MODELING/ Predictive analytics/ML for site performance modeling
+7 DYNAMIC TRIAL MONITORING/ Event and dropout prediction
+5 TRIAL POPULATION REPRESENTATIVENESS/ Dynamic monitoring of participant characteristics 
+** Clara Cali Mella
+2 Best models for recruitment forecasting
+1 Using RWD/external data for site identification
+1 Predictive analytics/ML for site performance modeling
+** Christi Kleoudis
+6 Clinical Drug Supply Optimization
+6 Clinical Drug Supply Optimization
+9 Stakeholder Engagement
+** Guohui Wu
+2 RECRUITMENT MONITORING AND FORECASTING
+6 CLINICAL DRUG SUPPLY OPTIMIZATION
+7 DYNAMIC TRIAL MONITORING
+** Gabriel Abreu
+3 STUDY DESIGN AND OPERATIONS IMPACT
+9 STAKEHOLDER ENGAGEMENT
+2 RECRUITMENT MONITORING AND FORECASTING
+** Zhuoxin Yu
+10 FOCUS AREA 10: STRATEGIC DATA COLLECTION
+1 “Using RWD/external data for site identification” under FOCUS AREA 1
+7 “Event and dropout prediction” under FOCUS AREA 7

@@ -1,0 +1,39 @@
+# first preference counts and focus area
+
+=cat  results.txt | awk '{print $1, (NR-1)%4, $0 }' | awk '{print $1, $2}' | sed '/\*\*/d' | grep '1$' | awk '{print $1}' | sort | uniq -c | sort -k1r
+      3 3
+      3 2
+      3 1
+      1 7
+      1 6
+      1 10
+
+# second preference
+=cat  results.txt | awk '{print $1, (NR-1)%4, $0 }' | awk '{print $1, $2}' | sed '/\*\*/d' | grep '2$' | awk '{print $1}' | sort | uniq -c | sort -k1r
+      3 1
+      2 7
+      2 6
+      2 3
+      2 2
+      1 9
+
+# third preference
+=cat  results.txt | awk '{print $1, (NR-1)%4, $0 }' | awk '{print $1, $2}' | sed '/\*\*/d' | grep '3$' | awk '{print $1}' | sort | uniq -c | sort -k1r
+      4 7
+      3 2
+      2 5
+      2 1
+      1 9
+
+# unconditional
+=cat  results.txt | awk '{print $1, (NR-1)%4, $0 }' | awk '{print $1, $2}' | sed '/\*\*/d' |  awk '{print $1}' | sort | uniq -c | sort -k1r
+      8 2
+      8 1
+      7 7
+      5 3
+      3 6
+      2 9
+      2 5
+      1 10
+
+

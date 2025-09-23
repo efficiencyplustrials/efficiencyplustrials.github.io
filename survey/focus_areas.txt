@@ -1,0 +1,130 @@
+* 1: SITE SELECTION AND PERFORMANCE MODELING
+ - Predictive analytics/ML for site performance modeling
+ - Impact of data privacy limitations on site selection
+ - Using RWD/external data for site identification
+ - Evaluating operational vs data quality performance
+ - Centralized statistical monitoring of enrollment
+ - Country caps and enrollment restrictions
+    
+* 2: RECRUITMENT MONITORING AND FORECASTING
+ - Predicting enrollment in slow/fast scenarios
+ - Best models for recruitment forecasting
+ - Mixing information sources in forecasts
+ - Screening vs enrollment projections
+ - Advanced Poisson-gamma modeling approaches
+ - Data-driven recruitment adjustments
+   
+* 3: STUDY DESIGN AND OPERATIONS IMPACT
+ - Implementing innovative designs (seamless trials)
+ - Time-cost efficient recruitment design
+ 
+* 4: NON-TRADITIONAL TRIAL SETTINGS
+ - DCT/PCT operational feasibility optimization
+ 
+* 5: TRIAL POPULATION REPRESENTATIVENESS
+ - Dynamic monitoring of participant characteristics
+ - Cohort monitoring across regions
+ 
+* 6: CLINICAL DRUG SUPPLY OPTIMIZATION
+ - Discontinuation/dropout modeling for supply
+ - 4C software workflow improvements
+ - Simulation-based supply platforms
+ - Demonstrating statistical value in supply
+ 
+* 7: DYNAMIC TRIAL MONITORING
+ - AI/ML for emerging risk prediction
+ - Event and dropout prediction (event driven trials)
+ - Data quality and collection
+ - QTL, intercurrent events
+* 8: REGULATORY PERSPECTIVES
+ - Promoting operational planning in guidelines
+ 
+* 9: STAKEHOLDER ENGAGEMENT
+ - Cross-functional collaboration strategies
+ - Demonstrating value through analysis
+ 
+* 10: STRATEGIC DATA COLLECTION
+ - Optimizing blood sample collection strategies
+
+
+* Tabluated Results
+
+#+NAME: tab
+|--------+-------------------+-----------------------------------------+------------|
+| counts |           overall |                                         | work group |
+|--------+-------------------+-----------------------------------------+------------|
+|      8 |                 2 | RECRUITMENT MONITORING AND FORECASTING  |          1 |
+|      8 |                 1 | SITE SELECTION AND PERFORMANCE MODELING |            |
+|      7 |                 7 | DYNAMIC TRIAL MONITORING                |          2 |
+|      5 |                 3 |                                         |            |
+|      3 |                 6 |                                         |            |
+|      2 |                 9 |                                         |            |
+|      2 |                 5 |                                         |            |
+|      1 |                10 |                                         |            |
+|--------+-------------------+-----------------------------------------+------------|
+| counts |        top choice |                                         |            |
+|--------+-------------------+-----------------------------------------+------------|
+|      3 |                 3 | STUDY DESIGN AND OPERATIONS IMPACT      |          3 |
+|      3 |                 2 |                                         |            |
+|      3 |                 1 |                                         |            |
+|      1 |                 7 |                                         |            |
+|      1 |                 6 |                                         |            |
+|      1 |                10 |                                         |            |
+| counts | second preference |                                         |            |
+|--------+-------------------+-----------------------------------------+------------|
+|      3 |                 1 |                                         |            |
+|      2 |                 7 |                                         |            |
+|      2 |                 6 |                                         |            |
+|      2 |                 3 |                                         |            |
+|      2 |                 2 |                                         |            |
+|      1 |                 9 |                                         |            |
+|--------+-------------------+-----------------------------------------+------------|
+| counts |   thir preference |                                         |            |
+|      4 |                 7 |                                         |            |
+|      3 |                 2 |                                         |            |
+|      2 |                 5 |                                         |            |
+|      2 |                 1 |                                         |            |
+|      1 |                 9 |                                         |            |
+|--------+-------------------+-----------------------------------------+------------|
+
+  #+NAME: my-filter
+  #+BEGIN_SRC elisp :var tbl=tab val=1 :colnames y
+    (cl-loop for row in tbl
+          if (equal (nth 3 row) val)
+          collect row into newtbl
+          finally return newtbl)
+  #+END_SRC
+
+  #+RESULTS: my-filter
+
+
+* Working group proposal
+ 1 Patient recruitment monitoring and forecasting, site selection
+ 2 Dynamic trial monitoring/data quality
+ 3 Study design and operations impact
+
+* Next steps:
+ - form team members
+ = propose specific research questions
+ - deliverables and timeline
+   
+* calvin
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* cmd
+# unconditional
+=cat  results.txt | awk '{print $1, (NR-1)%4, $0 }' | awk '{print $1, $2}' | sed '/\*\*/d' |  awk '{print $1}' | sort | uniq -c | sort -k1r
