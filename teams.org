@@ -1,5 +1,58 @@
 * Focus area teams
 ** Patient recruitment monitoring and forecasting, site selection
+|---+------------------+-----------|
+|   | Name             | Company   |
+|---+------------------+-----------|
+| 1 | Junxiang Luo     | Abbvie    |
+| 2 | Vlad Anisimov    | Amgen     |
+| 3 | Clara Cali Mella | Bayer     |
+| 4 | Haoyu Wang       | BMS       |
+| 5 | Bochao Jia       | Lilly     |
+| 6 | Guohui Wu        | Regeneron |
+| 7 | Kyle Wathen      | Cytel     |
+|---+------------------+-----------|
+#+TBLFM: $1=@#-1
+
+** Dynamic trial monitoring/data quality
+|---+------------+----------|
+|   | Name       | Company  |
+|---+------------+----------|
+| 1 | Xin Wang   | Abbvie   |
+| 2 | Bochao Jia | Lilly    |
+| 3 | Xikun Wu   | Beonemed |
+|---+------------+----------|
+#+TBLFM: $1=@#-1
+
+** Study design and operations impact
+|---+---------------------+---------|
+|   | Name                | Company |
+|---+---------------------+---------|
+| 1 | Vlad Anisimov       | Amgen   |
+| 2 | Haoyu Wang          | BMS     |
+| 3 | Jessica Cannon-Hill | JNJ     |
+|---+---------------------+---------|
+#+TBLFM: $1=@#-1
+
+** Clinical supply chain
+|---+-------------------+----------|
+|   | Name              | Company  |
+|---+-------------------+----------|
+| 1 | Vlad Anisimov     | Amgen    |
+| 2 | Christi Kleoudis  | AZ       |
+| 3 | Kaifeng Lu        | Beonemed |
+| 4 | Fei Chen          | JNJ      |
+|---+-------------------+----------|
+#+TBLFM: $1=@#-1
+
+* Next steps
+ General check-in meetings approximately every 4–6 weeks
+ separate workstream meetings organized as needed
+
+ 
+
+
+* Focus area teams details
+** Patient recruitment monitoring and forecasting, site selection
 *** Wang, Xin <xin.wang@abbvie.com>
  1-2 Geographic strategy: country/region/site cap in
   MRCT, retaining representativeness, without any particular
@@ -31,7 +84,7 @@
 	Publication on recruitment monitoring – models tested and results
 *** CG Wang <chenguang.wang@regeneron.com> Guohui Wu <guohui.wu@regeneron.com>
  1. Systematic meta-analysis for evaluating country and site performance for future enrollment planning: 6-9 months for literature review including regulatory documents, running simulation and publish the paper for instruction of appropriate stat analysis of country/site evaluation supporting enrollment strategy.
-*** Baochao Jia
+*** Bochao Jia
 *** Wang, Haoyu
 ** Dynamic trial monitoring/data quality
 *** Bochao Jia <jia_bochao@lilly.com>
@@ -59,9 +112,3 @@
  Stakeholder feedback
 *** Anisimov, Vlad
 *** Chen, Fei
-* Next steps
- General check-in meetings approximately every 4–6 weeks
- separate workstream meetings organized as needed
-
-
- 
