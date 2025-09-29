@@ -1,25 +1,26 @@
 * Focus area teams
 ** Patient recruitment monitoring and forecasting, site selection
-|---+------------------+-----------|
-|   | Name             | Company   |
-|---+------------------+-----------|
-| 1 | Junxiang Luo     | Abbvie    |
-| 2 | Vlad Anisimov    | Amgen     |
-| 3 | Clara Cali Mella | Bayer     |
-| 4 | Haoyu Wang       | BMS       |
-| 5 | Bochao Jia       | Lilly     |
-| 6 | Guohui Wu        | Regeneron |
-| 7 | Kyle Wathen      | Cytel     |
-|---+------------------+-----------|
+|---+-----------------------+-----------|
+|   | Name                  | Company   |
+|---+-----------------------+-----------|
+| 1 | Junxiang Luo/Xin Wang | Abbvie    |
+| 2 | Vlad Anisimov         | Amgen     |
+| 3 | Clara Cali Mella      | Bayer     |
+| 4 | Haoyu Wang            | BMS       |
+| 5 | Kyle Wathen           | Cytel     |
+| 6 | Bochao Jia            | Lilly     |
+| 7 | Guohui Wu             | Regeneron |
+|---+-----------------------+-----------|
 #+TBLFM: $1=@#-1
 
 ** Dynamic trial monitoring/data quality
 |---+------------+----------|
 |   | Name       | Company  |
 |---+------------+----------|
-| 1 | Xin Wang   | Abbvie   |
-| 2 | Bochao Jia | Lilly    |
-| 3 | Xikun Wu   | Beonemed |
+| 1 | Xikun Wu   | Beonemed |
+| 2 | Zhuoxin Yu | BMS      |
+| 3 | Bochao Jia | Lilly    |
+| 4 | Jun Xin    | Sanofi   |
 |---+------------+----------|
 #+TBLFM: $1=@#-1
 
@@ -34,14 +35,14 @@
 #+TBLFM: $1=@#-1
 
 ** Clinical supply chain
-|---+-------------------+----------|
-|   | Name              | Company  |
-|---+-------------------+----------|
-| 1 | Vlad Anisimov     | Amgen    |
-| 2 | Christi Kleoudis  | AZ       |
-| 3 | Kaifeng Lu        | Beonemed |
-| 4 | Fei Chen          | JNJ      |
-|---+-------------------+----------|
+|---+---------------------+----------|
+|   | Name                | Company  |
+|---+---------------------+----------|
+| 1 | Vlad Anisimov       | Amgen    |
+| 2 | Christi Kleoudis    | AZ       |
+| 3 | Kaifeng Lu/Xikun Wu | Beonemed |
+| 4 | Fei Chen            | JNJ      |
+|---+---------------------+----------|
 #+TBLFM: $1=@#-1
 
 * Next steps
