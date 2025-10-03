@@ -1,0 +1,24 @@
+#title-slide .title {
+     font-size: 0.1em; /* Adjust the em value as needed */
+   }
+   
+.reveal table {
+  font-size: 2px;
+}
+
+.reveal .footer {
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  width: 100%;
+  background-color: white;
+  padding: 10px; /* Example padding */
+  text-align: left; /* Example text alignment */
+  font-size: 0.3em;
+  font-weight: bold;
+  color: red  
+}
+
+.footer.footer-default {
+  color: red;
+}

@@ -1,0 +1,278 @@
+# Workstream Topics
+
+-   Please enter ONE key question that would be most important for you
+    to address under the focus area that you would like to contribute
+    to.
+
+## Site selection and performance modeling using data-driven approaches
+
+-   Bohdana Ratitch: Which predictive analytics and ML approaches are
+    the most suitable and effective for data-driven site performance
+    modeling? initial site selection + probability of site enrolling
+    patients
+-   Palani Ravindran:
+    -   How do data privacy or access limitations impact the
+        effectiveness of above?
+    -   How to use RWD or external data sources to identify additional
+        sites
+-   Zhuoxin Yu: What public available data or commercially available
+    database could be leveraged to select sites, investigators, and
+    study committee members? How to utilize these data?
+-   Bochao Jia: may need to evaluate site performance in different
+    perspectives: operational performance (i.e focus on key risk
+    indication and QTLs) and data quality (i.e identify odds data
+    pattern and anomalies).
+-   Vlad Anisimov: Data-driven centralized statistical monitoring of
+    clinical trial enrollment performance, detecting high and low
+    performing sites/country/regions and unusual recruitment patterns
+    profile of candidate sites
+
+## Recruitment monitoring and forecasting: best practices and tools (1)
+
+-   Haoyu Wang: How best to predict enrollment given too slow/too fast
+    scenarios are not uncommon at all?
+
+-   Tobias Straubinger: What are the best-suited models for recruitment,
+    which parameters improve the model and how can historic trial
+    performance be used for future trial performance forecasting?
+
+-   Fei Chen: How to mix different sources of information in to the
+    forecast, with what weight? Sources of information include: actuals,
+    historical projections on sites, expecations of local teams,
+    baseline plan
+
+    missing data problem? small trials, sites with few patients
+    non-performing sites
+
+-   Bochao Jia: We may need to differentiate the screening projection,
+    enrollment (randomization projection) and the projection of time for
+    enrollment completion may be more interested. minimize
+    over-enrollment better estimate of screening failure
+
+## Recruitment monitoring and forecasting: best practices and tools (2)
+
+-   Vlad Anisimov: Advanced data-driven statistical technologies for
+    modeling, forecasting and optimal designing patient recruitment and
+    clinical trial operations.
+    -   Advanced technologies to maximize patient recruitment
+        predictability at different stages and on different levels
+        (site/country/region) by utilizing Poisson-gamma model
+    -   Data-driven re-projection and optimal adjustment of recruitment
+        to return back on track
+    -   Modeling and forecasting restricted recruitment given upper and
+        low patients bounds in countries, regions,..
+    -   Forecasting other operational characteristics, e.g. predicting
+        multiple visits, events, costs, etc.
+    -   Predicting event counts in event-driven trials with focus on
+        oncology
+    -   Expanding Poisson-gamma model to model time-dependent rates,
+        developing some criteria for testing on time-dependence, etc.
+    -   Hierarchic stochastic models for joint modelling of
+        screened/randomized patients for multiple
+        screening/randomization stages and decision rules for optimal
+        stopping time to reduce oversampling
+
+## Study design and its impact on operations
+
+-   Haoyu Wang: How to further facilitate/simplify/remove hurdles when
+    implementing innovative designs (e.g., inferential seamless) given
+    current operational challenges/complexities?
+
+<!-- -->
+
+-   Vlad Anisimov:
+    -   Including using restrictions on recruitment in countries/regions
+        as country caps or subject minimum and optimal enrollment design
+    -   Optimal time-cost efficient recruitment design, sites/countries
+        selection to minimize operational cost given time restrictions,
+        e.g. PoS (probability to complete in time) is no less than a
+        given value. The optimal design should account for real-world
+        constrains such as restrictions on the number of sites in
+        countries, upper and low patients bounds in countries, regions,
+        etc.
+
+    <!-- -->
+
+    -   Forrest Williamson:
+
+## Operational efficiencies in non-traditional trial settings (e.g., DCTs, PCTs)
+
+-   Jun Xing: How can we design and implement decentralized, pragmatic,
+    and observational trials in a way that optimally balances
+    operational feasibility, gap between trail design assumptions
+    between efficacy and effectiveness, and struggle to maintain high
+    data quality, while aligning with real-world clinical practice?
+
+## Ensuring representativeness of trial populations and generalizability
+
+-   Bohdana Ratitch: How to dynamically monitor characteristics of
+    participants enrolled in a clinical trial with respect to the key
+    characteristics of the target population and provide site enrollment
+    targets for an ongoing trial to meet population representativeness
+    objectives?
+-   Vlad Anisimov: Monitoring/forecasting different cohorts of patients
+    in different regions
+
+## Clinical drug supply optimization
+
+-   Kaifeng Lu: Improving drug supply assumptions and forecasts by
+    providing more accurate discontinuation/loss-to-follow
+    up/skipping-visit modeling
+-   Fei Chen: Overview of 4C and other drug demand forecast software and
+    workflows and provide practical guidelines on how to engage
+    stakeholders to improve their workflow
+-   Fei Chen: simulation based platform for 4C + OMP
+-   Fei Chen: how to demonstrate value of statistics: retroactively
+    using existing supply software like 4c counter-factual outcomes
+    through simulation
+
+## Dynamic Trial Monitoring & Adaptive Operations
+
+-   Palani Ravindran: Which operational metrics and AI/ML techniques are
+    most predictive and reliable for emerging risks in ongoing clinical
+    trials (e.g., site/patient anomalies, protocol deviations)?
+-   Zhuoxin Yu: How to better predict and monitor events and dropouts,
+    both at study level and at region/site level?
+-   Vlad Anisimov:
+    -   Data-driven re-projection and optimal adjustment of recruitment
+        to return on track
+    -   Predicting events in event-driven trials
+-   Bochao Jia: ultilize predictive modelling to identify patients with
+    high risk of drop out. Then, team can proactively reach out to
+    patients before they drop in order to reduce the drop-out rate.
+
+## Regulatory perspectives
+
+-   Fei Chen: push regulatory to promote rigorous operational planning
+    into study design
+    -   [ICH E20 Adaptive
+        Design](https://www.ema.europa.eu/en/ich-e20-adaptive-designs-clinical-trials-scientific-guideline)
+        -   5.6:855 Operational Considerations
+            -   Use of an adaptive design can add challenges to the
+                operational execution of a clinical trial and these
+                should be addressed at the trial planning stage.
+        -   Propose to add the following paragraph to section
+
+Adaptations in clinical trials inherently introduce unpredictable
+demands on drug supply, potentially causing delays that adversely impact
+trial timelines. This challenge presents a significant opportunity to
+underscore the crucial role of operational planning in adaptive design
+strategies. An enhanced focus should be placed on thoroughly assessing
+the operational characteristics---specifically examining the impacts of
+adaptations on drug supply, randomization processes, data quality, and
+considerations for Multi-Regional Clinical Trials (MRCT), Decentralized
+Clinical Trials (DCT) and Pragmatic Clinical Trials (PCT). When
+evaluating the benefits and drawbacks of adaptive designs in contrast to
+traditional approaches, these operational aspects are pivotal. Moreover,
+the introduction of a \'design for adaptive operations\' should be
+championed, ensuring that operational planning is as rigorously
+conceived as the statistical methods detailed in this guidance document.
+Doing so will help align operational strategies with statistical rigor
+to optimize trial efficiency and mitigate risks associated with supply
+fluctuations and other operational challenges.
+
+## Stakeholder engagement
+
+-   Fei Chen: How to effectively engage and collaborate across different
+    operational teams and functions (e.g. clinical supply chain vs trial
+    delivery & execution), convince stake holders to embrace change and
+    overcome territorial issues
+-   Fei Chen: how to demonstrate value through retrospective
+    counter-factual analysis based on existing workflow?
+
+## Strategic data collection and analysis planning for alignment with Target Product Profile
+
+-   Zhuoxin Yu: What is the best blood sample collection strategy for
+    PK, ADA, biomarkers, to reduce the total amount of blood needed from
+    patients while maintain the quality of data analyses.
+
+## Please enter a new focus area if the above list does not represent your key interests
+
+Patient engagement: and best practices for evaluating participant
+satisfaction
+
+Analysis implementation efficiency
+
+`=====`{.verbatim}
+
+Please enter a new focus area if the above list does not represent your
+key interests
+
+-   Patient engagement: and best practices for evaluating participant
+    satisfaction
+-   Analysis implementation efficiency
+
+# Survey
+
+FOCUS AREA 1: SITE SELECTION AND PERFORMANCE MODELING FOCUS AREA 2:
+RECRUITMENT MONITORING AND FORECASTING FOCUS AREA 3: STUDY DESIGN AND
+OPERATIONS IMPACT FOCUS AREA 4: NON-TRADITIONAL TRIAL SETTINGS FOCUS
+AREA 5: TRIAL POPULATION REPRESENTATIVENESS FOCUS AREA 6: CLINICAL DRUG
+SUPPLY OPTIMIZATION FOCUS AREA 7: DYNAMIC TRIAL MONITORING FOCUS AREA 8:
+REGULATORY PERSPECTIVES FOCUS AREA 9: STAKEHOLDER ENGAGEMENT FOCUS AREA
+10: STRATEGIC DATA COLLECTION
+
+# Survey results
+
+## Bochao
+
+1 SITE SELECTION AND PERFORMANCE MODELING 2 RECRUITMENT MONITORING AND
+FORECASTING 7 TRIAL MONITORING
+
+## Jessica Cannon-Hill
+
+3 Study design and its impact on operations -- implementing innovative
+designs 3 Study design and its impact on operations - Time-cost
+efficient recruitment design 5 TRIAL POPULATION REPRESENTATIVENESS -
+Dynamic monitoring of participant characteristics
+
+## Vlad Anisimov
+
+2 RECRUITMENT MONITORING AND FORECASTING 3 STUDY DESIGN AND OPERATIONS
+IMPACT 1 SITE SELECTION AND PERFORMANCE MODELING
+
+## Palani Ravindran
+
+1 SITE SELECTION AND PERFORMANCE MODELING: Predictive analytics/ML for
+site performance modeling and Using RWD/external data for site
+identification 7 DYNAMIC TRIAL MONITORING: AI/ML for emerging risk
+prediction 2 RECRUITMENT MONITORING AND FORECASTING: Advanced
+Poisson-gamma modeling approaches
+
+## Haoyu Wang
+
+3 Implementing innovative designs (seamless trials) 2 Predicting
+enrollment in slow/fast scenarios 7 AI/ML for emerging risk prediction
+
+## Oleksandr Savenkov
+
+7 DYNAMIC TRIAL MONITORING 1 SITE SELECTION AND PERFORMANCE MODELING 2
+RECRUITMENT MONITORING AND FORECASTING
+
+## Bohdana Ratitch
+
+1 SITE SELECTION AND PERFORMANCE MODELING/ Predictive analytics/ML for
+site performance modeling 7 DYNAMIC TRIAL MONITORING/ Event and dropout
+prediction 5 TRIAL POPULATION REPRESENTATIVENESS/ Dynamic monitoring of
+participant characteristics
+
+## Clara Cali Mella
+
+2 Best models for recruitment forecasting 1 Using RWD/external data for
+site identification 1 Predictive analytics/ML for site performance
+modeling
+
+## Christi Kleoudis
+
+6 Clinical Drug Supply Optimization 6 Clinical Drug Supply Optimization
+9 Stakeholder Engagement
+
+## Guohui Wu
+
+2 RECRUITMENT MONITORING AND FORECASTING 6 CLINICAL DRUG SUPPLY
+OPTIMIZATION 7 DYNAMIC TRIAL MONITORING
+
+## Gabriel Abreu
+
+3 STUDY DESIGN AND OPERATIONS IMPACT 9 STAKEHOLDER ENGAGEMENT 2
+RECRUITMENT MONITORING AND FORECASTING

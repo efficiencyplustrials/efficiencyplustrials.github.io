@@ -1,0 +1,84 @@
+---
+title: "Efficiency+"
+author: "Efficiency+ SWG"
+format:
+ revealjs:
+  table-of-contents: true
+  toc-depth: 1
+  toc-title: Outline
+  revealjs-theme: simple
+  incremental: false
+  css: styles.css
+  scrollable: true
+  footer: "Efficiency+"
+
+editor: visual
+slide-number: true
+
+resource_files:
+ - archive.qmd
+ - todo.qmd
+ - teams.qmd
+ - csc.qmd
+---
+
+```{css}
+   #title-slide .title {
+     font-size: 1em; /* Adjust the em value as needed */
+   }
+
+#initial-kick-off-july-16-2025.level1 h1{
+     font-size: 1em; /* Adjust the em value as needed */
+   }
+
+#general-meeting-august-14-2025.level1 h1{
+     font-size: 1em; /* Adjust the em value as needed */
+   }
+
+    .reveal h2 {
+      font-size: 1em; /* Adjust this value as desired */
+    }
+
+    .reveal h1 {
+      font-size: 2em; /* Adjust this value as desired */
+    }
+
+
+
+#title-slide.level1 h1{
+     font-size: 2em; /* Adjust the em value as needed */
+   }
+
+
+
+.reveal table {
+  font-size: 34px;
+}
+
+.reveal .footer {
+  position: fixed;
+  bottom: 0;
+  left: 5%;
+  width: 100%;
+  background-color: white;
+  padding: 10px; /* Example padding */
+  text-align: left; /* Example text alignment */
+  font-size: 0.5em;
+  font-weight: bold;
+  color: red  
+}
+
+.footer.footer-default {
+  color: red;
+}
+
+```
+
+
+```{r}
+library(rmarkdown)
+```
+
+{{< include teams.qmd >}}
+
+{{< include csc.qmd >}}

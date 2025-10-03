@@ -1,0 +1,27 @@
+# Clinical Supply Chain Workstream
+
+## Team
+
+      Name               Company
+  --- ------------------ ----------
+  1   Vlad Anisimov      Amgen
+  2   Christi Kleoudis   AZ
+  3   Kaifeng Lu         Beonemed
+  4   Fei Chen           JNJ
+
+```{=org}
+#+TBLFM: $1=@#-1
+```
+## Focus area questions
+
+-   Simulation based work flow from demand forecast to supply planning
+-   Discontinuation/dropout modeling for supply
+-   Patient journey
+-   4C software workflow improvements
+-   How to demonstrating statistical value in supply (through
+    retrospective studies)?
+
+## Next steps
+
+-   Meeting frequency
+-   Knowledge sharing on respective CSC workflows/software used?
