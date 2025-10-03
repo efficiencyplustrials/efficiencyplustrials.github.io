@@ -6,22 +6,25 @@
 | 1 | Junxiang Luo/Xin Wang | Abbvie    |
 | 2 | Vlad Anisimov         | Amgen     |
 | 3 | Clara Cali Mella      | Bayer     |
-| 4 | Haoyu Wang            | BMS       |
-| 5 | Kyle Wathen           | Cytel     |
-| 6 | Bochao Jia            | Lilly     |
-| 7 | Guohui Wu             | Regeneron |
+| 4 | Xikun Wu              | Beonemed  |
+| 5 | Haoyu Wang            | BMS       |
+| 6 | Oleksandr Savenkov    | BMS       |
+| 7 | Kyle Wathen           | Cytel     |
+| 8 | Bochao Jia            | Lilly     |
+| 9 | Guohui Wu/CG Wang     | Regeneron |
 |---+-----------------------+-----------|
 #+TBLFM: $1=@#-1
 
 ** Dynamic trial monitoring/data quality
-|---+------------+----------|
-|   | Name       | Company  |
-|---+------------+----------|
-| 1 | Xikun Wu   | Beonemed |
-| 2 | Zhuoxin Yu | BMS      |
-| 3 | Bochao Jia | Lilly    |
-| 4 | Jun Xin    | Sanofi   |
-|---+------------+----------|
+|---+--------------------+----------|
+|   | Name               | Company  |
+|---+--------------------+----------|
+| 1 | Xikun Wu           | Beonemed |
+| 2 | Zhuoxin Yu         | BMS      |
+| 3 | Oleksandr Savenkov | BMS      |
+| 4 | Bochao Jia         | Lilly    |
+| 5 | Jun Xin            | Sanofi   |
+|---+--------------------+----------|
 #+TBLFM: $1=@#-1
 
 ** Study design and operations impact
@@ -35,14 +38,17 @@
 #+TBLFM: $1=@#-1
 
 ** Clinical supply chain
-|---+---------------------+----------|
-|   | Name                | Company  |
-|---+---------------------+----------|
-| 1 | Vlad Anisimov       | Amgen    |
-| 2 | Christi Kleoudis    | AZ       |
-| 3 | Kaifeng Lu/Xikun Wu | Beonemed |
-| 4 | Fei Chen            | JNJ      |
-|---+---------------------+----------|
+|---+-------------------+-----------|
+|   | Name              | Company   |
+|---+-------------------+-----------|
+| 1 | Vlad Anisimov     | Amgen     |
+| 2 | Christi Kleoudis  | AZ        |
+| 3 | Kaifeng Lu        | Beonemed  |
+| 4 | Cunyi Wang        | JNJ       |
+| 5 | Allison Gray      | JNJ       |
+| 6 | Fei Chen          | JNJ       |
+| 7 | Guohui Wu/CG Wang | Regeneron |
+|---+-------------------+-----------|
 #+TBLFM: $1=@#-1
 
 * Next steps
