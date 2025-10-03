@@ -27,13 +27,13 @@
   | 15 | Palanikumar Ravindran | BMS       | palanikumar.ravindran@bms.com      | AI/ML/Viz                     |
   | 16 | Zhuoxin Yu            | BMS       | zhuoxin.yu@bms.com                 | AI/ML/Viz                     |
   | 17 | Kyle Wathen           | Cytel     | kyle.wathen@cytel.com              | Software                      |
-  | 18 | -Robert Abugov-       | FDA       | robert.abugov@fda.hhs.gov          |                               |
-  | 19 | Bhargava Reddy        | JJIM      | breddy1@its.jnj.com                | Operations                    |
-  | 20 | Cristiana Mayer       | JJ Vision | CMayer1@its.jnj.com                |                               |
-  | 21 | Jessica Cannon-Hill   | JJ Vision | jcannon4@ITS.JNJ.COM               |                               |
-  | 22 | Forrest Williamson    | Lilly     | forrest_williamson@lilly.com       | Pediatric                     |
-  | 23 | Bochao Jia            | Lilly     | jia_bochao@lilly.com               | Operational Analytics         |
-  | 24 | Benjamin Hofner       | PEI       | benjamin.hofner@pei.de             | Group Advisor                 |
+  | 18 | Bhargava Reddy        | JJIM      | breddy1@its.jnj.com                | Operations                    |
+  | 19 | Cristiana Mayer       | JJ Vision | CMayer1@its.jnj.com                |                               |
+  | 20 | Jessica Cannon-Hill   | JJ Vision | jcannon4@ITS.JNJ.COM               |                               |
+  | 21 | Cunyi Wang            | JNJ       | CWang83@ITS.JNJ.com                |                               |
+  | 22 | Allison Gray          | JNJ       | agray2@its.jnj.com                 |                               |
+  | 23 | Forrest Williamson    | Lilly     | forrest_williamson@lilly.com       | Pediatric                     |
+  | 24 | Bochao Jia            | Lilly     | jia_bochao@lilly.com               | Operational Analytics         |
   | 25 | CG Wang               | Regeneron | chenguang.wang@regeneron.com       |                               |
   | 26 | Guohui Wu             | Regeneron | guohui.wu@regeneron.com            |                               |
   | 27 | Jun Xing              | Sanofi    | Jun.Xing@sanofi.com                |                               |
