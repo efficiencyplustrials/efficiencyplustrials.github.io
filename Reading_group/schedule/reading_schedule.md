@@ -23,7 +23,7 @@ Welcome to the SWG-Wide Reading Group! Below is the reading schedule for our upc
 ---
 
 ## **Group Guidelines**
-- **Frequency:** Meetings will be held every month.
+- **Frequency:** Meetings will take place biweekly.
 - **Duration:** Each session will last approximately 1 hour.
 - **Platform:** Teams
 - **Contact:** For questions or suggestions, please reach out to reading group organizer. 
