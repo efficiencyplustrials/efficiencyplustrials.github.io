@@ -30,11 +30,6 @@ Welcome to the SWG-Wide Reading Group! Below is the reading schedule for our upc
 
 ---
 
-## **Presenter Checklist**
-1. Please don't upload copyrighted papers unless they are open-access or you have permission.
-2. If the paper is behind a paywall, add only a link to the publisher or avXiv version instead. 
-   
-
 Looking forward to engaging discussions and shared learning!
 
 ---
