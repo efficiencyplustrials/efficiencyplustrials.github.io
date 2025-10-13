@@ -26,9 +26,13 @@ Welcome to the SWG-Wide Reading Group! Below is the reading schedule for our upc
 - **Frequency:** Meetings will be held every month.
 - **Duration:** Each session will last approximately 1 hour.
 - **Platform:** Teams
-- **Contact:** For questions or suggestions, please reach out to guohui.wu@regeneron.com.
+- **Contact:** For questions or suggestions, please reach out to reading group organizer. 
 
 ---
+
+## **Presenter Checklist**
+1. When convenient, add your paper to the [papers]
+   
 
 Looking forward to engaging discussions and shared learning!
 
