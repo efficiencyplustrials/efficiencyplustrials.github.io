@@ -1,54 +1,62 @@
 * Focus area teams
 ** Patient recruitment monitoring and forecasting, site selection
-|---+-----------------------+-----------|
-|   | Name                  | Company   |
-|---+-----------------------+-----------|
-| 1 | Junxiang Luo/Xin Wang | Abbvie    |
-| 2 | Vlad Anisimov         | Amgen     |
-| 3 | Clara Cali Mella      | Bayer     |
-| 4 | Xikun Wu              | Beonemed  |
-| 5 | Haoyu Wang            | BMS       |
-| 6 | Oleksandr Savenkov    | BMS       |
-| 7 | Kyle Wathen           | Cytel     |
-| 8 | Bochao Jia            | Lilly     |
-| 9 | Guohui Wu/CG Wang     | Regeneron |
-|---+-----------------------+-----------|
+
+|----+------------------------+-----------+-------------------------------|
+|    | Name                   | Company   |                               |
+|----+------------------------+-----------+-------------------------------|
+|  1 | Junxiang Luo           | Abbvie    | junxiang.luo@abbvie.com       |
+|  2 | Xin Wang               | Abbvie    | xin.wang@abbvie.com           |
+|  3 | *Vlad Anisimov*        | Amgen     | vanisimo@amgen.com            |
+|  4 | *Clara Cali Mella*     | Bayer     | clara.calimella@bayer.com     |
+|  5 | Xikun Wu               | Beonemed  | xikun.wu@beonemed.com         |
+|  6 | Haoyu Wang             | BMS       | haoyu.wang2@bms.com           |
+|  7 | Oleksandr Savenkov     | BMS       | oleksandr.savenkov@bms.com    |
+|  8 | Palanikumar Ravindran  | BMS       | palanikumar.ravindran@bms.com |
+|  9 | Kyle Wathen            | Cytel     | kyle.wathen@cytel.com         |
+| 10 | Bochao Jia             | Lilly     | jia_bochao@lilly.com          |
+| 11 | Guohui Wu              | Regeneron | guohui.wu@regeneron.com       |
+| 12 | CG Wang                | Regeneron | chenguang.wang@regeneron.com  |
+|----+------------------------+-----------+-------------------------------|
 #+TBLFM: $1=@#-1
 
 ** Dynamic trial monitoring/data quality
-|---+--------------------+----------|
-|   | Name               | Company  |
-|---+--------------------+----------|
-| 1 | Xikun Wu           | Beonemed |
-| 2 | Zhuoxin Yu         | BMS      |
-| 3 | Oleksandr Savenkov | BMS      |
-| 4 | Bochao Jia         | Lilly    |
-| 5 | Jun Xin            | Sanofi   |
-|---+--------------------+----------|
+|---+-------------------------+----------+-------------------------------|
+|   | Name                    | Company  |                               |
+|---+-------------------------+----------+-------------------------------|
+| 1 | Xikun Wu                | Beonemed | xikun.wu@beonemed.com         |
+| 2 | Zhuoxin Yu              | BMS      | zhuoxin.yu@bms.com            |
+| 3 | Oleksandr Savenkov      | BMS      | oleksandr.savenkov@bms.com    |
+| 4 | *Palanikumar Ravindran* | BMS      | palanikumar.ravindran@bms.com |
+| 5 | Bochao Jia              | Lilly    | jia_bochao@lilly.com          |
+| 6 | Jun Xin                 | Sanofi   | Jun.Xing@sanofi.com           |
+|---+-------------------------+----------+-------------------------------|
 #+TBLFM: $1=@#-1
 
 ** Study design and operations impact
-|---+---------------------+---------|
-|   | Name                | Company |
-|---+---------------------+---------|
-| 1 | Vlad Anisimov       | Amgen   |
-| 2 | Haoyu Wang          | BMS     |
-| 3 | Jessica Cannon-Hill | JNJ     |
-|---+---------------------+---------|
+|---+---------------------+---------+-------------------------------------|
+|   | Name                | Company |                                     |
+|---+---------------------+---------+-------------------------------------|
+| 1 | Vlad Anisimov       | Amgen   | vanisimo@amgen.com                  |
+| 2 | Angela Zhu          | BI      | angela.zhu@boehringer-ingelheim.com |
+| 3 | *Dooti Roy*         | BI      | dooti.roy@boehringer-ingelheim.com  |
+| 4 | Haoyu Wang          | BMS     | haoyu.wang2@bms.com                 |
+| 5 | Jessica Cannon-Hill | JNJ     | jcannon4@its.jnj.com                |
+|---+---------------------+---------+-------------------------------------|
 #+TBLFM: $1=@#-1
 
 ** Clinical supply chain
-|---+-------------------+-----------|
-|   | Name              | Company   |
-|---+-------------------+-----------|
-| 1 | Vlad Anisimov     | Amgen     |
-| 2 | Christi Kleoudis  | AZ        |
-| 3 | Kaifeng Lu        | Beonemed  |
-| 4 | Cunyi Wang        | JNJ       |
-| 5 | Allison Gray      | JNJ       |
-| 6 | Fei Chen          | JNJ       |
-| 7 | Guohui Wu/CG Wang | Regeneron |
-|---+-------------------+-----------|
+|---+--------------------+-----------+----------------------------------|
+|   | Name               | Company   |                                  |
+|---+--------------------+-----------+----------------------------------|
+| 1 | Vlad Anisimov      | Amgen     | vanisimo@amgen.com               |
+| 2 | *Christi Kleoudis* | AZ        | christi.kleoudis@astrazeneca.com |
+| 3 | Kaifeng Lu         | Beonemed  | kaifeng.lu@beonemed.com          |
+| 4 | Cunyi Wang         | JNJ       | CWang83@ITS.JNJ.com              |
+| 5 | Allison Gray       | JNJ       | agray2@its.jnj.com               |
+| 6 | Fei Chen           | JNJ       | fchen6@its.jnj.com               |
+| 7 | Guohui Wu          | Regeneron | guohui.wu@regeneron.com          |
+| 8 | CG Wang            | Regeneron | chenguang.wang@regeneron.com     |
+|---+--------------------+-----------+----------------------------------|
 #+TBLFM: $1=@#-1
 
 * Next steps
