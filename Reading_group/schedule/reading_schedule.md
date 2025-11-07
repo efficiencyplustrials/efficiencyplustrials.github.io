@@ -8,8 +8,8 @@ Welcome to the SWG-Wide Reading Group! Below is the reading schedule for our upc
 
 | **Date**       | **Time**    | **Topic/Paper**                                   | **Presenter** | **Additional Notes**                          |
 |-----------------|------------|--------------------------------------------------|---------------|-----------------------------------------------|
-| YYYY-MM-DD      | HH:MM AM/PM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 1</a>                               | Name 1        | Brief description or focus of the discussion. |
-| YYYY-MM-DD      | HH:MM AM/PM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 2</a>                               | Name 2        | Brief description or focus of the discussion. |
+| 2025-11-10      | 10-11 AM    | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 1</a>                               | Vlad Anisimov        | Brief description or focus of the discussion. |
+| 2025-11-21      | 10-11 AM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 2</a>                                 | Christi Kleoudis     | Brief description or focus of the discussion. |
 | YYYY-MM-DD      | HH:MM AM/PM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 3</a>                               | Name 3        | Brief description or focus of the discussion. |
 | YYYY-MM-DD      | HH:MM AM/PM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 4</a>                               | Name 4        | Brief description or focus of the discussion. |
 
