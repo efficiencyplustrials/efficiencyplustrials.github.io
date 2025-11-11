@@ -6,10 +6,10 @@ Welcome to the SWG-Wide Reading Group! Below is the reading schedule for our upc
 
 ## **Reading Schedule**
 
-| **Date**       | **Time**    | **Topic/Paper**                                   | **Presenter** | **Additional Notes**                          |
-|-----------------|------------|--------------------------------------------------|---------------|-----------------------------------------------|
-| 2025-11-10 | 10-11 AM | Enrollment Prediction | Vlad Anisimov |Modern Technologies for Forecasting and Optimising Clinical Trials Operations. |
-| 2025-11-21      | 10-11 AM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 2</a>                                 | Christi Kleoudis     | Brief description or focus of the discussion. |
+| **Date**         | **Time**    | **Topic/Paper**                                   | **Presenter** | **Additional Notes**                          |
+|------------------|------------|--------------------------------------------------|---------------|-----------------------------------------------|
+| 2025-11-10       | 10-11 AM | Enrollment Prediction | Vlad Anisimov |Modern Technologies for Forecasting and Optimising Clinical Trials Operations. |
+| 2025-11-21       | 10-11 AM | Clinical Supply Chain | Christi Kleoudis     | Brief description or focus of the discussion. |
 | YYYY-MM-DD      | HH:MM AM/PM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 3</a>                               | Name 3        | Brief description or focus of the discussion. |
 | YYYY-MM-DD      | HH:MM AM/PM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 4</a>                               | Name 4        | Brief description or focus of the discussion. |
 | 2026-01-05      | 10-11 AM | <a href="#" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">Paper Title 4</a>                               | Kaifeng Lu        | Brief description or focus of the discussion. |
