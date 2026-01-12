@@ -166,3 +166,245 @@
  [[https://x.com/efficiencyplus][@efficiencyplus]]
 ** Teams and Github
  Teams chat works?
+* General Meeting <November 12, 2025>
+** Agenda
+ - Introducing co-chairs:
+   Inna Perevozskaya (BMS) and Clara Cali Mella (Bayer)
+ - Introducing new members
+ - Workstream update by subteam leaders
+   |---------------+------------------------------------|
+   | Topic         | Group lead                         |
+   |---------------+------------------------------------|
+   | Recruitment   | Vlad Anisimov and Clara Cali Mella |
+   | Monitoring    | Palanikuma Ravindran               |
+   | Design        | Dooti Roy                          |
+   | CSC           | Christi Kleoudis                   |
+   | Reading Group | Guohui Wu                          |
+   |---------------+------------------------------------|
+ - Efficiency+ Roadmap (Inna)
+   What should be our deliverables?
+   Plan an Eff+ special topic issue?
+ - Conferences 2026
+  ENAR, JSM, IBC, RISW
+  SCOPE-X, SCOPE-EU (Clara)
+  SCOPE-USA Contact Marina Filshtinsky <mfilshtinsky@healthtech.com>
+ - Outreach slide deck to Merck and Pfizer (Clara)
+ - Inna publication strategy: influencing broader clinical trials community to go to a cross-functional journal where we can publish it all as a special issue. 
+   1)	Therapeutic innovation and Regulatory Science 
+   2)	Clinical Trials   
+    
+** Meeting notes
+1.	Inna to propose a  for promoting work done in this group
+2.	RISW invited proposal
+a.	I will put together a proposal based on the four topic areas
+b.	we need to find representation from academia and/or regulatory
+3.	Clara to reach out to SCOPE-X for possibility of expanding her presentation into a session on Eff+
+4.	I need to do some technical debugging on Teams/sharepoint/github access issues (Dooti and Inna currently still have problems)
+a.	Clara: please send me the out-reach deck you created and I will put it up
+* General Meeting <December 17, 2025>
+** Agenda
+ - Introduce new members
+    Jose' Pinheiro (JJIM)
+    Jimeng Sun (UIUC/keiji.ai)
+ - Workstream update by subteam leaders
+   |---------------+------------+-----------------------------------------------|
+   | Topic         | Group lead | Update                                        |
+   |---------------+------------+-----------------------------------------------|
+   | Recruitment   | Vlad/Clara |                                               |
+   | Monitoring    | Palanikuma |                                               |
+   | Architecture  | Dooti      | Jan 2026 (first meeting invite should be out) |
+   | CSC           | Christi    | Monthly meeting (second meeting Dec 4)        |
+   | Reading Group | Guohui     | Bi-weekly (Vlad/Christi/Guohui)               |
+   |---------------+------------+-----------------------------------------------|
+ - Efficiency+ Roadmap (Inna)
+   Publication strategy and potential cross-functional journals
+   Individual sub-team outputs may be published as stand-alone papers
+   One general paper tying it all up
+   Beyond stat journals only to a cross-functional journal a special issue. 
+    1. Therapeutic innovation and Regulatory Science 
+    2. Clinical Trials
+    3. Statistics in Biopharmaceutical Research (ASA journal)
+   Timeline: toward end of 2026
+ - RISW 2026 (Fei)
+    Invited session proposal (December 17, 2025 - January 14, 2026)
+     introduce the topic to regulatory and bring about interests?
+     link to regulatory topic ICHE6 guideline
+     
+     Should we highlight an Efficiency+ area?
+
+     Which regulators can we approach: (Fei will work with CG on framing)
+        Robert Abugov: how to frame the approach...
+	EMA contacts
+     Speakers
+      Dooti
+      Guohui
+      Jose'
+    Book room for face-to-face meeting
+ - SWG Annual Report Preparation (Fei)
+   To Yodit by Jan 31, 2026, EC by March 7, 2026
+   Template https://community.amstat.org/biop/aboutus/sub-committees/swg
+    1 Wellness check
+    2 What mechanism does your WG has to admit new members?
+      perhas start approaching people who haven't participated for 6
+   month if they still have interest (Jan 2027?)
+      small committee? (current co-chairs: fei/clara/inna)
+      academic advisory members for Eff+
+      reaching to our "advisors" and figure out how to engage them
+    3 Would your WG chair(s) be open to meeting once a year to share best practices and opportunities for collaboration?
+    4 Is there a term limit for the chair(s) for your WG? If there is a term limit, how long is it?
+ - Reading group update (Guohui)
+   [[https://github.com/efficiencyplustrials/efficiencyplustrials.github.io/blob/main/Reading_group/schedule/reading_schedule.md][schedule]]
+    Kaifeng (1/5/2026)
+    Methodological topics of great interest (Fei 1/19/2026)
+    Bayesian CSC optimization (Guohui to continue in subgroup meeting)
+    Poll for additional topics (GenAI/ML?)
+** Meeting notes
+*** Publication
+  Following Inna's suggestion at our last general meeting, we should
+ set a 2026 goal to publish a special issue in a cross-function
+ journal, and in addition to 1. Therapeutic innovation and Regulatory
+ Science, 2. Clinical Trials, Jose' suggested 3. Statistics in
+ Biopharmaceutical Research, an ASA journal.  Oor timeline should aim
+ to put out a special issue toward end of 2026, which means we need to
+ start contacting the journals early next year.
+*** RISW 2026
+  Fei will put together an invited session proposal (submission window
+  is December 17, 2025 - January 14, 2026).  Per CG's suggestion, we
+  should propose a session to introduce SWG and operational related
+  topics to regulatory participants and pique their interest for
+  participation, one possibility is to link the session to ICH-E6
+  guideline. We discussed the possibility to invite a speaker from
+  health authorities, following up on two previous leads (Robert
+  Abugov, FDA and Benjamin Hofner, EMA). CG and Fei will work on how
+  best to frame the session proposal and engage them.
+
+  Potential session speakers are Dooti, Guohui, Jose'
+  
+*** SWG Annual Report
+  We also discussed a request from SWG chair Yodit Seifu on an annual
+   SWG report, who's asking about mechanisms to admit new members as
+   well as term limits for chairs.
+
+ Kyle Wathen proposed that we should revisit Efficiency+ team roster
+ and confirm participation come January 2027 and remove those who do
+ not have the bandwith to actively participate.
+
+ CG also suggested formation of a committee for Efficiency+ that can
+ meet more frequently to discuss logistics such as membership to the
+ group. Currenly the co-chairs (Fei/Clara/Inna) have a reguarly
+ monthly meeting. Perhaps that is sufficient for now.
+
+ Lastly, Eff+ dose have advisory roles (Jose', Benjamin) and we should
+consider finding more advisors from academia. It is thus far unclear
+how to best engage our advisors. Fei will work with co-chairs on this.
+
+
+
+*** GPT version:
+
+### **Publication**
+
+Following Inna’s suggestion at our last general meeting, we propose
+setting a 2026 goal to publish a **special issue in a cross-functional
+journal**. In addition to *Therapeutic Innovation and Regulatory
+Science* and *Clinical Trials*, Jose suggested including *Statistics
+in Biopharmaceutical Research* (an ASA journal).
+
+Our timeline should target releasing the special issue toward the
+**end of 2026**, which means we need to begin contacting journals
+**early next year**.
+
+
+### **RISW 2026**
+
+Fei will prepare an **invited session proposal** (submission window:
+**December 17, 2025 – January 14, 2026**).
+
+Per CG’s suggestion, the session should introduce SWG and operational
+topics to regulatory participants and spark interest in future
+engagement. One idea is to **link the session to the ICH-E6
+guideline**.
+
+
+We also discussed inviting a speaker from health authorities, following up on two previous leads:
+
+*   Robert Abugov (FDA)
+*   Benjamin Hofner (EMA)
+
+CG and Fei will collaborate on framing the proposal and engaging these potential speakers.  
+Additional potential speakers include **Dooti, Guohui, and Jose**.
+
+***
+
+### **SWG Annual Report**
+
+We reviewed a request from SWG Chair **Yodit Seifu** regarding the
+annual SWG report, specifically asking about:
+
+*   Mechanisms for admitting new members
+*   Term limits for chairs
+
+Kyle Wathen proposed revisiting the **Efficiency+ team roster** in
+January 2027 to confirm participation and remove members who lack
+bandwidth for active involvement.
+
+CG suggested forming an **Efficiency+ committee** to meet more
+frequently and address logistics such as membership. Currently, the
+co-chairs (Fei, Clara, Inna) hold a regular monthly meeting, which may
+suffice for now.
+
+Lastly, Efficiency+ has advisory roles (Jose', Benjamin), and we should
+consider adding more advisors from academia. It remains unclear how
+best to engage advisors—Fei will work with co-chairs to address this.
+
+
+* CSC Meeting <December 4, 2025>
+ - review efficiency+ allison's example
+   https://azcollaboration.sharepoint.com/sites/ASAEfficiencyClinicalSupplyChainSubTeam/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=1wYFUB&FolderCTID=0x0120000357E7135F8B6649AEA3710302B9C600&id=%2Fsites%2FASAEfficiencyClinicalSupplyChainSubTeam%2FShared%20Documents%2FASA%20EfficiencyPlus%20Clinical%20Supply%20Chain%2FExample%20Trial
+
+* Reading group
+ - <November 11, 2025>
+   Vlad
+ - <December >
+ - Eff+ reading group presentation 1/19/2026
+    site closing
+    non-homogenous process necessary?
+    site level ML score
+     how to incoorporate?
+    combining projections
+    csc site level projection important
+    patient journey simulation
+    rtsm end-to-end simulation
+ - Eff+ reading group
+   share the slides
+   deep dive into details
+    poisson gamma modeling
+     time varying (need monte carlo?)
+    historical data (17 member global recruitment data sharing platform)
+     gamma poisson with superlearner regression?
+     efficacy/relevancy for new studies?
+    optimal design considerations
+     constrained optimization across country, site, cost (costs info are often hard to come by)
+     design factors such as min/max caps and their impact on probability of success
+    "adaptive" design
+      sites to be added tend to be less performing than original sites?
+      how to calculate how many I need? depending also on assumptions of site recruitment rate often good sites are already in the original plan... new sites not as good
+    screening and modeling of other processes
+     country-site-screening-randomization-dropout-events-patient journey-drug deman and supply
+     MCMC may be the only way?
+    sites
+     closing process
+     site level prediction is hard, how to best leverage historical information
+     identifying sites that don't recruit well (e.g. Pr=0, Pr>22) by borrowing information from other sites?
+      site level calculations like Prob(>2) is based only on site-level data or pooled across sites?
+     how to optimally group sites for gamma poisson implementation?
+    central monitoring algorithms
+     detecting high and low enrolling sites, boin design for detecting under/over enrolling sites, how to pool data across sites?
+    how to lead to actionable recommendations?
+* other topics
+Outreach
+ How to promote awareness amongst leaders in stats and operationalists
+Palani
+ survey of existing literature for white paper
+ 1 step beyond, i.e. new methods
+     

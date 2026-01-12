@@ -14,6 +14,8 @@
 |---+------------------+-----------|
 #+TBLFM: $1=@#-1
 
+** sharepoint (AZ)
+https://azcollaboration.sharepoint.com/sites/ASAEfficiencyClinicalSupplyChainSubTeam/Shared Documents/ASA EfficiencyPlus Clinical Supply Chain/Example Trial?csf=1&web=1&e=1wYFUB&xsdata=MDV8MDJ8ZmNoZW42QGl0cy5qbmouY29tfGYwYmJiOGU3NjVmMDQ1NzQ1YmQzMDhkZTMzNTQwOGM1fDNhYzk0YjMzOTEzNTQ4MjE5NTAyZWFmZGE2NTkyYTM1fDB8MHw2MzkwMDQ2MzMxOTAzODY2NDV8VW5rbm93bnxUV0ZwYkdac2IzZDhleUpGYlhCMGVVMWhjR2tpT25SeWRXVXNJbFlpT2lJd0xqQXVNREF3TUNJc0lsQWlPaUpYYVc0ek1pSXNJa0ZPSWpvaVRXRnBiQ0lzSWxkVUlqb3lmUT09fDB8fHw%3d&sdata=aHRyNU5rRkFOR2NpWEFtWitVTmZhQU9yTXl5MlZEMnlGTTlwVlE0Y1hRRT0%3d
 ** Focus area questions
 - Simulation based work flow from demand forecast to supply planning
 - Discontinuation/dropout modeling for supply

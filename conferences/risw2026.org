@@ -1,0 +1,77 @@
+* Prompt 
+Description:
+Session Objectives:
+Specifically topics of interest that will be highlighted:
+Proposed presentations:
+Target Audience:
+Key Highlights:
+Theme fit:
+
+* Description
+
+ICH‑E6(R3) emphasizes risk‑proportional quality management,
+reliability of results, and adaptability to digital and decentralized
+trial models. This invited session demonstrates how advanced
+statistical methods can transform operational efficiency across
+critical trial domains. Four talks will cover: (i) patient recruitment
+monitoring and forecasting, including predictive site selection
+models; (ii) dynamic trial monitoring and data quality strategies that
+integrate real‑time analytics for risk‑based oversight; (iii) the
+interplay between statistical design and operational execution,
+highlighting how design choices influence timelines and resource
+allocation-and vice versa; and (iv) clinical supply chain optimization
+using probabilistic forecasting and simulation to ensure continuity
+and minimize waste. This invited session will demonstrate how these
+advanced statistical methods enable cross-disciplinary decision-making
+in the context of ICH‑E6(R3) principles. By integrating biostatistics,
+clinical operations, regulatory science, and supply chain analytics,
+Each presentation will connect these innovations to ICH‑E6(R3)
+principles, offering practical frameworks and case studies for
+statisticians, clinical operations leaders, and regulatory scientists.
+
+* Audience
+   Clinical trial statisticians
+   Clinical operations leaders
+   Regulatory scientists
+   Data managers and engineers
+   Supply chain planners in clinical research
+
+* Theme Fit
+
+This session aligns with RISW’s focus on **transdisciplinary
+decision‑making and the changing digital landscape** by demonstrating
+how ICH‑E6(R3) principles can be implemented through advanced
+statistical approaches across critical operational domains. The talks
+integrate regulatory expectations, digital trial innovations, and
+efficiency‑driven analytics, offering practical solutions that enhance
+reliability of results and operational performance in modern clinical
+trials.
+
+* Submission window: December 17, 2025 – January 14, 2026;
+* Workshop dates: September 16–18, 2026, Rockville, MD.
+* RISW proposal guidance highlights: prioritize transdisciplinary decision‑making & the changing digital landscape
+
+* Efficiency+ in Practice: Advanced Analytics for Operational Excellence under ICH‑E6
+
+
+## 7) Outreach Email Template (to potential speakers; not used in submission)
+
+```text
+Subject: RISW 2026 Invited Session on ICH‑E6(R3) & Operational Efficiency
+
+Dear Colleague,
+
+I’m organizing a parallel session at RISW 2026 on “Quality by Design for Trial Operations:
+Statistical Innovations Aligned to ICH‑E6(R3).” The goal is to showcase actionable analytics
+that improve enrollment, monitoring, data governance, and decentralized operations in line
+with E6(R3)’s principles and Annex guidance.
+
+Would you be willing to present a 20–25 minute talk on [topic]? The session will include
+industry, FDA, and (ideally) academia, with names kept out of the proposal per RISW rules.
+
+Key dates: Proposal window closes January 14, 2026; workshop is Sept 16–18 (Rockville, MD).
+I can share a brief outline and expected takeaways.
+
+Thank you!
+Fei
+```

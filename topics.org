@@ -1,0 +1,88 @@
+
+** Data-driven Approaches
+
+- **Site Performance & Selection**
+  - Bohdana Ratitch: Suitable predictive analytics/ML for site performance modeling
+  - Palani Ravindran: Data privacy/access impacts; leveraging RWD/external data for site identification
+  - Zhuoxin Yu: Use of public/commercial databases for site/investigator/study committee selection
+  - Bochao Jia: Evaluating site performance from operational and data quality perspectives
+
+
+** Recruitment Monitoring & Forecasting
+
+- **Enrollment & Projection Methods**
+  - Haoyu Wang: Predicting enrollment with slow/fast scenarios
+  - Tobias Straubinger: Best models for recruitment; improving with trial history data
+  - Fei Chen: Combining sources for forecasting (actuals, historical, local, baseline)
+  - Bochao Jia: Differentiating screening/enrollment projections and time to completion
+
+
+** Study Design & Operational Impact
+
+- **Innovative Design Implementation**
+  - Haoyu Wang: Streamlining innovative/inferential seamless designs in face of operational challenges
+  - Forrest Williamson: (No explicit question, but implied study design/operations interface)
+ 
+
+** Operational Efficiencies in Non-traditional Trials
+
+- **Decentralized, Pragmatic, and Observational Trials**
+  - Jun Xing: Designing DCTs/PCTs to balance feasibility, efficacy-effectiveness gap, and data quality in real-world settings
+
+
+** Representativeness & Generalizability
+
+- **Population Monitoring**
+  - Bohdana Ratitch: Dynamically monitoring trial participant characteristics for representativeness; setting site enrollment targets to match population objectives
+
+
+** Clinical Drug Supply Optimization
+
+- **Forecasting & Stakeholder Engagement**
+  - Kaifeng Lu: Improving assumptions/forecasts for supply disruptions (discontinuation, skip visits)
+  - Fei Chen: Overview/practical guidelines for 4C and other supply forecast tools; simulation platforms for drug supply planning; showing statistical value via retrospective analysis
+
+
+** Dynamic Trial Monitoring & Adaptive Operations
+
+- **Predictive Monitoring & Techniques**
+  - Palani Ravindran: Most predictive operational metrics and AI/ML techniques for ongoing risk detection
+  - Zhuoxin Yu: Better prediction/monitoring of events and dropouts (study/regional/site levels)
+
+
+** Regulatory Perspectives
+
+- **Operational Planning in Study Design**
+  - Fei Chen: Advocating for operational planning rigor in regulatory guidelines (adaptive designs, MRCT, DCT, PCT)
+  - Reference to ICH E20 and operational challenges introduced by adaptations in trials
+
+
+** Stakeholder Engagement
+
+- **Collaboration & Change Management**
+  - Fei Chen: Collaborating across teams/functions, convincing stakeholders to embrace change
+  - Fei Chen: Showing value via counter-factual analysis/retrospective workflow insights
+
+
+** Strategic Data Collection & Analysis Planning
+
+**Sample Collection for Target Product Profile**
+  - Zhuoxin Yu: Best strategy for blood sample collection – optimize amount while maintaining data quality for PK, ADA, biomarkers
+
+---
+
+**️ Summary Table
+
+| Main Category                                    | Example Subtopics                                                  |
+|--------------------------------------------------+--------------------------------------------------------------------|
+| Data-driven Approaches                           | Site performance, data sources/selection, privacy/data quality     |
+| Recruitment Monitoring & Forecasting             | Enrollment prediction, model selection, projection methodology     |
+| Study Design & Impact on Operations              | Innovative design implementation, operational complexities         |
+| Operational Efficiency in Non-Traditional Trials | DCT/PCT/observational trial design, feasibility, data quality      |
+| Ensuring Representativeness & Generalizability   | Population monitoring and site targeting                           |
+| Clinical Drug Supply Optimization                | Supply/discontinuation modeling, stakeholder workflow, simulations |
+| Dynamic Trial Monitoring & Adaptive Operations   | Predictive monitoring, risk event/dropout prediction               |
+| Regulatory Perspectives                          | Guideline adaptation, operational rigor in planning                |
+| Stakeholder Engagement                           | Cross-team collaboration, change management                        |
+| Strategic Data Collection & Analysis Planning    | Optimized sample collection (PK/ADA/biomarkers)                    |
+
