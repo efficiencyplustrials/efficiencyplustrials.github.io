@@ -1,0 +1,98 @@
+1. **Site Selection and Performance Modeling: Predictive Analytics/ML and RWD Integration**
+2. **Recruitment Monitoring and Forecasting: Advanced Modeling Approaches**
+3. **Dynamic Trial Monitoring: AI/ML for Emerging Risk Prediction**
+4. **Trial Population Representativeness: Dynamic Monitoring of Participant Characteristics**
+
+---
+
+### **Abstracts for Each Topic**
+
+#### **1. Site Selection and Performance Modeling: Predictive Analytics/ML and RWD Integration**
+Optimizing site selection is critical for accelerating trial timelines
+and ensuring data quality. This talk will explore the use of
+predictive analytics and machine learning to model site performance,
+leveraging historical trial data and real-world data (RWD) to identify
+high-performing sites. The integration of external data sources
+enables a more nuanced understanding of site capabilities, patient
+availability, and operational risk. Presenters will share case studies
+demonstrating how these models have improved site activation speed,
+enrollment rates, and overall trial efficiency.
+
+
+#### **2. Recruitment Monitoring and Forecasting: Advanced Modeling Approaches**
+Accurate recruitment forecasting is essential for proactive trial
+management. This presentation will highlight advanced statistical
+methods, including Poisson-gamma models and Bayesian approaches, to
+monitor and predict recruitment trajectories under various
+scenarios. These models allow for dynamic updates as new data becomes
+available, enabling sponsors to anticipate delays, adjust strategies,
+and allocate resources more effectively. Real-world applications will
+illustrate how these techniques have reduced recruitment uncertainty
+and improved trial planning.
+
+
+#### **3. Dynamic Trial Monitoring: AI/ML for Emerging Risk Prediction**
+Traditional trial monitoring often lags behind emerging risks. This
+session will showcase how artificial intelligence and machine learning
+can be used to detect operational and data integrity risks in real
+time. By analyzing patterns in site behavior, patient data, and
+protocol deviations, these models can flag potential issues before
+they escalate. The discussion will include algorithm development,
+validation strategies, and implementation challenges, with examples
+from ongoing trials demonstrating improved oversight and risk
+mitigation.
+
+
+#### **4. Trial Population Representativeness: Dynamic Monitoring of Participant Characteristics**
+Ensuring that trial populations reflect the diversity of the target
+patient population is increasingly important for regulatory and
+ethical reasons. This talk will present statistical frameworks for
+dynamically monitoring participant characteristics—such as age,
+gender, race, and comorbidities—throughout the enrollment
+period. These methods support adaptive recruitment strategies and help
+maintain representativeness across sites and regions. Case studies
+will show how these tools have been used to enhance trial inclusivity
+and generalizability of results.
+
+
+
+Towards A Unified Modeling Framework for Patient Enrollment
+Guohui Wu and Chenguang Wang
+
+Regeneron
+Abstract
+Robust and accurate enrollment forecasting plays a critical role in ensuring clinical trial success. From a portfolio management perspective, pre-study enrollment prediction helps stakeholders better understand recruitment timelines under "what if" scenarios and forecast clinical trial drug demand. Constrained by limited information, enrollment rate assumptions are typically based on historical data from similar previous trials and/or expert knowledge.
+Once a study begins, accumulated patient enrollment data can be utilized to assess enrollment rate assumptions, providing operational insights and supporting data-informed decision-making. These insights enable prediction of future enrollment profiles, study timelines, and endpoint maturation—all critical factors for improving trial success.
+Despite the key importance of patient enrollment prediction and its evolving methodological development, significant unmet needs remain for a unified modeling framework. Such a framework should account for heterogeneity from difference sources, incorporate spatial correlation of the underlying enrollment process among sites, and allow for dispersion flexibility.
+Motivated by these needs, we propose a class of models that include commonly used Poisson and negative binomial models as special cases, while also incorporating other models with dispersion flexibility and spatial correlation. To facilitate efficient model estimation, we have developed customized algorithms that achieve fast and efficient estimation under the Bayesian paradigm. We provide examples demonstrating both the practical application of our proposed model and the efficiency of our algorithms.
+
+
+---
+
+### **Session Proposal for JSM Submission**
+
+Title:
+Efficiency+: Advancing Clinical Trial Operations through Innovative Statistical Methodologies
+
+**Organizer:** Fei Chen, Sr. Director Biostatistics, Johnson & Johnson
+
+**Session Type:** Invited Session
+
+**Session Description:**
+This invited session brings together leading statisticians and data
+scientists to discuss cutting-edge research aimed at improving
+clinical trial operations through advanced statistical methods. Topics
+will include predictive modeling for site selection, dynamic
+recruitment forecasting, AI-driven trial monitoring, and real-time
+assessment of population representativeness. Each presentation will
+highlight methodological innovations, practical implementation
+strategies, and real-world impact on trial efficiency and data
+quality. The session will appeal to statisticians, clinical
+researchers, and operational leaders seeking to leverage data science
+to optimize trial execution.
+
+Guohui Wu
+Critiana Mayer/Jessica
+Kaifeng Lu
+Clara Cali Mella
+

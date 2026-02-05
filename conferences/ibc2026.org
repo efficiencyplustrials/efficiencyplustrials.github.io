@@ -1,0 +1,155 @@
+** Fei Chen <fchen6@its.jnj.com>
+
+Efficiency+ SWG: Improve Clinical Trial Operations through Advanced Statistics
+
+The purpose of this session is to introduce the newly formed ASA
+Biopharmaceutical Section Scientific Working Group on Operational
+Efficiency, "Efficiency+." and promote awareness of the important
+roles statisticians can play in clinical trial operations. The
+initiative aims to foster collaboration among statisticians, clinical
+trial operations professionals, and regulatory stakeholders to drive
+innovative solutions and best practices. By bringing together diverse
+expertise, "Efficiency+" hopes to facilitate knowledge exchange,
+streamline operations, and develop data-driven strategies that will
+ultimately accelerate the path to successful clinical outcomes.
+
+The session will highlight state-of-the-art statistical methods and
+operational strategies to improve the efficiency of clinical trial
+execution, focusing on clinical study operational areas such as trial
+feasibility assessment, patient recruitment planning and tracking, and clinical drug
+supply. The presentations will explore innovative analytical
+methodologies at the intersection of several fields, including
+Bayesian modeling, Data Science and AI/ML and clinical trial simulation.
+
+This session aligns closely with the pressing need for innovation in
+clinical trial execution—a critical area as the biopharmaceutical
+industry and research community continue to tackle complex health
+challenges. By showcasing state-of-the-art statistical methods and
+operational strategies, the session addresses key pain points such as
+trial feasibility, site selection, patient recruitment, and drug
+supply management, which are pivotal for the success of modern
+clinical trials. The focus on leveraging cutting-edge analytical
+methodologies, including Bayesian modeling, AI/ML, and trial
+simulation, demonstrates a forward-thinking approach by integrating
+expertise from multiple domains. Additionally, the emphasis on
+real-world and clinical trial data ensures that the insights shared
+are both practical and impactful. This session fosters collaboration
+among statisticians from academia, industry, and
+government—contributing to the establishment of a dynamic field of
+research aimed at optimizing clinical trial processes and outcomes.
+
+** Anisimov, Vlad <vanisimo@amgen.com>;
+
+Advanced Data-Driven Statistical Technologies for Designing and Forecasting Clinical Trial Operations
+
+In an era defined by data abundance, leveraging advanced statistical
+technologies is transforming the design and forecasting of clinical
+trial operations. This presentation delves into latest innovation in
+data-driven approaches that optimize trial efficiency and enhance
+operational decision-making. Key topics include predictive modeling
+powered by machine learning to forecast patient recruitment and site
+performance, and real-world data integration to support operational
+feasibility and strategic planning. By coupling robust statistical
+methodologies with cutting-edge AI technologies, researchers and trial
+sponsors can streamline operations, reduce delays, and address
+challenges such as diverse population representation and global
+regulatory complexities. Real-world case studies and application
+scenarios will demonstrate how these advanced tools are reshaping
+clinical trial operations, fostering agility, cost management, and
+ultimately improved outcomes.
+
+** Xun Chen
+
+Efficiency+ SWG: Data-Driven Decision Making: The Role of Statistical Modeling in
+Improving Clinical Trial Success
+
+In an era of rising development costs and intensifying competition,
+improving the probability of clinical trial success is a leadership
+challenge - not just a technical one. This talk reframes statisticians
+as strategic partners in enterprise decision-making, moving beyond
+analysis delivery to shaping how organizations design, govern, and
+operate trials. I will outline how statistical leadership can help
+executives:
+
+1. Shift from retrospective reporting to forward-looking decisions
+through scenario planning, early signal detection, and proactive risk
+management;
+2. Simplify and standardize operations by championing
+fit-for-purpose designs, protocol quality by design, and reusable
+analytics assets;
+3. Accelerate execution by embedding statisticians
+alongside clinical operations to inform country and site strategies,
+enrollment predictability, and diversity-by-design;
+4. Strengthen governance and accountability with clear decision rights, cycle-time
+and quality metrics, and transparent evidence thresholds; and
+5. Scale capability with confidence by coupling AI-enabled insights and
+external real-world data with robust data stewardship, auditability,
+and ethical guardrails.
+
+
+** Palanikumar
+
+Efficiency+ SWG: Integrating GenAI-Enabled Machine Learning Models for Optimization of
+Clinical Trial Operations and Success Metrics
+
+The complexity of modern clinical trials demands innovative approaches
+to improve efficiency, predictability, and success rates. This
+presentation examines the integration of Generative AI (GenAI) and
+machine learning (ML) models into clinical trial operations, focusing
+on how these technologies can transform decision-making and
+performance monitoring. We will discuss frameworks for leveraging
+GenAI to synthesize historical trial data, real-world evidence, and
+operational metrics to generate predictive insights for enrollment
+forecasting, site selection, and protocol optimization. Advanced ML
+algorithms will be highlighted for their role in dynamic risk
+assessment, adaptive resource allocation, and early signal detection
+of operational bottlenecks. Additionally, we explore success metrics
+beyond traditional endpoints — such as cycle-time reduction, diversity
+compliance, and cost efficiency — and how AI-driven dashboards enable
+real-time scenario planning. 
+
+** Kyle Wathen  <kyle.wathen@cytel.com>
+
+Efficiency+ SWG: Emerging Software Tools for Planning and Monitoring
+
+Efficient feasibility planning relies on robust software platforms
+that support complex decision-making processes. I will focus on the
+role of software tools in feasibility assessments, site selection, and
+patient recruitment planning. The rapid evolution of software tools is
+revolutionizing clinical trial operations, enabling more efficient
+planning and monitoring processes. This presentation will explore
+emerging software technologies that combine advanced statistical
+methods with AI-driven analytics to enhance decision-making across the
+trial lifecycle. Key features include predictive site selection
+algorithms, patient recruitment monitoring dashboards, and tools for
+optimizing clinical drug supply. By integrating real-world data and
+clinical trial simulations, the software solutions need to provide
+actionable insights that improve feasibility assessments and
+streamline operational workflows. Additionally, innovations in data
+visualization and automated reporting system design can facilitate
+real-time tracking of trial progress, allowing teams to address
+bottlenecks proactively and manage more effectively the complexity of
+multi-regional clinical trials.
+
+* further comments
+
+The purpose of this session is to introduce and promote the newly
+formed ASA Biopharmaceutical Section Scientific Working Group on
+Operational Efficiency, "Efficiency+." This initiative aims to raise
+awareness of the important role that statisticians and quantitative
+scientists can play in improving clinical trial operations. By
+fostering greater collaboration among statisticians, clinical trial
+professionals, and regulatory partners, "Efficiency+" seeks to develop
+practical, data-driven approaches that can enhance overall trial
+efficiency and success. We hope to attract more contributors to the
+SWG through this invited session to increase our capacity and drive
+meaningful changes to impact the industry.
+
+Fei Chen : Efficiency+ Scientific Working Group
+Xun Chen : Data-Driven Decision Making: The Role of Statistical Modeling in Improving Clinical Trial Success
+Vlad Anisimov : Advanced Data-Driven Statistical Technologies for Designing and Forecasting Clinical Trial Operations
+Palanikumar Ravindran : Integrating GenAI-Enabled Machine Learning Models for Optimization of Clinical Trial Operations and Success Metrics
+Eun Young Suh : Operational Challenges and Lessons Learned in a Very Large Phase 3 Program
+Kyle Wathen : Emerging Software Tools for Planning and Monitoring
+
+

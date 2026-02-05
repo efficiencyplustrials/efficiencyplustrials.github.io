@@ -1,3 +1,47 @@
+* final version
+Efficiency+: Advanced Statistical Innovations Driving Clinical Trial Efficiency
+ 
+The ICH E6(R3) guideline, "Guideline for Good Clinical Practice," highlights the importance of risk-proportional quality management, the reliability of results, and adaptability to digital and decentralized trial models. While these principles primarily focus on maintaining the data integrity and credibility of clinical trials, they also underscore the significant role of clinical operations. These guidelines serve as a foundational context for advanced statistical methods, which are key to enhancing trial operational efficiency and decision-making processes. This invited session brings together experts from regulatory agencies, academia, and industry to explore how innovative analytics can optimize critical operational domains in clinical trials. The session uses ICH-E6 principles as a contextual framework for discussing statistical advancements that enable smarter, faster, and more reliable trials.
+ 
+Four talks are proposed to cover:
+- Data-Driven Patient Recruitment: Statistical Approaches to Site Activation and Enrollment Forecasting – a comparative analysis of diverse statistical models designed to capture these processes
+- Dynamic Trial Monitoring and Data Quality Strategies – integrating real-time analytics for risk-based oversight aligned with FDA initiatives such as C3TI SSDC.
+- Interplay Between Statistical Design and Operational Execution – how design choices influence timelines and resource allocation, and vice versa.
+- Clinical Supply Chain Optimization – probabilistic forecasting and simulation to ensure continuity and minimize waste.
+
+The session will also have discussants offering insights on how these innovations intersect with regulatory review. By integrating biostatistics, clinical operations, regulatory science, and supply chain analytics, this session provides practical frameworks and case studies for statisticians, clinical operations leaders, and regulatory scientists.
+ 
+Learning Objectives
+- Understand how advanced statistical methods can improve operational efficiency in patient recruitment, monitoring, and supply chain management.
+- Explore strategies for integrating real-time analytics into risk-based trial oversight.
+- Examine the interplay between trial design and operational execution to optimize timelines and resources.
+- Identify opportunities for aligning statistical innovations with regulatory expectations under ICH E6(R3).
+
+Target Audience
+- Clinical trial statisticians
+- Clinical operations leaders
+- Regulatory scientists
+- Supply chain planners
+
+Theme Fit
+
+This session aligns perfectly well with RISW’s focus on
+"Transdisciplinary decision‑making and the changing digital landscape"
+by demonstrating how advanced statistical approaches can have real
+impact in diverse clinical trial operations from site selection to
+enrollment monitoring to supply planning. The talks integrate
+regulatory expectations, digital trial innovations, and
+efficiency‑driven analytics, offering practical recommendations to
+improve trial integrity and reliability.
+
+Keywords
+- Efficiency+
+- Clinical trial excellence
+- Patient recruitment forecasting
+- Clinical supply chain
+- ICH E6(R3), Good Clinical Practice
+- Regulatory Decision Making
+
 * Prompt 
 Description:
 Session Objectives:

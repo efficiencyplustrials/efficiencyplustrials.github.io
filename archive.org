@@ -156,7 +156,6 @@
 
 
 
- 
 ** Media
 *** Web
  https://efficiencyplustrials.github.io
@@ -299,6 +298,34 @@ consider finding more advisors from academia. It is thus far unclear
 how to best engage our advisors. Fei will work with co-chairs on this.
 
 
+***
+
+### **SWG Annual Report**
+
+We reviewed a request from SWG Chair **Yodit Seifu** regarding the
+annual SWG report, specifically asking about:
+
+*   Mechanisms for admitting new members
+*   Term limits for chairs
+
+Kyle Wathen proposed revisiting the **Efficiency+ team roster** in
+January 2027 to confirm participation and remove members who lack
+bandwidth for active involvement.
+
+CG suggested forming an **Efficiency+ committee** to meet more
+frequently and address logistics such as membership. Currently, the
+co-chairs (Fei, Clara, Inna) hold a regular monthly meeting, which may
+suffice for now.
+
+Lastly, Efficiency+ has advisory roles (Jose', Benjamin), and we should
+consider adding more advisors from academia. It remains unclear how
+best to engage advisors—Fei will work with co-chairs to address this.
+
+*   Robert Abugov (FDA)
+*   Benjamin Hofner (EMA)
+
+CG and Fei will collaborate on framing the proposal and engaging these potential speakers.  
+Additional potential speakers include **Dooti, Guohui, and Jose**.
 
 *** GPT version:
 
@@ -328,79 +355,154 @@ guideline**.
 
 We also discussed inviting a speaker from health authorities, following up on two previous leads:
 
-*   Robert Abugov (FDA)
-*   Benjamin Hofner (EMA)
-
-CG and Fei will collaborate on framing the proposal and engaging these potential speakers.  
-Additional potential speakers include **Dooti, Guohui, and Jose**.
-
-***
-
-### **SWG Annual Report**
-
-We reviewed a request from SWG Chair **Yodit Seifu** regarding the
-annual SWG report, specifically asking about:
-
-*   Mechanisms for admitting new members
-*   Term limits for chairs
-
-Kyle Wathen proposed revisiting the **Efficiency+ team roster** in
-January 2027 to confirm participation and remove members who lack
-bandwidth for active involvement.
-
-CG suggested forming an **Efficiency+ committee** to meet more
-frequently and address logistics such as membership. Currently, the
-co-chairs (Fei, Clara, Inna) hold a regular monthly meeting, which may
-suffice for now.
-
-Lastly, Efficiency+ has advisory roles (Jose', Benjamin), and we should
-consider adding more advisors from academia. It remains unclear how
-best to engage advisors—Fei will work with co-chairs to address this.
-
-
 * CSC Meeting <December 4, 2025>
  - review efficiency+ allison's example
    https://azcollaboration.sharepoint.com/sites/ASAEfficiencyClinicalSupplyChainSubTeam/Shared%20Documents/Forms/AllItems.aspx?csf=1&web=1&e=1wYFUB&FolderCTID=0x0120000357E7135F8B6649AEA3710302B9C600&id=%2Fsites%2FASAEfficiencyClinicalSupplyChainSubTeam%2FShared%20Documents%2FASA%20EfficiencyPlus%20Clinical%20Supply%20Chain%2FExample%20Trial
 
-* Reading group
- - <November 11, 2025>
-   Vlad
- - <December >
- - Eff+ reading group presentation 1/19/2026
-    site closing
-    non-homogenous process necessary?
-    site level ML score
-     how to incoorporate?
-    combining projections
-    csc site level projection important
-    patient journey simulation
-    rtsm end-to-end simulation
- - Eff+ reading group
-   share the slides
-   deep dive into details
-    poisson gamma modeling
-     time varying (need monte carlo?)
-    historical data (17 member global recruitment data sharing platform)
-     gamma poisson with superlearner regression?
-     efficacy/relevancy for new studies?
-    optimal design considerations
-     constrained optimization across country, site, cost (costs info are often hard to come by)
-     design factors such as min/max caps and their impact on probability of success
-    "adaptive" design
-      sites to be added tend to be less performing than original sites?
-      how to calculate how many I need? depending also on assumptions of site recruitment rate often good sites are already in the original plan... new sites not as good
-    screening and modeling of other processes
-     country-site-screening-randomization-dropout-events-patient journey-drug deman and supply
-     MCMC may be the only way?
-    sites
-     closing process
-     site level prediction is hard, how to best leverage historical information
-     identifying sites that don't recruit well (e.g. Pr=0, Pr>22) by borrowing information from other sites?
-      site level calculations like Prob(>2) is based only on site-level data or pooled across sites?
-     how to optimally group sites for gamma poisson implementation?
-    central monitoring algorithms
-     detecting high and low enrolling sites, boin design for detecting under/over enrolling sites, how to pool data across sites?
-    how to lead to actionable recommendations?
+* Co-chair meeting <2026-01-16 Fri>
+*** SWG Annual Report
+We reviewed a request from SWG Chair **Yodit Seifu** regarding the
+annual SWG report, specifically asking about:
+ - Mechanisms for admitting new members
+    
+ - Term limits for chairs: staggered/rotation
+
+  We also discussed a request from SWG chair Yodit Seifu on an annual
+   SWG report, who's asking about mechanisms to admit new members as
+   well as term limits for chairs.
+
+   Kyle Wathen proposed that we should revisit Efficiency+ team roster
+   and confirm participation come January 2027 and remove those who do
+   not have the bandwith to actively participate.
+
+   CG also suggested formation of a committee for Efficiency+ that can
+   meet more frequently to discuss logistics such as membership to the
+   group. Currenly the co-chairs (Fei/Clara/Inna) have a reguarly
+   monthly meeting. Perhaps that is sufficient for now.
+
+   Lastly, Eff+ dose have advisory roles (Jose', Benjamin) and we should
+   consider finding more advisors from academia/HA/CRO. It is thus far unclear
+   how to best engage our advisors. Fei will work with co-chairs on this.
+
+ 
+** 2026 deliverables
+*** White paper
+  Following Inna's suggestion at our last general meeting, we should
+ set a 2026 goal to publish a special issue in a cross-function
+ journal, and in addition to
+ 
+ 1. Therapeutic innovation and Regulatory Science,
+ 2. Clinical Trials
+ 3. Statistics in Biopharmaceutical Research
+ 4. CRO's perspective on best journal # clara and fei to do research  on (IQVIA publication?)
+ 5. medical journals to reach clinical audience? (possibility for next  year 2027, short publication)
+    
+   our timeline should aim
+ to put out a special issue toward end of 2026, which means we need to
+ start contacting the journals early next year.
+*** Conferences
+ - ENAR March /IBC July/JSM August/RISW Sept
+ - SCOPE Europe Barcelona (annoucement for submission will come out
+   after SCOPE FL feb)
+*** Social media (Crystal Shaw @ Amgen)
+@efficiencyplus on X.com
+efficiencyplustrial on linkedin
+*** subgroup meetings
+
+*** todo
+- Clara and Fei to reach out to our internal contacts (including Kyle from Cytel) for potential CRO representations on Eff+
+- Clara and Fei to research on a potential journal publication that's geared towards CROs for our white paper
+- Jose' suggested perhaps we should plan on publishing an opinion paper in a relevant medical journal to reach clinical audience to promote awareness, set as goal for 2027
+- SCOPE Europe annoucement for submission will come out after SCOPE FL in Feburary, Fei to organize speakers for a session proposal
+
+* Guo-hui and Jose' Reading Group brainstorm <2026-01-29 Thu>
+   does asa provide a meeting host that allows meeting/webinar
+   platform
+   give cyrus and vlad update, ask for him to reach out to bslc
+   (biostats leaders consortium)
+   how to promote people to talk about the problems they are working
+   on as presentations
+   asa biopharm webinar
+   quantitative evaluation of management strategy, design of experiments
+* General Meeting <2026-02-04 Wed>
+ - Annual report submitted and logged in github
+ - Subtopic team update
+  - Clara (Enrollment)
+    Here is our folder in the GitHub to upload literature and our
+    working documents:
+    efficiencyplustrials.github.io/Topics/patient_recruitment_site_selection
+    at main · efficiencyplustrials/efficiencyplustrials.github.io
+     
+     For our next meeting we agreed to have the following topics:
+     -	Discuss the main topics we want to work on this year:
+     o	Review Vlad’s document (you’ll find it in our folder)
+     o	Add there any other topic you’d like to include (by end of this week)
+     o	I’ll send a voting email next Monday so we can share the results on our call on Tuesday
+     -	Agree on deliverables for this year:
+     o	One publication
+     o	Presentation in conferences? Which ones?
+     o	Other?
+  - Palani (Monitoring)
+    white paper summarizing current work
+  - Dooti (Study design and impact on operations)
+     Dear Fei,
+     
+     I wanted to share some updates on the subgroup Study Design and
+    Operations Impact. We had our first meeting couple of weeks back
+    and had productive discussions on what the group could focus on
+    this year. The group will meet once a month for an hour and work
+    async.
+     
+     The consensus was the following:
+     
+     	Expanding Group Membership to Cross-Functional Stakeholders:
+    This group can only be successful with cross-functional
+    feedback. We will reach out to operations, drug supply, and other
+    affected functions to seek their inputs and experiences while
+    implementing adaptive designs.
+    
+     	First focus on inferential seamless 2/3 designs and
+    understanding implementational challenges from 360 view
+    cross-functionally from various sponsors. The intent would be
+    writing a manuscript (and presentations) to share the learnings
+    and if possible, workaround solutions.
+    
+     	Share broadly in conferences: At the least this should promote
+    a novel and broad lens understanding for statisticians when they
+    are proposing such designs and it can serve as way to explain
+    benefits of such designs to non-statistical colleagues.
+     
+     I recently had a major role change, and my schedule is crazy between work travels. This should all calm down in the next few weeks. 
+     I have asked Jessica to represent us in tomorrow's meeting and provide an update in my absence. In case she is not there, please help me share the above update with the rest of the team. 
+     
+     Looking forward to the exciting year! 
+     
+     Dooti
+  - Christi (CSC)
+    I will not be able to attend tomorrow's general meeting and our
+    previous Clinical Trials Supply Chain meeting was cancelled so
+    there aren't really any new updates.  The only thing that was
+    passed along was the template/sample information collection
+    document I created to have a standard way to collect information
+    for our pilot example trials.  Our next meeting we will go through
+    that document and create a plan for how to implement the simple
+    trial Allison developed for us.
+  - Reading group discussing with Guohui and Jose'
+   ASA host Eff+ general meeting for recording purposes (feic)
+   Present practical problems rather than solutions at reading groups
+    clinical operation perspective critical
+   Broaden to bigger audience, e.g. through ASA BIOP webinar? (feic)
+   Do we have reach to BSLC to promote this group's work?
+ - Crystal Shaw's social media work on X and linkedin
+ - ENAR/IBC/JSM/RISW
+  - SLDS
+  = SCOPE-EU (submission open soon after SCOPE-US finishes)
+ - Outreach to journal for special issue
+
+** notes
+ paper sharing within this group
+ private git repo (feic to set up)
+ private sharepoint
 * other topics
 Outreach
  How to promote awareness amongst leaders in stats and operationalists
