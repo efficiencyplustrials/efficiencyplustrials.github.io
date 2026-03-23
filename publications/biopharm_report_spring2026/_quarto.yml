@@ -1,0 +1,8 @@
+project:
+  type: default
+format:
+  docx:
+    toc: false
+    number-sections: false
+bibliography: references.bib
+csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
