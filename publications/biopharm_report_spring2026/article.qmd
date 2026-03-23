@@ -1,5 +1,5 @@
 ---
-title: "How Many Vials for Brazil? Efficiency+ Brings Statistics to Trial Operations"
+title: "How Many Vials for Brazil? Efficiency+ Brings Statistical Innovation to Trial Operations"
 author: "Fei Chen"
 format:
   docx:
@@ -16,30 +16,30 @@ bibliography: references.bib
 
 Here is a question that most statisticians have probably never been asked: *How many vials of drug should we ship to a site in Brazil next month?* Or: *Should we activate five more sites in Japan to stay on track for enrollment?*
 
-These are clinical operations questions - and they are fundamentally statistical problems. Yet for decades, they have been answered largely by rules of thumb, spreadsheets, and gut instinct. The result? Globally, more than 80% of clinical trials fail to enroll on time, leading to costly extensions and additional sites [@desai2020]. Drug supply waste in clinical trials is estimated at 50-70% of packaged material [@nside2023]. Sites are selected based on relationships rather than data. The cost of these inefficiencies is staggering - delays alone can cost sponsors millions of dollars per day for a late-stage program.
+These are clinical operations questions, but they are fundamentally statistical problems. For decades, operational decisions have been made largely by rules of thumb, spreadsheets, and gut instinct; sites are selected based on relationships rather than data. The result? More than half of clinical trials globally fail to enroll on time, leading to costly extensions and additional sites [@lamberti2024]; and drug supply waste in clinical trials is estimated at 50% [@mckinsey2021]. The cost of these inefficiencies is staggering - delays alone can cost sponsors millions of dollars per day for a late-stage program.
 
-We believe statisticians can do something about this. That is why we started **Efficiency+**.
+Statisticians are well-equipped to contribute innovative solutions to several aspects of operational inefficiencies, including enrollment forecasting, site selection, drug supply planning, and more. Yet, there is no organized community to share methods, compare approaches, or develop best practices. That is why we started **Efficiency+**.
 
 ## How We Got Here
 
-The idea for Efficiency+ grew out of conversations among statisticians who found themselves increasingly involved in operational decisions - enrollment forecasting, site selection, drug supply planning - and realized there was no organized community to share methods, compare approaches, or develop best practices.
+The idea for Efficiency+ grew out of conversations among statisticians who found themselves increasingly involved in operational decisions, including enrollment forecasting, site selection, and drug supply planning.
 
 In early 2025, we submitted a proposal to the ASA Biopharmaceutical Section to form a new Scientific Working Group (SWG) focused on clinical trial operational efficiency. The proposal was approved, and in July 2025 we held our kickoff meeting with about 20 members from over 10 pharmaceutical and biotech companies.
 
-From the start, we wanted Efficiency+ to be different from a typical methods-focused working group. Our scope is deliberately cross-functional - we care about the intersection of statistics with clinical operations, drug supply, regulatory planning, and data management. The "+" in our name reflects this: we are statisticians, *plus* the collaborators and domains we need to work with to actually move the needle.
+From the start, we wanted Efficiency+ to be different from a typical methods-focused working group. Our scope is deliberately cross-functional. We care about the intersection of statistics with clinical operations, drug supply, regulatory planning, and data management. The "+" in our name reflects this: statisticians, plus the collaborators and domains we need to work with to move the needle.
 
 ## Our Mission
 
 Our mission is to advance clinical trial operations by championing cross-pharma and cross-functional collaborative research and driving statistical innovations. We are dedicated to fostering interdisciplinary progress in trial design and execution, ensuring the highest standards of study conduct. Through sharing insights, identifying gaps, and learning from one another, we aim to optimize efficiency, reduce waste, and ultimately accelerate the path from lab to patient [@efficiencyplus_website].
 
-## What We Are Working On
+## Our Workstreams
 
-After our kickoff, we surveyed members to identify the most pressing topics. The results were clear - four focus areas emerged, and we organized into corresponding workstreams:
+After our kickoff, we surveyed members to identify the most pressing topics. The results were clear - four focus areas emerged. We then organized our group into corresponding topic workstreams:
 
 **1. Patient Recruitment Monitoring and Forecasting, Site Selection**
 *Led by Clara Cali Mella (Bayer) and Vlad Anisimov (Amgen)*
 
-This is the area that drew the most interest. The team is tackling questions like: What are the best statistical models for enrollment forecasting? How do you combine historical data, real-world data, and accumulating trial data into a single forecast? How should site selection leverage predictive analytics rather than just investigator relationships? Vlad brings deep expertise in Poisson-gamma modeling for recruitment [@anisimov2007], and the team is working toward a comparative review of forecasting methodologies.
+This topic drew the most interest. The team is tackling questions like: What are the best statistical models for enrollment forecasting? How do you combine historical data, real-world data, and accumulating trial data into a single forecast? How should site selection leverage predictive analytics rather than just investigator relationships? Vlad brings deep expertise in Poisson-gamma modeling for recruitment, and the team is working toward a comparative review of forecasting methodologies.
 
 **2. Dynamic Trial Monitoring and Data Quality**
 *Led by Palanikumar Ravindran (BMS)*
@@ -49,22 +49,22 @@ This workstream focuses on using AI/ML and statistical methods for real-time ris
 **3. Study Design and Operations Impact**
 *Led by Dooti Roy (Boehringer Ingelheim)*
 
-Innovative trial designs (adaptive, platform, seamless) are exciting statistically but can create operational nightmares. This team examines the two-way relationship between design choices and operational execution - how design decisions affect timelines and resources, and how operational realities should inform design.
+Innovative trial designs, such as adaptive, platform, and seamless designs, are statistically exciting but can create operational nightmares. This team examines the two-way relationship between design choices and operational execution - how design decisions affect timelines and resources, and how operational realities should inform design.
 
 **4. Clinical Supply Chain**
 *Led by Christi Kleoudis (AstraZeneca)*
 
-Drug supply planning is one of the most impactful yet underappreciated areas where statistics can help. This workstream is developing simulation-based approaches to forecast drug demand, optimize vial configurations, and reduce waste - potentially saving millions per program.
+Drug supply planning is one of the most impactful yet underappreciated areas where statistical innovation can make a difference. This workstream is developing simulation-based approaches to forecast drug demand, optimize vial configurations, and reduce waste, potentially saving millions per program.
 
 ## Our Members
 
-One thing we are proud of is the breadth of our membership. Efficiency+ currently includes about 20 active members from AbbVie, Amgen, AstraZeneca, Bayer, Beonemed, Boehringer Ingelheim, BMS, Cytel, Johnson & Johnson, Eli Lilly, Regeneron, and Sanofi. We have statisticians, data scientists, and clinical operations professionals - exactly the kind of cross-functional mix we think is needed to make real progress.
+We are proud of the breadth of our membership, which exemplifies our vision for cross-industry, cross-functional collaboration. Efficiency+ currently includes about 20 active members from AbbVie, Amgen, AstraZeneca, Bayer, Beonemed, Boehringer Ingelheim, BMS, Cytel, Johnson & Johnson, Eli Lilly, Regeneron, and Sanofi. Our membership comprises statisticians, data scientists, and clinical operations professionals - exactly the kind of cross-functional mix needed to make real progress.
 
 ## What We Have Done So Far
 
-It has been less than a year since our kickoff, but we have been busy.
+Efficiency+ has been quite productive in building a presence in the research community:
 
-**Conference Presence.** We just wrapped up a successful invited session at **ENAR 2026** (March 15-18, Indianapolis) titled *"Enhancing Clinical Trial Efficiency through Statistics, AI, and Collaborative Innovation."* The session featured talks on data-driven recruitment forecasting, trial monitoring methods, pediatric trial challenges, and randomization in platform trials - and generated great discussion with the audience. We have more sessions coming:
+**Conference Presence.** We just wrapped up a successful invited session at **ENAR 2026** (March 15-18, Indianapolis) titled *"Enhancing Clinical Trial Efficiency through Statistics, AI, and Collaborative Innovation."* The session featured talks on data-driven recruitment forecasting, trial monitoring methods, pediatric trial challenges, and randomization in platform trials, and the conversations are just beginning! We have more sessions coming this year:
 
 - **IBC 2026** (July, Seoul) - Invited session introducing Efficiency+ and showcasing member research on enrollment forecasting, AI-driven monitoring, and statistical leadership in operations
 - **JSM 2026** (August, Boston) - Accepted invited session on *"Advancing Clinical Trial Operations through Innovative Statistical Methodologies"*
@@ -72,13 +72,11 @@ It has been less than a year since our kickoff, but we have been busy.
 - **SCOPE Europe 2026** (October, Barcelona) - Planning to submit a session proposal to this premier clinical operations summit, bringing our work directly to the operations community
 - **SLDS 2026** (November, Brooklyn, NY) - Invited presentation at the ASA Statistical Learning and Data Science conference, showcasing our AI-enabled specification-driven simulation approach
 
-**Simulation Tools.** We have been developing a clinical trial simulation engine in R (the "CSC" project) that provides end-to-end simulation capabilities - from site activation and patient enrollment through randomization, visit scheduling, and drug supply forecasting. The engine features 31 country-specific parameter types and Bayesian forecasting with JAGS integration. A key strength of the tool is its scenario planning capability: supply chain planners can explore the trade-off between probability of stock-out and amount of drug waste under different study designs and forecast/supply strategies, enabling more informed decision-making before and during a trial.
+**Simulation Tools.** We have been developing a clinical trial simulation engine in R (the "CSC" project) that provides end-to-end simulation capabilities from site activation and patient enrollment through randomization, visit scheduling, and drug supply forecasting. The engine features 31 country-specific parameter types and Bayesian forecasting with JAGS integration. A key strength of the tool is its scenario planning capability: supply chain planners can explore the trade-off between probability of stock-out and amount of drug waste under different study designs and forecast/supply strategies, enabling more informed decision-making before and during a trial.
 
 Importantly, the CSC platform is not just a standalone tool - it is our integration backbone. Each of our four topic teams works on different aspects of trial operations, and the simulation engine serves as the common platform that ties all their work together. The approach is "specification-first": each team defines *what* their methodology improves (e.g., adaptive site activation, ML-based enrollment forecasting, kit-specific safety stock policies) as structured specifications, and AI-assisted coding tools translate those specs into working simulation modules. This lets methodology experts contribute without needing to write code themselves, while enabling rigorous comparison of isolated versus integrated improvements. The vision is one platform, four teams, infinite scenarios - where simulation becomes the common language that proves the value of each team's contribution and reveals synergies across them. This tool is still a work in progress, with active development ongoing across the working group.
 
 **Reading Group.** We run a regular reading group where members discuss recent literature on clinical trial operations, keeping the group current on methods and sparking new research ideas.
-
-**Website.** Our website at [efficiencyplustrials.github.io](https://efficiencyplustrials.github.io/) serves as a hub for our mission, focus areas, and resources.
 
 ## Find Us Online
 
@@ -86,7 +84,7 @@ We are actively building our community presence beyond conferences:
 
 - **X (Twitter)**: Follow us at **\@efficiencyplus** ([x.com/efficiencyplus](https://x.com/efficiencyplus)) for session highlights, working group milestones, and new publications
 - **LinkedIn**: Connect with us at **\@efficiency-plus-trials** ([linkedin.com/company/efficiency-plus-trials](https://www.linkedin.com/company/efficiency-plus-trials)) for updates on conference sessions, working group news, and member spotlights
-- **Website**: [efficiencyplustrials.github.io](https://efficiencyplustrials.github.io/)
+- **Website**: [efficiencyplustrials.github.io](https://efficiencyplustrials.github.io/) - serves as a hub for our mission, focus areas, and resources
 - **GitHub**: [github.com/efficiencyplustrials](https://github.com/efficiencyplustrials/) - our open-source tools and materials
 
 We promote our work through these channels and through the ASA BIOP section's own communications, including the AMSTAT newsletter and conference announcements.
@@ -95,25 +93,25 @@ We promote our work through these channels and through the ASA BIOP section's ow
 
 Looking ahead, our roadmap includes:
 
-- **Special journal issue** - We plan to organize a collection of white papers from each of our topic subteams into a special issue of a peer-reviewed journal (exact venue to be determined), providing a comprehensive reference for the field
+- **Special journal issue** - organizing a collection of white papers from each of our topic subteams into a special issue of a peer-reviewed journal (exact venue to be determined), providing a comprehensive reference for the field
 - **Webinars** to share our findings with the broader community
 - **Expanded simulation tools** - continuing development of our clinical trial simulation engine with additional modules for outcome metrics, real-time dashboards, and scenario optimization
 - **Cross-working-group collaboration** with other ASA BIOP SWGs (e.g., Safety, Bayesian, Software Engineering) on shared challenges
 
 ## Join Us
 
-If any of this resonates with you - whether you are a statistician who has been pulled into operational discussions, a clinical operations professional curious about what advanced analytics can do, or a data scientist looking for impactful applications - we would love to hear from you.
+If any of this resonates with you - whether you are a statistician who has been pulled into operational discussions, a clinical operations professional curious about what advanced analytics can do, or a data scientist looking for impactful applications - we would love your input.
 
 We are especially looking for:
 
 - **Regulatory agency participants** - perspectives from FDA, EMA, and other agencies are invaluable for ensuring our methods align with evolving guidelines like ICH E6(R3)
-- **Clinical trial operations professionals** - the people who live these challenges daily and can ground our statistical work in operational reality
-- Statisticians and data scientists with experience in Bayesian modeling, AI/ML, clinical trial simulation, or drug supply chain analytics
+- **Clinical trial operations professionals** - people who live these challenges daily and can ground our statistical work in operational reality
+- **Statisticians and data scientists** with experience in Bayesian modeling, AI/ML, clinical trial simulation, or drug supply chain analytics
 
-Reach out to me at [fchen6@its.jnj.com](mailto:fchen6@its.jnj.com), visit our website at [efficiencyplustrials.github.io](https://efficiencyplustrials.github.io/), or find us at any of our upcoming conference sessions. We are building something that we think can genuinely change how our industry runs clinical trials - and the more perspectives we have at the table, the better.
+Reach out to me at [fchen6@its.jnj.com](mailto:fchen6@its.jnj.com), visit our website at [efficiencyplustrials.github.io](https://efficiencyplustrials.github.io/), or find us at any of our upcoming conference sessions. We are building something that we think can genuinely change how our industry runs clinical trials - the more perspectives we have at the table, the better.
 
 ## Acknowledgments
 
-The author thanks all members of the Efficiency+ Scientific Working Group for their contributions and enthusiasm in the group's first year. Efficiency+ was co-founded by Fei Chen (Johnson & Johnson) and Bohdana Ratitch (Bayer), who jointly developed the original proposal and led the working group through its formation. Bohdana has since stepped down from her co-chair role, and her contributions to launching this initiative are gratefully acknowledged. Clara Cali Mella (Bayer) has stepped in as co-chair to continue the partnership. Special thanks to our group advisors - José Pinheiro, Inna Perevozskaya (BMS), and Benjamin Hofner (PEI) - for their guidance, to the workstream leads - Clara Cali Mella, Vlad Anisimov, Palanikumar Ravindran, Dooti Roy, and Christi Kleoudis - to Crystal Shaw and Leanne Goldstein (Amgen) for leading our social media presence on LinkedIn and X, and to Kyle Wathen (Cytel) for chairing our ENAR session. Thanks also to the ASA Biopharmaceutical Section for supporting this initiative. A full list of Efficiency+ members and their affiliations can be found on our website at [efficiencyplustrials.github.io](https://efficiencyplustrials.github.io/).
+The author thanks all members of the Efficiency+ Scientific Working Group for their contributions and enthusiasm in the group's first year. Efficiency+ was co-founded by Fei Chen (Johnson & Johnson) and Bohdana Ratitch (Bayer), who jointly developed the original proposal and led the working group through its formation. Bohdana has since stepped down from her co-chair role, and her contributions to launching this initiative are gratefully acknowledged. Clara Cali Mella (Bayer) has stepped in as co-chair to continue the partnership. Special thanks to our group advisors - Jose Pinheiro, Inna Perevozskaya (BMS), and Benjamin Hofner (PEI) - for their guidance; to the workstream leads - Clara Cali Mella, Vlad Anisimov, Palanikumar Ravindran, Dooti Roy, and Christi Kleoudis; to our social media team, Crystal Shaw and Leanne Goldstein (Amgen), for leading our presence on LinkedIn and X; and to Kyle Wathen (Cytel) for chairing our ENAR session. Thanks also to the ASA Biopharmaceutical Section for supporting this initiative. A full list of Efficiency+ members and their affiliations can be found on our GitHub repository at [github.com/efficiencyplustrials](https://github.com/efficiencyplustrials/).
 
 ## References
