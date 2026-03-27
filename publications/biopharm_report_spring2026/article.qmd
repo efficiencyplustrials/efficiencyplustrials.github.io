@@ -39,7 +39,7 @@ After our kickoff, we surveyed members to identify the most pressing topics. The
 **1. Patient Recruitment Monitoring and Forecasting, Site Selection**
 *Led by Clara Cali Mella (Bayer) and Vlad Anisimov (Amgen)*
 
-This topic drew the most interest. The team is tackling questions like: What are the best statistical models for enrollment forecasting? How do you combine historical data, real-world data, and accumulating trial data into a single forecast? How should site selection leverage predictive analytics rather than just investigator relationships? Vlad brings deep expertise in Poisson-gamma modeling for recruitment and the team is working toward a comparative review of forecasting methodologies.
+This topic drew the most interest. The team is tackling questions like: What are the best statistical models for enrollment forecasting? How do you combine historical data, real-world data, and accumulating trial data into a single forecast? How should site selection leverage predictive analytics rather than just investigator relationships? Vlad brings deep expertise in Poisson-gamma modeling for recruitment [@anisimov2020] and the team is working toward a comparative review of forecasting methodologies.
 
 **2. Dynamic Trial Monitoring and Data Quality**
 *Led by Palanikumar Ravindran (BMS)*
