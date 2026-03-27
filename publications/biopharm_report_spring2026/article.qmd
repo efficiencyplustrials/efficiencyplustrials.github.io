@@ -64,7 +64,7 @@ We are proud of the breadth of our membership, which exemplifies our vision for 
 
 It has been less than a year since our kickoff, but Efficiency+ has been quite productive in building presence in the research community:
 
-**Conference Presence.** We just wrapped up a successful invited session at **ENAR 2026** (March 15-18, Indianapolis) titled *"Enhancing Clinical Trial Efficiency through Statistics, AI, and Collaborative Innovation."* The session featured talks on data-driven recruitment forecasting, trial monitoring methods, pediatric trial challenges, and randomization in platform trials. We generated great discussion with the audience, and the conversations are just beginning! We have more sessions coming this year:
+**Conference Presence.** We just wrapped up a successful invited session at **ENAR 2026** (March 15-18, Indianapolis) titled *"Enhancing Clinical Trial Efficiency through Statistics, AI, and Collaborative Innovation."* The session featured talks by Inna Perevozskaya (BMS) on trial monitoring methods, Vlad Anisimov (Amgen) on recruitment forecasting, Forrest Williamson (Eli Lilly) on pediatric trial challenges, and Ziqian Geng (AbbVie) on randomization in platform trials, with Kyle Wathen (Cytel) chairing. We generated great discussion with the audience, and the conversations are just beginning! We have more sessions coming this year:
 
 - **IBC 2026** (July, Seoul) - Invited session introducing Efficiency+ and showcasing member research on enrollment forecasting, AI-driven monitoring, and statistical leadership in operations
 - **JSM 2026** (August, Boston) - Accepted invited session on *"Advancing Clinical Trial Operations through Innovative Statistical Methodologies"*
