@@ -70,7 +70,6 @@ It has been less than a year since our kickoff, but Efficiency+ has been quite p
 - **JSM 2026** (August, Boston) - Accepted invited session on *"Advancing Clinical Trial Operations through Innovative Statistical Methodologies"*
 - **RISW 2026** (September, Rockville, MD) - Accepted invited session on *"Advanced Analytics for Operational Excellence"* covering recruitment, monitoring, design-operations interplay, and supply chain optimization
 - **SCOPE Europe 2026** (October, Barcelona) - Planning to submit a session proposal to this premier clinical operations summit, bringing our work directly to the operations community
-- **SLDS 2026** (November, Brooklyn, NY) - Invited presentation at the ASA Statistical Learning and Data Science conference, showcasing our AI-enabled specification-driven simulation approach
 
 **Simulation Tools.** We have been developing a clinical trial simulation engine in R (the "CSC" project) that provides end-to-end simulation capabilities, from site activation and patient enrollment through randomization, visit scheduling, and drug supply forecasting. The engine features 31 country-specific parameter types and Bayesian forecasting with JAGS integration. A key strength of the tool is its scenario planning capability: supply chain planners can explore the trade-off between probability of stock-out and amount of drug waste under different study designs and forecast/supply strategies, enabling more informed decision-making before and during a trial.
 
@@ -93,7 +92,7 @@ We promote our work through these channels and through the ASA BIOP section's ow
 
 Looking ahead, our roadmap includes:
 
-- **Special journal issue** - organizing a collection of white papers from each of our topic subteams into a special issue of a peer-reviewed journal (exact venue to be determined), providing a comprehensive reference for the field
+- **Special journal issue** - organizing a collection of white papers from each of our topic subteams into a special issue of a peer-reviewed journal (exact venue to be determined), providing a comprehensive reference for the field. Each subteam is actively drafting papers as expected deliverables for 2026
 - **Webinars** to share our findings with the broader community
 - **Expanded simulation tools** - continuing development of our clinical trial simulation engine with additional modules for outcome metrics, real-time dashboards, and scenario optimization
 - **Cross-working-group collaboration** - working with other ASA BIOP SWGs (e.g., Safety, Bayesian, Software Engineering) on shared challenges
