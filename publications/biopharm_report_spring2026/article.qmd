@@ -16,17 +16,17 @@ bibliography: references.bib
 
 Here is a question that most statisticians have probably never been asked: *How many vials of drug should we ship to a site in Brazil next month?* Or: *Should we activate five more sites in Japan to stay on track for enrollment?*
 
-These are clinical operations questions, but they are fundamentally statistical problems. For decades, operational decisions have been made largely by rules of thumb, spreadsheets, and gut instinct. The result? sites are selected based on relationships rather than data; more than half of clinical trials globally fail to enroll on time, leading to costly extensions and additional sites [@lamberti2024]; and drug supply waste in clinical trials is estimated at 50% [@mckinsey2021]. The cost of these inefficiencies is staggering as delays alone can cost sponsors millions of dollars per day for a late-stage program.
+These are clinical operations questions, but they are fundamentally statistical problems. For decades, operational decisions have been made largely by deterministic rules of thumb, spreadsheets, previous experience, and gut instinct. The result? sites are selected based on relationships rather than data; more than half of clinical trials globally fail to enroll on time, leading to costly extensions and opening of additional sites [@lamberti2024]; and drug supply waste in clinical trials is estimated at 50% [@mckinsey2021]. The cost of these inefficiencies is staggering as delays alone can cost sponsors millions of dollars per day for a late-stage program.
 
-Statisticians are well-equipped to contribute innovative solutions to operational inefficiencies. That is why we started **Efficiency+**.
+Statisticians are well-equipped to contribute innovative solutions to address operational inefficiencies. That is why we started **Efficiency+**.
 
 ## How We Got Here
 
 The idea for Efficiency+ grew out of conversations among statisticians who found themselves increasingly involved in several aspects of operational decisions, including enrollment forecasting, site selection, and drug supply planning. Yet, there is no organized statistical community to share methods, compare approaches, or develop best practices.
 
-In early 2025, we submitted a proposal to the ASA Biopharmaceutical Section to form a new Scientific Working Group (SWG) focused on clinical trial operational efficiency. The proposal was approved, and in July 2025 we held our kickoff meeting with about 20 members from over 10 pharmaceutical and biotech companies.
+In early 2025, we submitted a proposal to the ASA Biopharmaceutical Section to form a new Scientific Working Group (SWG) focused on clinical trial operational efficiency. The proposal was approved and in July 2025 we held our kickoff meeting with about 20 members from over 10 pharmaceutical and biotech companies.
 
-From the start, we wanted Efficiency+ to be different from a typical methods-focused working group. Our scope is deliberately cross-functional. We care about the intersection of statistics with clinical operations, drug supply, regulatory planning, and data management. The "+" in our name reflects the statisticians plus the collaborators and domains we need to work with to move the needle.
+From the start, we wanted Efficiency+ to be different from a typical methods-focused working group. Our scope is deliberately cross-functional. We care about the intersection of statistics with clinical operations, drug supply, regulatory planning, data management, and functions supporting other clinical operations. The "+" in our name reflects the statisticians plus the collaborators and domains we need to work with to move the needle.
 
 ## Our Mission
 
@@ -34,7 +34,7 @@ Our mission is to advance clinical trial operations by championing cross-pharma 
 
 ## Workstreams
 
-After our kickoff, we surveyed members to identify the most pressing topics. The results were clear and four focus areas emerged. We then organized our group into corresponding workstreams:
+After our kickoff, we surveyed members to identify the most pressing topics. The results were clear and four focus areas emerged. We then organized our group into the corresponding workstreams:
 
 **1. Patient Recruitment Monitoring and Forecasting, Site Selection**
 *Led by Clara Cali Mella (Bayer) and Vlad Anisimov (Amgen)*
@@ -54,7 +54,7 @@ Innovative trial designs (adaptive, platform, seamless) are statistically exciti
 **4. Clinical Supply Chain**
 *Led by Christi Kleoudis (AstraZeneca)*
 
-Drug supply planning is one of the most impactful yet underappreciated areas where statistical innovation can make a difference. This workstream is developing simulation-based approaches to forecast drug demand, optimize vial configurations, and reduce waste, potentially saving millions per program.
+Drug supply planning is one of the most impactful yet underappreciated areas where statistical innovation can make a difference. This workstream is developing simulation-based approaches to forecast drug demand, optimize vial configurations, and reduce waste, potentially saving millions of dollars per program.
 
 ## Our Members
 
@@ -73,7 +73,7 @@ It has been less than a year since our kickoff, but Efficiency+ has been quite p
 
 **Simulation Tools.** We have been developing a clinical trial simulation engine in R (the "CSC" project) that provides end-to-end simulation capabilities, from site activation and patient enrollment through randomization, visit scheduling, and drug supply forecasting. The engine features 31 country-specific parameter types and Bayesian forecasting with JAGS integration. A key strength of the tool is its scenario planning capability: supply chain planners can explore the trade-off between probability of stock-out and amount of drug waste under different study designs and forecast/supply strategies, enabling more informed decision-making before and during a trial.
 
-Importantly, the CSC platform is not just a standalone tool. It is our integration backbone. Each of our four topic teams works on different aspects of trial operations, and the simulation engine serves as the common platform that ties all their work together. The approach is "specification-first": each team defines *what* their methodology improves (e.g., adaptive site activation, ML-based enrollment forecasting, kit-specific safety stock policies) as structured specifications, and AI-assisted coding tools translate those specs into working simulation modules. This lets methodology experts contribute without needing to write code themselves, while enabling rigorous comparison of isolated versus integrated improvements. The vision is one platform, four teams, infinite scenarios, where simulation becomes the common language that proves the value of each team's contribution and reveals synergies across them. This tool is still a work in progress, with active development ongoing across the working group.
+Importantly, the CSC platform is not just a standalone tool. It is our integration backbone. Each of our four topic teams works on different aspects of trial operations, and the simulation engine serves as the common platform that ties all their work together. The approach is "specification-first": each team defines *what* their methodology improves (e.g., adaptive site activation, ML-based enrollment forecasting, kit-specific safety stock policies) as structured specifications, and AI-assisted coding tools translate those specs into working simulation modules. This lets methodology experts contribute without needing to write code themselves, while enabling rigorous comparison of isolated versus integrated improvements. The vision is one platform, four teams, infinite scenarios, where simulation becomes the common language that proves the value of each team's contribution and reveals synergies across them. This tool is still work in progress, with active development ongoing across the working group.
 
 **Reading Group.** We run a regular reading group where members discuss recent literature on clinical trial operations, keeping the group current on methods and sparking new research ideas.
 
