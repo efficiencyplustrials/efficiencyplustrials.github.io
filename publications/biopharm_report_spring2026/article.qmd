@@ -60,7 +60,7 @@ Drug supply planning is one of the most impactful yet underappreciated areas whe
 
 ## Our Members
 
-We are proud of the breadth of our membership, which exemplifies our vision for cross-industry, cross-functional collaboration. Efficiency+ currently includes about 20 active members from AbbVie, Amgen, AstraZeneca, Bayer, Beonemed, Boehringer Ingelheim, BMS, Cytel, Johnson & Johnson, Eli Lilly, Regeneron, and Sanofi. Our membership comprises statisticians, data scientists, and clinical operations professionals, exactly the kind of cross-functional mix needed to make real progress.
+We are proud of the breadth of our membership, which exemplifies our vision for cross-industry, cross-functional collaboration. Efficiency+ currently includes about 20 active members from AbbVie, Amgen, AstraZeneca, Bayer, BeOne Medicines, Boehringer Ingelheim, Bristol-Myers Squibb, Cytel, Johnson & Johnson, Eli Lilly, Regeneron, and Sanofi. Our membership comprises statisticians, data scientists, and clinical operations professionals, exactly the kind of cross-functional mix needed to make real progress.
 
 ## What We Have Done So Far
 
@@ -70,7 +70,7 @@ It has been less than a year since our kickoff, but Efficiency+ has been quite p
 
 - **IBC 2026** (July, Seoul) - Invited session introducing Efficiency+ and showcasing member research on enrollment forecasting, AI-driven monitoring, and statistical leadership in operations
 - **JSM 2026** (August, Boston) - Accepted invited session on *"Advancing Clinical Trial Operations through Innovative Statistical Methodologies"*
-- **RISW 2026** (September, Rockville, MD) - Accepted invited session on *"Advanced Analytics for Operational Excellence"* covering recruitment, monitoring, design-operations interplay, and supply chain optimization
+- **RISW 2026** (September, Rockville) - Accepted invited session on *"Advanced Analytics for Operational Excellence"* covering recruitment, monitoring, design-operations interplay, and supply chain optimization
 - **SCOPE Europe 2026** (October, Barcelona) - Planning to submit a session proposal to this premier clinical operations summit, bringing our work directly to the operations community
 
 **Simulation Tools.** We are developing a clinical trial simulation engine in R (the "CSC" project) that provides end-to-end simulation capabilities, from site activation and patient enrollment through randomization, visit scheduling, and drug supply forecasting. The engine features 31 country-specific parameter types and Bayesian forecasting with JAGS integration. A key strength of the tool is its scenario planning capability: supply chain planners can explore the trade-off between probability of stock-out and amount of drug waste under different study designs and forecast/supply strategies, enabling more informed decision-making before and during a trial.
