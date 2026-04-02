@@ -14,7 +14,7 @@ bibliography: references.bib
 
 ![Scan to follow Efficiency+ on LinkedIn](QR.png){width=1.5in}
 
-## Why Clinical Trial Operations Needs Statisticians
+## The Importance of Statistical Innovation in Clinical Trial Operations
 
 Most clinical trial statisticians have probably never been asked: *How many vials of drug should we ship to a site in Brazil next month?* Or: *Should we activate five more sites in Japan to stay on track for enrollment?*
 
