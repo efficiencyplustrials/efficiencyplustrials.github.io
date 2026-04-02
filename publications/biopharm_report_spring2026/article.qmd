@@ -12,6 +12,8 @@ bibliography: references.bib
 
 *On behalf of the Efficiency+ Scientific Working Group*
 
+![Scan to follow Efficiency+ on LinkedIn](QR.png){width=1.5in}
+
 ## Why Clinical Trial Operations Needs Statisticians
 
 Most clinical trial statisticians have probably never been asked: *How many vials of drug should we ship to a site in Brazil next month?* Or: *Should we activate five more sites in Japan to stay on track for enrollment?*
@@ -82,8 +84,6 @@ Importantly, the CSC platform is not just a standalone tool. It is our integrati
 We are actively building our community presence beyond conferences:
 
 - **LinkedIn**: Connect with us at **\@efficiency-plus-trials** ([linkedin.com/company/efficiency-plus-trials](https://www.linkedin.com/company/efficiency-plus-trials)) for updates on conference sessions, working group news, and member spotlights
-
-![Scan to follow Efficiency+ on LinkedIn](QR.png){width=30%}
 - **Website**: [efficiencyplustrials.github.io](https://efficiencyplustrials.github.io/) serves as a hub for our mission, focus areas, and resources
 - **GitHub**: [github.com/efficiencyplustrials](https://github.com/efficiencyplustrials/) - our open-source tools and materials
 
