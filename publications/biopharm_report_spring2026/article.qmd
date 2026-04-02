@@ -18,7 +18,7 @@ bibliography: references.bib
 
 Most clinical trial statisticians have probably never been asked: *How many vials of drug should we ship to a site in Brazil next month?* Or: *Should we activate five more sites in Japan to stay on track for enrollment?*
 
-These are clinical operations questions, but they are fundamentally statistical problems. For decades, operational decisions have been made largely by deterministic rules of thumb, spreadsheets, previous experience, and gut instinct. The result? Sites are selected based on historical familiarity rather than data; more than half of clinical trials globally fail to enroll on time, leading to costly extensions and opening of additional sites [@lamberti2024]; and drug supply waste in clinical trials is estimated at 50% [@mckinsey2021]. The cost of these inefficiencies is staggering as delays alone can cost sponsors millions of dollars per day for a late-stage program.
+These are clinical operations questions, but they are fundamentally statistical problems. For decades, operational decisions have been made largely by deterministic rules of thumb, spreadsheets, previous experience, and intuition. The result? Sites are selected based on historical familiarity rather than data; more than half of clinical trials globally fail to enroll on time, leading to costly extensions and opening of additional sites [@lamberti2024]; and drug supply waste in clinical trials is estimated at 50% [@mckinsey2021]. The cost of these inefficiencies is staggering as delays alone can cost sponsors millions of dollars per day for a late-stage program.
 
 Statisticians are well-equipped to contribute innovative solutions to address operational inefficiencies. This motivated the formation of **Efficiency+**.
 
