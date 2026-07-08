@@ -1,0 +1,46 @@
+## Welcome New Members
+
+| Name | Affiliation | Introduced By |
+|------|-------------|---------------|
+| Kristen Daniels | BI — Executive Director, Early Asset TA Lead | Dooti Roy |
+| Kristen Leraas | JNJ Vision Med Tech — Associate Director, Clinical Operations | Jessica Cannon-Hill |
+| Leanne Goldstein | Amgen | Crystal Shaw |
+| Maria Pia Beccar-Varela | UTEP | Clara Cali Mella |
+| Maria Cristina Mariani | UTEP | Clara Cali Mella |
+| Meilin Jiang | Lilly | Forrest Williamson |
+
+## Social Media
+
+- Crystal and Leanne to lead social media efforts
+
+## JSM Efficiency+ Lunch
+
+- Tuesday 8/2, 12:00–1:00 PM
+- Alternative: RISW (can do only one)
+
+## ASA Report
+
+- Summarize recent progress, achievements, or ongoing work
+- Can cover how the group was formed, motivation, and ambition
+- Promotion opportunity: LinkedIn, AMSTAT newsletter, ASA conferences
+- Reference: [ASA BIOP Report on Substack](https://asabiopreport.substack.com)
+
+## Conferences
+
+| Conference | Details |
+|------------|---------|
+| IBC2026 | Replacement speakers needed (see next slide) |
+| RTSM | Upper Providence, PA, May 12–13 (discussant) |
+| SCOPE-EU | October |
+| SLDS | November, Brooklyn |
+| SCT | Annual Meeting |
+
+## IBC2026 — Replacement Speakers Needed
+
+- **Session 1**: Data-Driven Decision Making: The Role of Statistical Modeling in Improving Clinical Trial Success
+- **Session 2**: Integrating GenAI-Enabled Machine Learning Models for Optimization of Clinical Trial Operations and Success Metrics
+
+## SWG Deliverables
+
+- **Special issue**: Journal outreach effort
+- **Unified spec-driven framework** for team deliverables

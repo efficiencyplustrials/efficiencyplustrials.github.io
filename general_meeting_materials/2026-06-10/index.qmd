@@ -1,0 +1,149 @@
+---
+title: "Efficiency+ General Meeting"
+subtitle: "June 10, 2026"
+author: "ASA BIOP SWG"
+format:
+ revealjs:
+  table-of-contents: true
+  toc-depth: 1
+  toc-title: Agenda
+  revealjs-theme: simple
+  incremental: false
+  scrollable: true
+  embed-resources: true
+  footer: "Efficiency+"
+  css: styles.css
+slide-number: true
+---
+
+<style>
+.reveal .footer {
+  color: red !important;
+}
+</style>
+
+## Agenda
+
+1. Welcome New Members
+2. Conferences (RISW, IBC, JSM, SCOPE-EU)
+3. Efficiency+ Lunch at JSM
+4. Guohui Wu (Regeneron) Proposal
+5. ASA BIOP Webinar
+6. Subteam Work Towards a Special Issue
+
+## Welcome New Member — Yi Hong
+
+**Yi Hong** — [Yi.hong1@gilead.com](mailto:Yi.hong1@gilead.com)
+
+Associated Director, Clinical Data Science — Gilead Sciences
+
+- Focuses on Advanced Analytics and AI to improve clinical trial operational efficiency and design
+- Learned about Efficiency+ Trials from Dr. Anisimov's post
+- Interested in learning from peers, exchanging best practices, and contributing insights from data science, AI, and clinical development
+
+## Welcome New Member — Rakhi Kilaru
+
+**Rakhi Kilaru** — [Rakhi.Kilaru@thermofisher.com](mailto:Rakhi.Kilaru@thermofisher.com)
+
+Thermo Fisher Scientific
+
+- Interested in dynamic trial monitoring
+- Co-lead for CSM/QTL Special Interest Group jointly endorsed by ASA-BIOP/EFSPI and PSI (with Susan Talbot, Amgen)
+
+## Conferences — RISW
+
+**Invited Session:** Efficiency+: Advanced Statistical Innovations Driving Clinical Trial Efficiency
+
+- 📅 September 2026
+
+| Participant | Affiliation |
+|---------|-------------|
+| CG Wang & Guohui Wu | Regeneron |
+| Jose Pinheiro | — |
+| Jimeng Sun | Keiji AI |
+| Dooti Roy | Boehringer Ingelheim |
+
+## Conferences — IBC
+
+**Contributed Session OP.02:** Clinical Trial Operations and Safety Signal Detection
+
+- 📅 July 13, 2026, 10:45 AM – 12:15 PM | Room 401 D
+
+| Speaker | Affiliation |
+|---------|-------------|
+| Fei Chen | JnJ |
+| Kyle Wathen | Cytel |
+| Cunyi Wang | JnJ |
+| Vlad Anisimov | Amgen |
+
+## Conferences — JSM
+
+**Invited Paper Session #1232:** Efficiency+: Advancing Clinical Trial Operations through Innovative Statistical Methodologies — [Session link](https://ww3.aievolution.com/JSMAnnual2026/index.cfm?do=ev.viewEv&ev=5664)
+
+- 📅 Tuesday, Aug 4, 2:00 PM – 3:50 PM | Thomas M. Menino Convention & Exhibition Center, Room CC-204B
+
+| Speaker | Affiliation |
+|---------|-------------|
+| Guohui Wu | Regeneron |
+| Jessica Canon-Hill | JnJ |
+| Kaifeng Lu | Beonemed |
+| Clara Cali Mella | Bayer *(looking for replacement)* |
+
+## Conferences — SCOPE-EU
+
+**Panel Discussion:** Efficiency+ SWG: Improve Clinical Trial Operations through Advanced Statistics
+
+Data Strategy and AI Innovation Stream
+
+- 📅 October 13–14, 2026 | Barcelona
+- Moderator: Clara Cali Mella
+
+| Panelist | Affiliation |
+|---------|-------------|
+| Mario Wolfs | BMS |
+| Bhargava Reddy | JnJ |
+| Clara Cali Mella | Bayer |
+| Ken Getz | Tufts Center for Clinical Trials |
+
+## Efficiency+ Lunch at JSM
+
+**Title:** Efficiency+: Advancing Clinical Trial Operations through Innovative Statistical Methodologies
+
+| | |
+|---|---|
+| **Date** | August 4, 2026 |
+| **Time** | 12:00 PM – 1:00 PM |
+| **Location** | Westin Boston Seaport District |
+| **Room** | W-Hale (Conference for 10) |
+
+*W = The Westin Boston Seaport District, 425 Summer St., Boston, MA*
+
+Contact: Christina Link, ASA Meetings Planner — [Christina@amstat.org](mailto:Christina@amstat.org)
+
+## Guohui Wu (Regeneron) Proposal
+
+- Conferences in 2027 and submission deadlines
+- Efficiency+ conference?
+
+## ASA BIOP Webinar
+
+Distance Learning Chair: Ji Young Kim
+
+Proposed: A Distance Learning webinar to showcase past SWG achievements and preview future topics to encourage participation.
+
+**Proposed Topics:**
+
+1. Clinical supply chain
+2. Enrollment modeling
+3. Platform trials
+4. Preclinical
+5. Feasibility
+
+## Subteam Work Towards a Special Issue
+
+Potential journals:
+
+1. Therapeutic Innovation and Regulatory Science
+2. Clinical Trials
+3. Statistics in Biopharmaceutical Research (ASA journal)
+4. Cross-functional journals? Clinical Trials? Clinical Research News? Applied Clinical Trials?

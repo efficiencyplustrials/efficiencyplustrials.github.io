@@ -119,3 +119,6 @@ I can share a brief outline and expected takeaways.
 Thank you!
 Fei
 ```
+* 
+CG Wang <chenguang.wang@regeneron.com>, Jose Pinheiro <jcpinheir@gmail.com>
+Cc: Sun Jimeng <jimeng@keiji.ai>, Guohui Wu <guohui.wu@regeneron.com>, Roy,Dr.,Dooti (MED BDS) BIP-US-R <dooti.roy@boehringer-ingelheim.com>

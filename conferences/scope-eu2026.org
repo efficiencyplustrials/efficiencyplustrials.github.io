@@ -1,0 +1,14 @@
+
+It will be a panel discussion for the Data Strategy and AI Innovation stream at SCOPE Europe (October 1314, Barcelona). 
+I will serve as the moderator, and we would need to confirm 35 panelists and we can organise some questions-answers on the preferred topics to make it work.
+Their preference at SCOPE is to have a majority of panelists from pharma but we can also include someone from academia or a vendor if needed.
+
+Title: Efficiency+ SWG: Improve Clinical Trial Operations through Advanced Statistics
+ 
+The session will highlight state-of-the-art statistical methods and operational strategies to improve the efficiency of clinical trial execution, focusing on clinical study operational areas such as trial feasibility assessment, site selection and performance evaluation, patient recruitment planning and tracking, and clinical drug supply. The presentations will explore innovative analytical methodologies at the intersection of several fields, including Bayesian modeling, Data Science and AI/ML, clinical trial simulation, and data visualization, leveraging real-world and clinical trial data to maximize operational efficiency and excellence. The session aims to facilitate the exchange of insights, experiences, and best practices among statisticians from industry, academia and government, with the ultimate goal of establishing an area of methodological research and application focused on the optimization of clinical trial processes and outcomes.
+
+discussant
+bhargav
+marion
+ken getz
+clara cali mella

@@ -33,15 +33,17 @@
 #+TBLFM: $1=@#-1
 
 ** Study design and operations impact
-|---+---------------------+---------+-------------------------------------|
-|   | Name                | Company |                                     |
-|---+---------------------+---------+-------------------------------------|
-| 1 | Vlad Anisimov       | Amgen   | vanisimo@amgen.com                  |
-| 2 | Angela Zhu          | BI      | angela.zhu@boehringer-ingelheim.com |
-| 3 | *Dooti Roy*         | BI      | dooti.roy@boehringer-ingelheim.com  |
-| 4 | Haoyu Wang          | BMS     | haoyu.wang2@bms.com                 |
-| 5 | Jessica Cannon-Hill | JNJ     | jcannon4@its.jnj.com                |
-|---+---------------------+---------+-------------------------------------|
+|---+---------------------+---------+------------------------------------------|
+|   | Name                | Company |                                          |
+|---+---------------------+---------+------------------------------------------|
+| 1 | Vlad Anisimov       | Amgen   | vanisimo@amgen.com                       |
+| 2 | Angela Zhu          | BI      | angela.zhu@boehringer-ingelheim.com      |
+| 3 | *Dooti Roy*         | BI      | dooti.roy@boehringer-ingelheim.com       |
+| 4 | Kristen Daniels     | BI      | kristen.daniels@boehringer-ingelheim.com |
+| 5 | Haoyu Wang          | BMS     | haoyu.wang2@bms.com                      |
+| 6 | Jessica Cannon-Hill | JNJ     | jcannon4@its.jnj.com                     |
+| 7 | Kristen Leraas      | JNJ     | KLeraas@ITS.JNJ.com                      |
+|---+---------------------+---------+------------------------------------------|
 #+TBLFM: $1=@#-1
 
 ** Clinical supply chain

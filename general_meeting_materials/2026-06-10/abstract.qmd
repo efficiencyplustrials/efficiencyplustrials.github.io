@@ -1,0 +1,37 @@
+---
+title: "Efficiency+: Advancing Clinical Trial Operations through Statistical Innovation"
+subtitle: "ASA Biopharmaceutical Section Distance Learning Webinar"
+format:
+  html:
+    embed-resources: true
+    theme: cosmo
+---
+
+Clinical trial operational inefficiencies — delayed enrollment, drug supply waste, underperforming sites — are fundamentally statistical problems. Yet statisticians have historically lacked a dedicated community to share methods, compare approaches, and develop best practices in this space. Formed in 2025 under the ASA Biopharmaceutical Section, the **Efficiency+ Scientific Working Group (SWG)** was created to fill that gap, uniting statisticians, data scientists, and clinical operations professionals from over a dozen pharmaceutical and biotech companies.
+
+In this webinar, Efficiency+ members will provide a comprehensive update on the group's first year of activities and its vision for the future.
+
+## Agenda
+
+1. **Introduction to Efficiency+** *(Fei Chen, Johnson & Johnson, 8 min)*  
+   Overview of the group's mission, its four topic workstreams — patient recruitment monitoring and forecasting/site selection, dynamic trial monitoring and data quality, study design and operations impact, and clinical supply chain — and key achievements since the July 2025 kickoff.
+
+2. **Reading Group Highlights** *(Guohui Wu, Regeneron, 8 min)*  
+   A tour of recent literature and invited talks covered by the Efficiency+ reading group, highlighting emerging methods and open research questions in clinical trial operations.
+
+3. **Workstream Reports** *(Workstream leads, 8 min each)*  
+   Each of the four topic sub-team leads will report on their workstream's activities, ongoing research, and planned deliverables — including progress toward a special journal issue and a shared clinical trial simulation engine:
+
+   - **Patient Recruitment Monitoring & Forecasting / Site Selection** — Clara Cali Mella (Bayer) & Vlad Anisimov (Amgen)
+   - **Dynamic Trial Monitoring and Data Quality** — Palanikumar Ravindran (BMS)
+   - **Study Design and Operations Impact** — Dooti Roy (Boehringer Ingelheim)
+   - **Clinical Supply Chain** — Christi Kleoudis (AstraZeneca)
+
+4. **Community and Outreach** *(Leanne Goldstein, Amgen)*  
+   Social media engagement, conference presence for the remainder of 2026 and into 2027 (IBC, JSM, RISW, SCOPE Europe), website and GitHub resources, and how to get involved.
+
+Attendees will leave with a clear picture of the state of statistical innovation in clinical trial operations and opportunities to contribute to or benefit from this growing community.
+
+---
+
+**Target Audience:** Statisticians, data scientists, and clinical operations professionals with interest in enrollment forecasting, site selection, trial monitoring, adaptive/platform trial design, or clinical supply chain optimization.

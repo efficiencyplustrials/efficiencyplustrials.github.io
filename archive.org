@@ -503,7 +503,234 @@ efficiencyplustrial on linkedin
  paper sharing within this group
  private git repo (feic to set up)
  private sharepoint
+* E+ update for Cyrus et al <2026-02-10 Tue>
+   Topics covering whole e2e chain: from study design to CSC
+   eff+ provides a platform for end to end optimization
+   Deliverable: white paper, sub team implementation specs, simulation framework, study design E2E spec aka Christi template
+   Use the spec to unite the four subteams work 
+   What cannot be generated are notes teams, so ask them to record their notes in form of specs that can be implemented in the future as part of the platform plug in
+
+* General Meeting <2026-03-25 Wed>
+ - New members
+     Kristen Daniels (BI, introduced by Dooti: Kristen
+      Daniels, Executive Director, Early Asset TA Lead,  Kristen brings
+      with her years of experience in Clinical Operations and now as an Asset TA Lead)
+     Kristen Leraas (JNJ, introduced by
+      Jessica: associate director of clinical operations from JNJ Vision med tech)
+     Leanne Goldstein (Amgen, introduced by Crystal)
+     Maria Pia Beccar-Varela (UTEP, introduced by Clara)
+     Maria Cristina Mariani (UTEP introduced by Clara)
+     Meilin Jiang (Lilly, introduced by Forrest Williamson)
+ - Topic sub team update
+    Clara
+    Palani
+    Dooti
+    Christi
+ - Social media
+    Crystal, Leanne   
+ - JSM Efficiency+ Lunch (Tuesday 8/2 12-1pm)
+  - or RISW? can do only one
+ - ASA report
+   You can summarize recent progress, achievements, or ongoing work in your working group. Or you can talk about how the group was formed, the motivation and the ambition. For example, https://asabiopreport.substack.com/p/biopharmaceutical-section-safety . 
+   The content is flexible - essentially whatever you want to share with the readers about your working group. People often see this as a promotion opportunity for their working group to increase visibility and influence, as we promote articles on LinkedIn, AMSTAT newsletter, and ASA conferences to reach broader audiences. 
+   You can find past articles published online on Substack and all past issues are archived in pdf on the ASA official website.
+ - Conferences
+   IBC2026 replacement speakers
+    Data-Driven Decision Making: The Role of Statistical Modeling in Improving Clinical Trial Success
+    Integrating GenAI-Enabled Machine Learning Models for Optimization of Clinical Trial Operations and Success Metrics
+   RTSM Upper Providence, PA, May 12-13
+    discussant
+   SCOPE-EU October
+   SLDS November Brooklyn
+   SCT Annual Meeting
+ - SWG deliverables
+    Special issue: Journal outreach effort?
+    Unified spec-driven framework for team deliverables
+
+** meeting notes
+Efficiency+ Trials Meeting Notes — March 26, 2026
+
+1. Document Sharing (Palani)
+- Discussion around improving document sharing workflows across collaborators
+- Need to establish a consistent approach for sharing materials within the group
+- Sharepoint/Teams seems to be good option, Christi and Palani to connect if needed
+
+2. LinkedIn Live (Leanne, Crystal)
+- Exploring LinkedIn Live as a channel for outreach and visibility
+- Could be used to broadcast presentations, discussions, or updates to a broader audience
+
+3. Journal Club (Guohui, Fei)
+- Considering hosting under the ASA (American Statistical Association) umbrella
+- Social media promotion to increase reach and engagement
+- **Inna's proposal**: Ideas on how to broaden the journal club audience, including:
+  - Email subscription list for notifications and updates
+  - Recording sessions so they can be shared asynchronously with those who can't attend live
+- Fei to connect with Guohui on presentation topics
+  End-to-end clinical trial simulator
+  Introduction to social media and brainstorm
+  
+4. Tufts Center for the Study of Drug Development (Leanne, Fei)
+- Opportunity to invite presenters from outside the statistics discipline
+- Goal: bring in diverse perspectives (e.g., clinical operations, regulatory, drug development) to enrich discussions
+- Fei and Leanne to connect
+
+5. Integrated deliverables from topic teams (Fei and topic leads)
+- Fei to organize a small meeting with topic leads to brainstorm best ways of integrating four teams output
+    
+
+* General Meeting <2026-06-10 Wed>
+** Conferences
+IBC
+    Session Title: Clinical Trial Operations and Safety Signal Detection 
+    Session ID#: OP.02.02
+    Session Room: 401 D 
+    Date and time: July 13, 2026 from 10:45 AM to 12:15 PM
+
+Kyle Wathen Cytel
+Cunyi Wang JnJ
+Vlad Anisimov Amgen
+    
+JSM
+ https://ww3.aievolution.com/JSMAnnual2026/index.cfm?do=ev.viewEv&ev=5664
+ Guohui Wu Regeneron
+ essica Canon-Hill JnJ
+ Kaifeng Lu Beonemed
+ Clara Cali Mella Bayer (looking for replacement)
+
+SCOPE-EU
+ Mario Wolfs BMS
+ Bhargava Reddy JnJ
+ Clara Cali Mella Bayer
+ Ken Getz Tufts Center for Clinical Trials
+
+RISW
+CG Wang/Guohui Regeneron.com
+Jose Pinheiro Rutgers
+Sun Jimeng keiji.ai
+Dooti Roy BI
+
+
+ 
+** New member introduction
+Yi Hong Yi.hong1@gilead.com
+
+I am Associated Director in Clinical Data Science at Gilead
+Sciences. My work focuses on applying Advanced Analytics and AI to
+improve clinical trial operational efficiency and design.
+
+I learned the Efficiency Plus Trials group from Dr Anisimov's post and
+am very interested in joining, as I value the opportunity to learn
+from peers, exchange best practices, and contribute insights from my
+experience across data science, AI, and clinical development. I would
+appreciate the opportunity to join the group and participate
+discussions.
+
+** From: Kilaru, Rakhi <Rakhi.Kilaru@thermofisher.com>
+Sent: Sunday, April 12, 2026 2:58:16 PM
+To: Chen, Fei [JRDUS] <FChen6@its.jnj.com>; rakhi.kilaru@ppd.com <rakhi.kilaru@ppd.com>
+Subject: [EXTERNAL] RE: Efficiency+ 
+ 
+Hi Fei,
+ 
+Thanks for this information, it was wonderful attending your session! 
+ 
+Many in my group is quite heavily involved in statistical
+contributions to operational efficiencies and would love to be
+involved with this group. I have someone in mind for all 4
+workstreams!
+
+ 
+I would like to volunteer myself for dynamic trial monitoring as this
+is something that I have a personal research interest in and as
+co-lead for CSM/QTL special interest group jointly endorsed by the
+ASA-BIOP/EFSPI and PSI, I can bring forth expertise/dialogue from that
+front as well.
+
+
+Yes, indeed I am the QTL lead for ASA-BIOP and co-lead on the QTL/CSM
+special interest group with my co-lead Susan Talbot from Amgen. We
+need to update the webpage in ASA BIOP 😊
+
+** jsm
+invited session
+Tuesday, Aug 4: 2:00 PM - 3:50 PM
+1232 
+Invited Paper Session 
+Thomas M. Menino Convention & Exhibition Center 
+Room: CC-204B
+
+** Efficiency+ Lunch at JSM
+    We are writing to confirm the meeting/event for Biopharmaceutical Section to take place during the 2026 Joint Statistical Meetings in Boston, MA
+    Meeting Title: Efficiency+: Advancing Clinical Trial Operations through Innovative Statistical Methodologies
+    Date: August 4, 2026
+    Start Time:  12:00:00 PM
+    End Time: 1:00:00 PM
+    Location: Westin Boston Seaport District
+    Room Name: W-Hale
+    Room Set:  Conference for 10
+    W = The Westin Boston Seaport District, 425 Summer St., Boston, MA
+    If you selected food items during the submission process, we will confirm your menu choices and audio-visual order via email by mid-June 2026.  A final guarantee of attendees and menu choices are due back to us by Friday June 26, 2026.
+   If you are interested in ordering catering or audio-visual for your event and didn’t include that information in your meeting request submission, please contact christina@amstat.org, with menu selections and your approved committee budget amount. 
+   Below is a link to the Headquarter Hotel menus where your event is scheduled. Prices listed do not include the 30% Service Charge including gratuities and sales tax of 7%, which will be calculated and applied at final billing. 
+   Weston Menus
+   Please contact Christina Link, Meetings Planner for the American Statistical Association, directly at Christina@amstat.org  if you have any questions regarding your meeting request.
+   For further information regarding 2026 JSM, please visit the JSM Conference web site.
+   We look forward to seeing you in Boston, MA!
+
+Meetings Department
+American Statistical Association
+meetings@amstat.org
+(703) 684-1221
+
+** ASA BIOP Webinar
+** Subteam work towards a special issue
+1. Therapeutic innovation and Regulatory Science                                                                          
+    2. Clinical Trials                                                                                                        
+    3. Statistics in Biopharmaceutical Research (ASA journal)                                                                 
+ 4. cross-function journals? clinical trials?
+    clinical research news? applied clinical trials?
+
+
+jsm registration
+name change
+special journal rewview articles by four teams
+webinar
+first E+ conference?
+rtsm society https://myrps.org/
+
+
+* General Meeting <2026-07-29 Wed>
+** new member introduction
+Craig Wozniak
+Xuewei Wang, Astellas
+** webinar
+* CSC subgroup meeting <2026-06-04 Thu>
+manufacture to depot
+labeling
+one init stock paramter for study vs stratified
+hiearchical model for init stock values?
+
+cost, drug min, stockout
+
+video
+
+workstream deliverable ideas
+study design template
+spec for simulation implementation
+spec for validation
+interactive app to visualize simulation architecture
+video
+manufacturing -> depot -> sites -> patients -> resupply
+refer to christi's time vs shelf life flowchart
+what happens within each bucket?
+what happens to components of each bucket?
+how are parameters within each bucket interact with each other?
+
 * other topics
+jcp
+•	My discussions with the folks at Rutgers about possible ways I can get some sort of courtesy position with the Stat Dept and how this could potentially open the door for consulting activities for myself and other people at Rutgers. Progress is a bit on the slow side and I wanted to check with you if you thought that would be worth pursuing, from the perspective of opening the door for me to engage in project discussions with you and other SMMC folks. I believe it'll be up to me to drive things with Rutgers and would like to discuss if that is worth pursuing or not.
+•	Inna gave a nice presentation at yesterday's journal club meeting - she mentioned it was the same presentation she gave at ENAR and it had considerable overlap with what she presented years ago at the ASA BIOP RISW, which sort of motivated the beginnings of OVAP at J&J. One point that came through clearly during her talk and I mentioned at the end of the presentation, is the importance of learning how to work with folks from other functions who currently own the space - you have done a great job in engaging with people from Feasibility, CSC, Data Science, etc., but this is not something that statisticians are good, or even mildly versed at. Learning how to influence with humility and, yet, drive, while letting others share the spotlight with us is a critical talent we need to develop as a professional class and I wonder if it would be worthwhile writing an article about it at some point (leveraging your experience at J&J) -- what do you think? It was a bit sobering to realize that Inna's was talking about her work at GSK, which may have contributed for her leaving the company and that she has not been able to get traction with a similar activity at BMS (please do not share this assessment with the rest of the WG). 
+
 Outreach
  How to promote awareness amongst leaders in stats and operationalists
 Palani

@@ -146,10 +146,14 @@ SWG through this invited session to increase our capacity and drive
 meaningful changes to impact the industry.
 
 Fei Chen : Efficiency+ Scientific Working Group
-Xun Chen : Data-Driven Decision Making: The Role of Statistical Modeling in Improving Clinical Trial Success
 Vlad Anisimov : Advanced Data-Driven Statistical Technologies for Designing and Forecasting Clinical Trial Operations
+Kyle Wathen : Emerging Software Tools for Planning and Monitoring
+Cunyi: Data Driven Decision Making: The Role of Statistical Modeling in Driving Clinical Trial Decisions
+
+Xun Chen : Data-Driven Decision Making: The Role of Statistical Modeling in Improving Clinical Trial Success
+
 Palanikumar Ravindran : Integrating GenAI-Enabled Machine Learning Models for Optimization of Clinical Trial Operations and Success Metrics
 Eun Young Suh : Operational Challenges and Lessons Learned in a Very Large Phase 3 Program
-Kyle Wathen : Emerging Software Tools for Planning and Monitoring
+
 
 

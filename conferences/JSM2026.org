@@ -97,3 +97,20 @@ Critiana Mayer/Jessica
 Kaifeng Lu
 Clara Cali Mella
 
+Fei Chen
+
+Efficiency+: A new ASA BIOP Scientific Working Group Advancing Statistical Innovation in Clinical Trial Operations
+
+Clinical trial operations  enrollment forecasting, site selection, drug supply planning  are fundamentally statistical 
+problems, yet they remain largely governed by rules of thumb and intuition. More than half of trials miss enrollment 
+timelines, and drug supply waste is estimated at 50%. Statisticians are well-positioned to change this, but until recently, 
+there has been no organized community to share methods or develop best practices.
+
+This talk introduces Efficiency+, an ASA Biopharmaceutical Section Scientific Working Group formed in 2025 to bring statistical
+innovation to clinical trial operations. We will describe the group's cross-industry membership (12 companies, ~20 members), 
+its four workstreams  recruitment forecasting and site selection, dynamic trial monitoring, study design and operations, and clinical supply chain  and the common simulation platform being developed to integrate and evaluate contributions across all 
+teams.
+
+We will share highlights from the group's first year, including methods under development and lessons learned from building a 
+cross-functional, cross-company collaborative. Attendees will leave with a concrete picture of open problems in this space and
+how to get involved.                                 
