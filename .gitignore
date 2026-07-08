@@ -2,3 +2,9 @@ Topics/
 
 # CSC is a standalone R package with its own git repo
 CSC/
+
+# Word temp/lock files
+~$*
+
+# Symlink to external CSC path
+general_meeting_materials/integration_slides
