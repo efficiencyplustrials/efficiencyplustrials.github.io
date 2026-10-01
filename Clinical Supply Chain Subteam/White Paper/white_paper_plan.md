@@ -158,3 +158,38 @@ Hardest-won lessons from iterative development — framed as "what simulation-bu
 | 2, 4.4 | `vlad/` — Anisimov papers (PharmaOutsourcing 2010, Lefew et al. 2021, GSK TR 2010-01) |
 | 3, 4 | `cunyi/SKILL.md` (SA findings), `cunyi/4_complete.R`, `cunyi/simulation_from_spec.R`, `cunyi/New spec.docx` |
 | 5 | `cunyi/SKILL.md` (workflow), `cunyi/SA_comparison_report.html` |
+
+---
+
+## Gap Analysis: Christi's Outline vs. Current Draft
+
+*Reviewed 2026-10-01. Gaps to address before finalizing.*
+
+### ✅ Well covered
+
+- The three competing objectives (waste, cost, stock-out) — Sections 1 and 2
+- Depot structure and customs/lead-time rationale — Section 2
+- Site resupply algorithm (min-stock trigger, weekly review) — Section 3
+- 0–5% stock-out tolerance as the benchmark — used throughout Section 4
+- Commercial timing risk from supply delays — Section 6
+- Cold-chain complexity — Section 1
+- FEFO dispensing and DND rule — Sections 2 and 3
+- Full-chain waste definition and rationale — Section 4
+
+### ⚠️ Partially covered — needs strengthening
+
+| Gap | Where it belongs | What to add |
+|---|---|---|
+| **Manufacturing context** | Section 2 or 3 | Christi distinguishes early-phase small-batch (Product Development) vs. Ph3 large commercial manufacturer batches. Paper only describes a fixed schedule without this context. Add 1–2 sentences on how manufacturing mode affects batch sizing and flexibility. |
+| **Waste formula** | Section 2 (KPI definitions) | Christi gives an explicit formula: `(kits shipped − kits used) / kits used`. Paper states waste as % of production but never defines the formula. Add the formula in plain-language form. |
+| **Fixed vs. variable waste parameters** | Section 2 | Christi explicitly lists *fixed* parameters (number of label languages, countries, depots, customs, shelf life) and *variable* parameters (initial stock, resupply thresholds). Paper conflates them. Add this taxonomy — it clarifies what teams can and cannot control. |
+| **Shipment cost mechanics** | Section 2 or 6 | Christi explains packaging unit economics (e.g., 4 kits per box vs. 1 kit = 4× shipping cost). Paper mentions logistics costs qualitatively but not the cost structure. Add a brief concrete example. |
+| **Initial stock at site initiation** | Section 3 | Christi calls out "initial stock" sent at site initiation as a distinct decision variable alongside resupply thresholds. Paper focuses on ongoing resupply (THRESH top) but never discusses the initiation shipment. Add a sentence or two. |
+
+### ❌ Not covered — new content needed
+
+| Gap | Where it belongs | What to add |
+|---|---|---|
+| **IRT (Interactive Response Technology)** | Section 2 and/or Section 5 | Christi explicitly names IRT configuration as a key planning and execution tool alongside simulation. It is absent from the paper entirely. Add a brief explanation of IRT's role in randomization, kit assignment, and resupply triggering, and note the relationship between IRT configuration and simulation assumptions. |
+| **Sustainability / environmental framing of waste** | Section 1 and/or Section 6 | Christi frames drug expiry waste as both a financial and sustainability/environmental issue ("wasted scientific opportunity," "environmental footprint of discarded drug product"). Paper treats waste only in operational and financial terms. Add 1–2 sentences in the Introduction and/or Discussion on the sustainability dimension. |
+| **Adaptive trials** | Section 1 and/or Section 6.3 | Christi lists adaptive designs as a driver of supply complexity. Section 6.3 mentions adaptive trials only as a future application of the SKILL approach. Acknowledge adaptive designs earlier (Section 1) as part of the complexity framing. |
