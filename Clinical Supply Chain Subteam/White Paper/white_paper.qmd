@@ -351,18 +351,18 @@ Fifteen smaller batches do not materially reduce waste. They also provide less p
 
 A narrow waste measure can lead the team toward the wrong decision.
 
-**Site-only waste**, called V1 in the analysis, counts expiry at clinical sites. It does not show what happens at depots. A stricter site shelf-life rule may improve V1 because fewer near-expiry kits reach sites. However, those kits may remain at the regional depot and expire there.
+**Site-only waste** counts expiry at clinical sites. It does not show what happens at depots. A stricter site shelf-life rule may improve site-only waste because fewer near-expiry kits reach sites. However, those kits may remain at the regional depot and expire there.
 
-**Full-chain waste**, called V2, counts expiry and damage at every modeled location. It compares these losses with total drug production. V2 shows whether a decision truly reduces waste or merely moves it elsewhere.
+**Full-chain waste** counts expiry and damage at every modeled location. It compares these losses with total drug production. Full-chain waste shows whether a decision truly reduces waste or merely moves it elsewhere.
 
 | Waste measure | What it shows | Main limitation |
 |---|---|---|
-| Site-only waste, V1 | Expiry at clinical sites | Can hide waste moved to a depot |
-| Full-chain waste, V2 | Expiry and damage across the modeled supply chain | Requires complete depot and site data |
+| Site-only waste | Expiry at clinical sites | Can hide waste moved to a depot |
+| Full-chain waste | Expiry and damage across the modeled supply chain | Requires complete depot and site data |
 
-V2 should remain the primary measure for optimization.
+Full-chain waste should remain the primary measure for optimization.
 
-The 30% to 50% industry planning range discussed in Section 2 usually uses a shipment-based operational definition. It compares unused shipped kits with used kits. V2 instead compares expiry and damage with all drug produced. The measures use different comparison quantities and are not directly comparable. This paper reports both definitions where useful and clearly identifies which one applies.
+The 30% to 50% industry planning range discussed in Section 2 usually uses a shipment-based operational definition. It compares unused shipped kits with used kits. Full-chain waste instead compares expiry and damage with all drug produced. The measures use different comparison quantities and are not directly comparable. This paper reports both definitions where useful and clearly identifies which one applies.
 
 #### 4.4 Recommended operating configuration
 
