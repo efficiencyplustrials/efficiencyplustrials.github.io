@@ -1,6 +1,3 @@
-# Third-party copyrighted materials
-vlad/
-
 # Large generated HTML files (SA outputs, scatter plots)
 cunyi/SA_comparison_report.html
 cunyi/scatter_*.html
