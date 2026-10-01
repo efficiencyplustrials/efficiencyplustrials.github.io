@@ -1,0 +1,141 @@
+/* ── Page layout ──────────────────────────────────────────── */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  line-height: 1.7;
+}
+
+/* ── Title block ──────────────────────────────────────────── */
+#title-block-header {
+  border-bottom: 3px solid #cc0000;
+  padding-bottom: 20px;
+  margin-bottom: 32px;
+}
+.title {
+  font-size: 2em;
+  color: #cc0000;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.subtitle {
+  font-size: 1.15em;
+  color: #555;
+  margin-top: 6px;
+}
+.date {
+  color: #888;
+  font-size: 0.9em;
+  margin-top: 4px;
+}
+
+/* ── Section headings ─────────────────────────────────────── */
+h1, h2 {
+  color: #cc0000;
+  border-bottom: 2px solid #cc0000;
+  padding-bottom: 6px;
+  margin-top: 2em;
+}
+h1 { font-size: 1.6em; }
+h2 { font-size: 1.35em; }
+h3 {
+  color: #333;
+  font-size: 1.1em;
+  margin-top: 1.5em;
+  font-weight: 600;
+}
+
+/* ── TOC ──────────────────────────────────────────────────── */
+#TOC {
+  background: #fff5f5;
+  border-left: 4px solid #cc0000;
+  padding: 16px 20px;
+  margin-bottom: 32px;
+  border-radius: 4px;
+}
+#TOC a {
+  color: #cc0000;
+  text-decoration: none;
+}
+#TOC a:hover {
+  text-decoration: underline;
+}
+
+/* ── Tables ───────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93em;
+  margin: 1.5em 0;
+}
+thead th {
+  background: #cc0000;
+  color: white;
+  padding: 8px 12px;
+  text-align: left;
+  font-weight: 600;
+}
+tbody td {
+  padding: 7px 12px;
+  border-bottom: 1px solid #e0e0e0;
+  vertical-align: top;
+}
+tbody tr:nth-child(even) td {
+  background: #fff5f5;
+}
+
+/* ── Blockquotes (callouts) ───────────────────────────────── */
+blockquote {
+  border-left: 4px solid #cc0000;
+  background: #fff5f5;
+  padding: 12px 18px;
+  margin: 1.5em 0;
+  color: #333;
+  font-style: normal;
+}
+
+/* ── Lists ────────────────────────────────────────────────── */
+ul, ol {
+  padding-left: 1.6em;
+  margin: 0.6em 0 1em 0;
+}
+li {
+  margin-bottom: 0.35em;
+}
+
+/* ── Horizontal rules (section dividers) ─────────────────── */
+hr {
+  border: none;
+  border-top: 1px solid #e0e0e0;
+  margin: 2.5em 0;
+}
+
+/* ── Bold text ────────────────────────────────────────────── */
+strong {
+  color: #cc0000;
+}
+
+/* ── References section ───────────────────────────────────── */
+#references h2 {
+  margin-top: 2em;
+}
+#references p {
+  font-size: 0.92em;
+  margin-bottom: 0.5em;
+}
+
+/* ── Footer branding ──────────────────────────────────────── */
+body::after {
+  content: "Efficiency+ Trials";
+  display: block;
+  text-align: right;
+  font-size: 0.75em;
+  color: #cc0000;
+  font-weight: bold;
+  margin-top: 3em;
+  padding-top: 8px;
+  border-top: 1px solid #e0e0e0;
+}

@@ -1,0 +1,20 @@
+# Third-party copyrighted materials
+vlad/
+
+# Large generated HTML files (SA outputs, scatter plots)
+cunyi/SA_comparison_report.html
+cunyi/scatter_*.html
+
+# GPT iteration log (large, auto-generated)
+white_paper_log.json
+
+# Quarto intermediate and rendered files (regenerate with: quarto render)
+*.knit.md
+*_cache/
+*_files/
+.quarto/
+white_paper.html
+
+# Python cache
+__pycache__/
+*.pyc
