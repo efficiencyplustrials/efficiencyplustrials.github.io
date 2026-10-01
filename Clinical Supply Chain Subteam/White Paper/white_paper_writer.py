@@ -85,35 +85,112 @@ SECTIONS = {
     "s2": {
         "id": "s2",
         "title": "2. Clinical Trial Supply Chain: Structure and Challenges",
-        "target_length": "~1.25 pages (~600 words)",
+        "target_length": "~1.75 pages (~850 words)",
         "depends_on": [],
         "brief": """
-Write Section 2. Cover:
+Write Section 2. Cover all of the following — integrate them into flowing
+prose with tables where useful, not as a bullet dump:
+
+SUPPLY CHAIN STRUCTURE
 - How the supply chain is structured: manufacturer → EU central depot →
   regional depots (e.g., China) → clinical sites → patients. The flow is
   one-way. Customs clearance can take weeks to months, which is why regional
   depots exist close to where patients are.
-- The three-tier inventory system. Explain site resupply triggers in plain
-  English: when stock falls below a set minimum, the site automatically
-  requests more from the depot. Explain FEFO (First Expired, First Out)
-  dispensing: sites must use the oldest drug first so nothing expires unused.
-  Explain DND (Do Not Dispense): drug expiring within 13 days cannot be
-  given to patients.
-- What makes supply hard to plan: enrollment is unpredictable (sites recruit
-  faster or slower than expected), randomization adds uncertainty (you don't
-  know which treatment arm each patient will be assigned to until the moment
-  of randomization), lead times vary, and drugs have a limited shelf life.
-- Introduce the shelf-life-constrained regime: unlike commercial supply
-  chains, ordering too much too early can make the problem worse, not better,
-  because the drug expires before patients arrive to use it.
+
+MANUFACTURING CONTEXT
+- Drug is manufactured in "runs" or batches — a batch is designed to produce
+  a set amount regardless of how much is immediately needed.
+- Early in development (Phase 1/2), the Product Development team manufactures
+  small batches in-house. As Phase 3 approaches, production shifts to large
+  commercial manufacturers who will eventually supply approved product to
+  pharmacies. This shift affects batch sizing flexibility and lead times.
+- Whether manufactured in small or large batches, production is planned
+  ahead of demand, which creates inherent waste risk if enrollment is slower
+  than expected.
+
+THREE-TIER INVENTORY SYSTEM AND OPERATIONAL RULES
+- Explain the three inventory tiers (EU central depot, regional depot,
+  clinical site) and their roles.
+- Initial stock: at study start, a defined quantity of drug is sent to each
+  depot, and at site initiation (when a site first opens), a starting stock
+  is sent to the site. Choosing this initial quantity is a distinct planning
+  decision — too little risks an early stock-out before resupply arrives;
+  too much risks expiry if the site recruits slowly.
+- Ongoing resupply: sites use an automatic trigger — when usable stock falls
+  below a set minimum, the site requests more from the depot. Explain FEFO
+  (First Expired, First Out): sites dispense the drug with the earliest
+  expiry date first. Explain DND (Do Not Dispense): drug expiring within
+  13 days cannot be given to patients, even if it is physically on the shelf.
+- IRT (Interactive Response Technology): IRT is the electronic system used
+  in most clinical trials to manage randomization and drug supply. When a
+  patient is randomized, the IRT assigns them to a treatment arm and
+  identifies which kit to dispense. IRT also tracks site inventory and can
+  trigger automatic resupply requests. The supply rules encoded in the IRT
+  — minimum stock levels, kit assignment logic, resupply thresholds — must
+  closely match the assumptions used in any supply simulation. A mismatch
+  between the IRT configuration and the simulation model leads to predictions
+  that do not reflect real trial operations.
+
+WHAT MAKES SUPPLY HARD TO PLAN
+- Enrollment is unpredictable: sites recruit faster or slower than expected.
+- Randomization adds uncertainty: the required treatment arm cannot be
+  predicted until the moment of randomization.
+- Lead times vary: manufacturing, transport, customs, and site delivery all
+  take longer than planned at times.
+- Drugs have a limited shelf life: inventory loses usability over time.
+- Together these create the shelf-life-constrained regime: unlike commercial
+  supply chains, ordering too much too early can make performance worse
+  because drug expires before patients arrive.
+
+FIXED VS. VARIABLE WASTE DRIVERS
+- Some parameters that drive waste are fixed and outside the team's control:
+  number of languages required on the drug label (which can force separate
+  kit productions per region), number of countries, number of depots,
+  customs requirements, and the drug's shelf life.
+- Other parameters are variable — the team can adjust them: the initial
+  stock sent to each depot and site at study start, and the resupply
+  thresholds that trigger ongoing orders.
+- Understanding this distinction focuses optimization effort where it can
+  actually make a difference.
+
+WASTE DEFINITION AND COST MECHANICS
+- Drug wastage is commonly expressed as a percentage:
+  (kits shipped − kits used) / kits used × 100%.
+  A 30–50% waste rate is the typical industry planning range for clinical
+  trials — this is expected given the need to protect patients against
+  uncertain demand, not a sign of failure.
+- There is a fundamental trade-off between shipping cost and waste. Shipping
+  smaller, more frequent quantities reduces waste but increases cost
+  dramatically. For example, if the smallest shipping carton holds 4 kits,
+  sending 1 kit per shipment costs 4× more in packaging and freight than
+  sending all 4 together. Cold-chain requirements (temperature-controlled
+  transport and storage) amplify this effect further — some biologics
+  require ultra-cold storage, making every shipment extremely expensive.
+  Teams willing to accept somewhat higher waste may consolidate shipments
+  and substantially reduce logistics costs.
+- Stock-out consequences: missed patient visits, extended recruitment
+  timelines, and additional operational costs. Supply delays can also
+  consume patent exclusivity time, reducing the commercial window after
+  approval.
+
+SUSTAINABILITY DIMENSION
+- Drug expiry is not only a financial loss — it also represents an
+  environmental cost. Discarded investigational product consumes the
+  resources used to manufacture, package, and ship it, then adds to
+  pharmaceutical waste streams. As trials grow more global and complex,
+  the environmental footprint of wasted drug is an increasing concern
+  for sponsors alongside cost.
+
+KPI DEFINITIONS
 - Define the three KPIs used throughout the paper:
-    * Stock-out rate: the percentage of patient visits where no drug was
-      available (target: below 5%)
-    * Full-chain waste rate: all drug that expired or was damaged across the
-      entire supply chain, as a percentage of total drug produced (industry
-      norm: 30-50% — this is expected, not a failure)
+    * Stock-out rate: the percentage of patient visits where no usable drug
+      was available for the patient's assigned treatment (target: below 5%)
+    * Full-chain waste rate: all drug that expired or was damaged anywhere
+      in the supply chain — central depot, regional depots, and sites —
+      as a percentage of total drug produced (industry norm: 30–50%)
     * Logistics cost: driven mainly by shipping frequency, shipment size,
       and cold-chain requirements
+
 - Reference Anisimov (2010) and Lefew, Ninh & Anisimov (2021) as the
   academic foundation for the statistical modeling approach used later.
 """
@@ -429,11 +506,15 @@ Cover:
   right drug to the right patient at the right time — but three competing
   goals make this hard: minimize drug waste, control shipping costs, and
   avoid stock-outs. No single setting wins on all three simultaneously.
-- Why this is getting harder: trials are increasingly global, drugs require
-  cold-chain storage, and patient enrollment is impossible to predict
-  precisely.
-- The gap: most supply teams still rely on fixed overages and rules of thumb.
-  This paper shows a better way.
+- Why this is getting harder: trials are increasingly global and complex —
+  many now involve adaptive designs that change in response to accumulating
+  data, multiple dosing arms, cold-chain biologics, and patient enrollment
+  that is impossible to predict precisely. Sponsors also face mounting
+  scrutiny over the environmental footprint of discarded drug product:
+  every kit that expires unused represents both wasted investment and
+  wasted manufacturing resources.
+- The gap: most supply teams still rely on fixed overages and rules of
+  thumb. This paper shows a better way.
 - What this paper delivers: (1) a practical simulation framework that
   quantifies the waste/cost/stock-out trade-offs for a real trial design,
   and (2) the SKILL approach — a structured AI-assisted coding workflow
@@ -709,8 +790,18 @@ def main():
 
     with open(paper_path, "w") as f:
         f.write(final_paper)
+
+    # Append to log (preserve prior run history)
+    existing_logs = []
+    if os.path.exists(log_path):
+        try:
+            with open(log_path, "r") as f:
+                existing_logs = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            existing_logs = []
+    combined_logs = existing_logs + all_logs
     with open(log_path, "w") as f:
-        json.dump(all_logs, f, indent=2)
+        json.dump(combined_logs, f, indent=2)
 
     # Summary
     print(f"\n{'='*60}")

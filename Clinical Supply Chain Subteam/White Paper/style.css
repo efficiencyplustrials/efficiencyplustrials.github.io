@@ -48,20 +48,40 @@ h3 {
   font-weight: 600;
 }
 
-/* ── TOC ──────────────────────────────────────────────────── */
-#TOC {
-  background: #fff5f5;
-  border-left: 4px solid #cc0000;
-  padding: 16px 20px;
-  margin-bottom: 32px;
-  border-radius: 4px;
+/* ── Inline TOC sidebar (White Paper tab) ─────────────────── */
+#toc-sidebar {
+  position: fixed;
+  top: 80px;
+  right: calc(50% - 620px);   /* sits just outside the 900px content column */
+  width: 180px;
+  font-size: 0.80em;
+  line-height: 1.6;
+  border-left: 3px solid #dee2e6;
+  padding-left: 12px;
+  color: #555;
+  z-index: 100;
+  background: white;
 }
-#TOC a {
-  color: #cc0000;
+#toc-sidebar strong {
+  color: #333;
+  font-size: 0.95em;
+  display: block;
+  margin-bottom: 6px;
+}
+#toc-sidebar a {
+  color: #555;
   text-decoration: none;
+  display: block;
+  padding: 1px 0;
 }
-#TOC a:hover {
-  text-decoration: underline;
+#toc-sidebar a:hover {
+  color: #cc0000;
+}
+/* Hide sidebar on narrow screens where it would overlap */
+@media (max-width: 1200px) {
+  #toc-sidebar {
+    display: none;
+  }
 }
 
 /* ── Tables ───────────────────────────────────────────────── */
