@@ -400,22 +400,20 @@ The AI can produce an initial code draft much faster than a person starting from
 
 A program can run successfully and still represent the supply chain incorrectly. A simulation becomes trustworthy only after people test its logic, compare it with known examples, review its outputs, and approve its use.
 
-### 5.3 The six-phase workflow in practice
+### 5.3 The six-step workflow in practice
 
-The SKILL uses six phases numbered 0, 0.5, 0.7, 1, 2, and 3. The numbering reflects how the workflow developed. Phases 0.5 and 0.7 were added after practical experience showed that early confirmation prevents errors that are costly to find later.
+The SKILL follows six steps in a fixed sequence. The first three steps are preparatory — they must be completed and approved before any code is written. This structure reflects a core lesson from practice: errors found before coding takes minutes to fix; the same errors found after running hundreds of simulation scenarios can take days to correct.
 
-These two phases act as mandatory quality gates. The process cannot move to coding until the analyst approves them.
-
-| Phase | Main activity | Required output |
+| Step | Name | Required output |
 |---|---|---|
-| 0 | Read before writing | Summary of the study, source documents, and analysis goal |
-| 0.5 | Confirm every assumption | Approved table of major modeling decisions |
-| 0.7 | Verify dispensing edge cases | Approved checklist of unusual but important situations |
-| 1 | Generate code | Initial simulation draft that follows required supply rules |
-| 2 | Run and interpret | Reviewed results, checks, and explanations of anomalies |
-| 3 | Produce a structured report | Performance summary, recommendations, and open questions |
+| 1 | Read the study | Summary of source documents, study design, and analysis goal |
+| 2 | Confirm every assumption | Approved table of major modeling decisions |
+| 3 | Verify dispensing scenarios | Approved checklist of unusual but important patient situations |
+| 4 | Generate the model | Initial simulation code that follows required supply rules |
+| 5 | Run and interpret | Reviewed results, anomaly checks, and plain-English explanations |
+| 6 | Produce a structured report | Performance summary, recommendations, and open questions |
 
-#### Phase 0 — Read before writing
+#### Step 1 — Read the study
 
 The AI first reads the full protocol and supply specification. It identifies the type of analysis required. For example, the request may involve a baseline forecast, a comparison of resupply settings, or a manufacturing sensitivity analysis.
 
@@ -423,7 +421,7 @@ The AI also checks a persistent context file. This is a saved record of decision
 
 This step prevents the team from starting to write code before it understands the operating problem.
 
-#### Phase 0.5 — Confirm every assumption
+#### Step 2 — Confirm every assumption
 
 The AI next prepares a table of major modeling decisions. The table covers items such as:
 
@@ -443,9 +441,9 @@ The analyst must approve or correct each item. The AI does not move forward base
 
 This checkpoint is similar to reviewing a building plan before construction begins. Correcting a doorway on the plan is easy. Moving it after the wall is built is expensive.
 
-#### Phase 0.7 — Verify dispensing edge cases
+#### Step 3 — Verify dispensing scenarios
 
-The next checkpoint focuses on situations that standard process descriptions often overlook. The SKILL uses a checklist containing more than ten dispensing scenarios.
+This step focuses on situations that standard process descriptions often overlook. The SKILL uses a checklist containing more than ten dispensing scenarios.
 
 Examples include:
 
@@ -463,7 +461,7 @@ Examples include:
 
 The analyst confirms what should happen in each case. This prevents uncommon events from being handled through unspoken assumptions.
 
-#### Phase 1 — Generate code
+#### Step 4 — Generate the model
 
 After approval, the AI writes the initial model in R, a software language commonly used for data analysis and simulation.
 
@@ -480,7 +478,7 @@ The SKILL requires several operating rules. These include:
 
 The AI can also prepare the code needed for the repeated scenario runs and parameter comparisons described in Sections 3 and 4. However, the draft remains subject to human testing and review.
 
-#### Phase 2 — Run and interpret
+#### Step 5 — Run and interpret
 
 The analyst runs the model in the sponsor-approved computer environment. This protects data, preserves control over software versions, and supports a clear review record.
 
@@ -488,9 +486,9 @@ The analyst then shares the output with the AI. The AI summarizes the findings i
 
 The analyst investigates these warnings before accepting the results.
 
-#### Phase 3 — Produce a structured report
+#### Step 6 — Produce a structured report
 
-The final phase converts the reviewed output into a decision-focused report. It includes:
+The final step converts the reviewed output into a decision-focused report. It includes:
 
 - A summary of key performance measures
 - Comparisons with the baseline
