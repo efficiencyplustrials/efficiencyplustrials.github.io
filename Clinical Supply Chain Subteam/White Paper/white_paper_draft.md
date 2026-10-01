@@ -14,7 +14,7 @@ Cold-chain biologics add further pressure. Biologics are drugs made from living 
 
 Many supply teams still manage uncertainty through fixed extra quantities and rules of thumb. These methods can provide useful protection, but they do not show how connected decisions affect the full supply chain. A rule that lowers expiry at sites may simply move expiry to a depot. A large manufacturing buffer may reduce shortages while creating substantial waste.
 
-This paper presents a better way. First, it provides a practical simulation framework applied to a hypothetical but realistic trial design: a 250-patient, double-blind, weight-based dose-finding study across 23 global sites. This type of design — where patients are stratified by body weight and receive different kit quantities accordingly — is common in Phase 3 development. The framework tests uncertain enrollment, patient dropout, treatment assignment, resupply, shipping, and expiry, and quantifies the trade-off between drug waste and stock-outs. Second, it presents the SKILL approach, a structured workflow for using an artificial intelligence coding assistant. The approach helps clinical operations teams build and run simulations with less dependence on a dedicated programming resource, while keeping human review, testing, and approval central.
+This paper presents a practical alternative. First, it provides a practical simulation framework applied to a hypothetical but realistic trial design: a 250-patient, double-blind, weight-based dose-finding study across 23 global sites. This type of design — where patients are stratified by body weight and receive different kit quantities accordingly — is common in Phase 3 development. The framework tests uncertain enrollment, patient dropout, treatment assignment, resupply, shipping, and expiry, and quantifies the trade-off between drug waste and stock-outs. Second, it presents the SKILL approach, a structured workflow for using an artificial intelligence coding assistant. The approach helps clinical operations teams build and run simulations with less dependence on a dedicated programming resource, while keeping human review, testing, and approval central.
 
 Section 2 describes the supply chain structure and challenges; Section 3 presents the simulation framework; Section 4 reports sensitivity analysis findings; Section 5 describes the AI-assisted implementation approach; Sections 6 and 7 discuss implications and conclusions.
 
@@ -54,7 +54,7 @@ Sites normally follow **First Expired, First Out**, or FEFO. This means staff di
 
 A kit can also become unusable before its printed expiry date. Under the sponsor rule modeled in this paper, staff must not dispense a kit that will expire within 13 days. This is the **Do Not Dispense**, or DND, window. The 13-day period is a sponsor-defined quality threshold. It reflects the minimum usable life needed to support the patient visit and required dispensing safety checks. A kit inside this window may still be on the shelf, but the system treats it as unavailable.
 
-An **Interactive Response Technology**, or IRT, system manages many of these activities electronically. It assigns each patient by chance to a treatment group, identifies the correct kit to dispense, tracks stock, and triggers resupply. This chance-based assignment is called randomization. The IRT rules must closely match the simulation assumptions. If the IRT uses a different resupply trigger, expiry rule, or DND window, the simulation will not reflect actual trial operations.
+An **Interactive Response Technology**, or IRT, system manages many of these activities electronically. It assigns each patient to a treatment group, identifies the correct kit to dispense, tracks stock, and triggers resupply. The IRT rules must closely match the simulation assumptions. If the IRT uses a different resupply trigger, expiry rule, or DND window, the simulation will not reflect actual trial operations.
 
 | Operating decision | Purpose | Risk if set too low | Risk if set too high |
 |---|---|---|---|
@@ -282,8 +282,6 @@ It may appear that tightening this rule would reduce expiry. In practice, it mos
 
 For example, a site may reject a kit because it has too little shelf life remaining. The kit then stays at the regional depot. If no other site can use it, it expires there instead. Site expiry falls, but depot expiry rises. Full-chain waste barely changes.
 
-This is similar to moving unwanted stock from one shelf to another. The first shelf looks cleaner, but the organization still owns the same unusable stock.
-
 **Recommendation:** Keep the 30-day default. Treat MIN_SHELF as a quality-control setting, not as a tool for reducing total waste.
 
 #### EU inventory protection
@@ -320,7 +318,7 @@ Fifteen smaller batches do not materially reduce waste. They also provide less p
 
 A narrow waste measure can lead the team toward the wrong decision.
 
-**Site-only waste** counts expiry at clinical sites. It does not show what happens at depots. A stricter site shelf-life rule may improve site-only waste because fewer near-expiry kits reach sites. However, those kits may remain at the regional depot and expire there.
+**Site-only waste** counts expiry at clinical sites. It does not show what happens at depots. A stricter site shelf-life rule may improve site-only waste because fewer near-expiry kits reach sites. However, those kits may remain at the regional depot and expire there. The location of the waste changes; the total does not.
 
 **Full-chain waste** counts expiry and damage at every modeled location. It compares these losses with total drug production. Full-chain waste shows whether a decision truly reduces waste or merely moves it elsewhere.
 
