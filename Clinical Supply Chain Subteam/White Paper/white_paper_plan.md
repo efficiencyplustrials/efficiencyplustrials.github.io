@@ -193,3 +193,38 @@ Hardest-won lessons from iterative development — framed as "what simulation-bu
 | **IRT (Interactive Response Technology)** | Section 2 and/or Section 5 | Christi explicitly names IRT configuration as a key planning and execution tool alongside simulation. It is absent from the paper entirely. Add a brief explanation of IRT's role in randomization, kit assignment, and resupply triggering, and note the relationship between IRT configuration and simulation assumptions. |
 | **Sustainability / environmental framing of waste** | Section 1 and/or Section 6 | Christi frames drug expiry waste as both a financial and sustainability/environmental issue ("wasted scientific opportunity," "environmental footprint of discarded drug product"). Paper treats waste only in operational and financial terms. Add 1–2 sentences in the Introduction and/or Discussion on the sustainability dimension. |
 | **Adaptive trials** | Section 1 and/or Section 6.3 | Christi lists adaptive designs as a driver of supply complexity. Section 6.3 mentions adaptive trials only as a future application of the SKILL approach. Acknowledge adaptive designs earlier (Section 1) as part of the complexity framing. |
+
+---
+
+## Gap Fixes Round 2 (from 2026-10-01 independent multi-model review)
+
+*Four models reviewed independently: gpt-5.5, gpt-5.4, o3, o4-mini.*
+*Items flagged by 3+ models marked 🔴 (must fix). 1–2 models marked 🟡 (significant improvement).*
+
+### 🔴 Priority 1 — Must fix
+
+| # | Section(s) | Issue | Action |
+|---|---|---|---|
+| 1 | S2, S4 | **Waste metric inconsistency**: S2 defines waste as `(kits shipped − kits used) / kits used`; full-chain waste uses `(expired + damaged) / total produced`. Two different denominators, used interchangeably. The 43.5% baseline and 30–50% range never state which applies. | Clearly label the two metrics. State which applies to each reported figure. Clarify which denominator the 30–50% industry range uses. |
+| 2 | S2, S4 | **Logistics cost KPI declared but never reported**: Listed as one of three KPIs in S2 but absent from all sensitivity results. | Explicitly scope cost out as a future analysis in S2 and adjust the KPI framing accordingly. |
+| 3 | S4 | **15-batch scenario missing waste figure**: Batch comparison reports stock-out (3.8%) for 15 small batches but not the waste rate. | Add the waste result for the 15-batch scenario (or state it was not materially different from baseline). |
+| 4 | S4 | **"~39x" is mathematically ~37.5x**: 3.0% / 0.08% = 37.5. | Correct to "approximately 38-fold" or "more than 37-fold". |
+| 5 | S3, S6 | **No model validation mentioned**: No back-testing, no SME face-validation, no convergence justification for 100 replications. Limitations section omits this. | Add brief justification for 100 replications in S3. Add model validation as an explicit limitation in S6. |
+| 6 | S5 | **SKILL phase numbering (0, 0.5, 0.7, 1, 2, 3) unexplained**: Unconventional and confusing for a non-technical audience. | Add a one-sentence explanation (intermediate checkpoints added after practical experience), or renumber 1–6 with functional titles. |
+
+### 🟡 Priority 2 — Significant improvement
+
+| # | Section(s) | Issue | Action |
+|---|---|---|---|
+| 7 | S3 | **Stock-out rate unit not precisely defined**: Never states whether 0.68% is patient-level, visit-level, or site-level. | Add one sentence: "percentage of scheduled patient visits where no usable kit of the correct treatment arm was available." |
+| 8 | S3 | **No uncertainty reported for 100-replication results**: Only point estimates; no ranges or confidence intervals. | Add a brief characterization of variability across replications for the main KPIs. |
+| 9 | S4 | **EU_PROTECT causal pathway not explained**: Reducing EU buffer raises China stock-outs ~38-fold but the mechanism is never explained. | Add 2–3 sentences: lower EU buffer → less stock available for China transfers → shortage manifests at China sites after long lead times. |
+| 10 | S4 | **4 large batches produce lower stock-out (0.08%) — counterintuitive, unexplained**: Fewer batches = less stock-out is non-obvious. | Explain: large batches front-load supply, creating a large buffer that covers even peak demand — at the cost of much higher expiry. |
+| 11 | S2 | **DND 13-day threshold basis never stated**: Whether regulatory, IRT default, or sponsor policy is not mentioned. | Add a brief parenthetical clarifying the source. |
+| 12 | S1, S2 | **Environmental cost mentioned but not integrated into any result**: Flagged qualitatively but not tied to any decision framework. | Acknowledge explicitly that it is a qualitative consideration not directly modeled in this paper. |
+| 13 | S2 | **30–50% waste range and <5% stock-out tolerance not cited**: Presented as industry norms without references. | Attribute to Anisimov (2010) or Peterson et al. (2004); note stock-out tolerance is a common sponsor planning convention. |
+| 14 | S2, S4 | **Initial site stock mentioned in S2 but never tested**: Called a distinct decision variable then dropped. | Add a note in S4 acknowledging initial site stock was not varied and is a candidate for future sensitivity work. |
+
+### Re-run scope for Round 2
+
+Fixes touch S2 (waste metric, DND basis, cost scoping, citations), S3 (stock-out definition, replication note), S4 (15-batch waste, ~38x correction, EU_PROTECT pathway, 4-batch explanation, cost note), S5 (phase numbering), S6 (validation limitation). Full re-run required: S2 → S3 → S4 → S5 → S6 → S7 → S1.

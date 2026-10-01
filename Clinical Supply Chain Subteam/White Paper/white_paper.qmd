@@ -33,23 +33,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ### 1. Introduction {#introduction}
 
-Clinical trial supply teams must deliver the right drug to the right patient at the right time. They must also balance three competing goals:
+Clinical trial supply teams must deliver the right drug to the right patient at the right time. They must also limit unused drug and control shipping costs. These goals compete with one another.
 
-- Minimize unused and expired drug
-- Control shipping and handling costs
-- Avoid stock-outs that could disrupt patient treatment
+Holding more stock can prevent stock-outs. A stock-out means that no usable kit is available when a patient needs treatment. However, excess stock may expire before sites can use it. Smaller and more frequent shipments can reduce expiry, but they increase freight, packaging, and handling costs. No single supply setting produces the best result for service, waste, and cost at the same time.
 
-No single supply setting performs best on all three goals. Sending large quantities early can reduce shortage risk, but it may increase expiry. Sending smaller quantities more often can reduce waste, but it raises freight and packaging costs. Holding less stock at sites may improve efficiency, but it leaves less protection when enrollment rises unexpectedly or a shipment is delayed.
+This challenge is becoming harder as trials grow more global and complex. Many studies include several countries, depots, treatment groups, and dose levels. Some use adaptive designs, which allow trial rules to change as information becomes available. Patient enrollment remains difficult to predict. Sites may open late, recruit at different speeds, or enroll no patients at all.
 
-This balancing act is becoming harder. Trials increasingly operate across many countries, depots, and clinical sites. Some use multiple dosing or treatment arms. Others use adaptive designs, which allow planned changes in response to accumulating study information. Many biologic drugs also require cold chain, meaning temperature-controlled storage and transport. These conditions increase both supply complexity and delivery cost.
+Cold-chain biologics add further pressure. Biologics are drugs made from living cells or organisms. Cold chain means that the drug requires temperature-controlled storage and transport. Each shipment may therefore be expensive, while every expired kit represents wasted manufacturing effort, packaging, energy, transport, and disposal. Sponsors also face growing scrutiny over this environmental footprint.
 
-Patient enrollment adds further uncertainty. Some sites recruit quickly. Others recruit slowly or enroll no patients. The exact treatment assignment may not be known until a patient enters the trial. Patients may also miss visits or leave treatment early. As a result, teams cannot predict demand precisely.
+Many supply teams still manage uncertainty through fixed extra quantities and rules of thumb. These methods can provide useful protection, but they do not show how connected decisions affect the full supply chain. A rule that lowers expiry at sites may simply move expiry to a depot. A large manufacturing buffer may reduce shortages while creating substantial waste.
 
-Sponsors also face growing scrutiny over the environmental impact of discarded drug. Every unused kit that expires represents lost investment. It also represents wasted manufacturing materials, packaging, storage capacity, transport energy, and disposal effort.
-
-Despite these challenges, many supply plans still rely on fixed overages and rules of thumb. Teams may produce a set percentage above expected demand or hold the same quantity at every site. These approaches are simple, but they can hide important differences among sites, treatment arms, and regions.
-
-This paper presents a more practical, evidence-based approach. First, it describes a simulation framework that creates many realistic versions of a trial. The framework quantifies the trade-off between waste and stock-out risk for a detailed trial design. It also shows how shipment frequency and shipment size affect logistics cost. Second, the paper presents the SKILL approach. This structured, AI-assisted workflow helps clinical operations teams translate study rules into a working simulation without requiring a dedicated programmer to write every line manually. An analyst must still confirm assumptions, test the model, interpret the results, and approve recommendations.
+This paper presents a better way. First, it provides a practical simulation framework that tests uncertain enrollment, patient dropout, treatment assignment, resupply, shipping, and expiry for a trial with 250 patients and 23 sites. It quantifies the trade-off between drug waste and stock-outs and assesses shipping cost implications in practical terms. Second, it presents the SKILL approach, a structured workflow for using an artificial intelligence coding assistant. The approach helps clinical operations teams build and run simulations with less dependence on a dedicated programming resource, while keeping human review, testing, and approval central.
 
 Section 2 describes the supply chain structure and challenges; Section 3 presents the simulation framework; Section 4 reports sensitivity analysis findings; Section 5 describes the AI-assisted implementation approach; Sections 6 and 7 discuss implications and conclusions.
 
@@ -57,218 +51,208 @@ Section 2 describes the supply chain structure and challenges; Section 3 present
 
 ### 2. Clinical Trial Supply Chain: Structure and Challenges {#supply-chain-structure}
 
-A clinical trial supply chain moves drug through several controlled steps. A typical global network follows this path:
+A clinical trial supply chain moves drug through several connected locations. A typical flow starts at the manufacturer. Drug then moves to a central depot in the European Union, onward to regional depots, such as a depot in China, and finally to clinical sites and patients.
+
+The flow is usually one way:
 
 **Manufacturer → EU central depot → regional depots → clinical sites → patients**
 
-The flow is generally one-way. Drug shipped to a regional depot or site usually cannot return to central inventory for reuse. Each transfer also requires documentation, temperature control where needed, and inventory tracking.
+Returning or redirecting drug is often difficult. Labels, import permits, and quality requirements may differ by country. Customs clearance can take weeks or even months. A delay at one border can therefore affect patient visits much later in the chain.
 
-Regional depots place drug closer to patients. For example, a study may supply Chinese sites through a depot in China rather than shipping every order from Europe. This matters because customs clearance can take weeks or even months. A local depot shortens the final delivery route and reduces the risk that a site runs out while a shipment waits at the border.
+#### Manufacturing starts before demand is clear
 
-#### Manufacturing before demand is known
+Manufacturers produce clinical drug in batches. Each batch contains a set quantity, even when the study does not yet know exactly how much it will need.
 
-Manufacturers produce clinical drug in runs, also called batches. A batch is designed to produce a set quantity. The manufacturer cannot easily make only the exact number of kits needed the following week.
+During Phase 1 and Phase 2 trials, a Product Development team may make small batches in-house. These teams can often respond more quickly to changes, although their capacity may be limited.
 
-Manufacturing arrangements also change during development. In Phase 1 and Phase 2, the Product Development team may produce small batches in-house. These smaller runs may offer more flexibility. As the program approaches Phase 3, production often moves to a large commercial manufacturer. That manufacturer may later supply the approved product to pharmacies.
+Phase 3 usually brings a major shift. Production often moves to a large commercial manufacturer that may later supply pharmacies after approval. This manufacturer can produce much larger volumes. It also tends to require larger minimum batches, longer planning cycles, and earlier commitments. The supply team has less flexibility to respond to changing enrollment.
 
-This shift brings greater capacity and readiness for commercial supply. However, it can also mean larger minimum batch sizes, longer planning cycles, and less flexibility to change quantities at short notice.
+As a result, production begins before final demand is known. If enrollment is slower than expected, drug may expire. If enrollment is faster than expected, the study may run short. This uncertainty creates an inherent risk of waste.
 
-In both settings, production starts before actual patient demand is known. If enrollment is slower than expected, some drug may expire before use. This creates an inherent risk of waste.
+#### The three-tier inventory system
 
-#### Three inventory tiers
+This paper models three inventory tiers: the EU central depot, regional depots, and clinical sites. Each tier has different operating needs.
 
-After manufacturing, teams manage supply across three inventory tiers.
+At study start, the supply team sends a defined initial quantity to the central and regional depots. It also sends starting stock to each site when that site opens. Initial stock is a separate decision from ongoing resupply. Too little starting stock can cause an early stock-out. A stock-out means that no usable kit of the required treatment is available when needed. Too much starting stock can lead to expiry, especially at sites that enroll few patients.
 
-| Inventory tier | Main role | Typical planning concern |
+The sensitivity analysis in Section 4 did not vary initial site stock. This setting remains an important candidate for future optimization.
+
+After the study starts, automatic resupply rules maintain inventory. When usable stock falls below a set minimum, the system triggers a new shipment. The resupply threshold must provide enough protection against uncertain demand and delivery delays. However, a high threshold can place excess drug at slow-enrolling sites.
+
+Sites normally follow **First Expired, First Out**, or FEFO. This means staff dispense the kit with the earliest expiry date first. FEFO reduces avoidable expiry. It cannot prevent expiry when a site holds more stock than it can use.
+
+A kit can also become unusable before its printed expiry date. Under the sponsor rule modeled in this paper, staff must not dispense a kit that will expire within 13 days. This is the **Do Not Dispense**, or DND, window. The 13-day period is a sponsor-defined quality threshold. It reflects the minimum usable life needed to support the patient visit and required dispensing safety checks. A kit inside this window may still be on the shelf, but the system treats it as unavailable.
+
+An **Interactive Response Technology**, or IRT, system manages many of these activities electronically. It assigns each patient by chance to a treatment group, identifies the correct kit to dispense, tracks stock, and triggers resupply. This chance-based assignment is called randomization. The IRT rules must closely match the simulation assumptions. If the IRT uses a different resupply trigger, expiry rule, or DND window, the simulation will not reflect actual trial operations.
+
+| Operating decision | Purpose | Risk if set too low | Risk if set too high |
+|---|---|---|---|
+| Initial depot stock | Supports country and site start-up | Delayed site supply | Expiry at the depot |
+| Initial site stock | Supports first patient visits | Early stock-out | Expiry at slow sites |
+| Resupply threshold | Triggers ongoing shipments | Missed visits during demand surges | Excess site inventory and waste |
+| Shipment quantity | Restores usable stock | Frequent shipments and higher logistics costs | More drug exposed to expiry |
+
+#### Why demand is difficult to predict
+
+Several uncertainties act at the same time. Sites may open late. Enrollment may be faster or slower than planned. Randomization may place more patients than expected in one treatment group. Manufacturing, customs, and transport times may change. Meanwhile, every kit has a limited shelf life.
+
+Together, these factors create a **shelf-life-constrained supply chain**. In plain terms, the study must place the right treatment at the right location before a patient visit, but not so early that the drug expires.
+
+Some waste drivers are largely fixed for a given study. These include the number of countries and depots, required label languages, customs requirements, and drug shelf life. The supply team may be unable to change them.
+
+Other drivers are adjustable. These include initial stock quantities and resupply thresholds. Optimization should focus on these decisions because the team can change them without redesigning the trial.
+
+#### Two waste measures
+
+This paper reports two distinct waste measures. They should not be confused because they count waste differently and compare it with different quantities.
+
+| Measure | What it counts | How to interpret it |
 |---|---|---|
-| EU central depot | Holds the main study inventory and supplies regional depots | Holding enough stock to support the network without creating excessive aging inventory |
-| Regional depot | Holds inventory near a country or group of countries | Protecting sites against customs and international transport delays |
-| Clinical site | Holds kits for direct dispensing to patients | Keeping usable stock available for the correct treatment arm and visit |
+| **Operational waste ratio** | Kits shipped but not used, compared with kits used | If 140 kits are shipped and 100 are used, the operational waste ratio is 40% |
+| **Full-chain waste rate** | Drug that expires or is damaged at the central depot, regional depots, or clinical sites, compared with all drug produced | Captures losses across the complete supply chain, including losses before drug reaches a site |
 
-Initial stock and ongoing resupply require different decisions. At study start, the sponsor sends a defined quantity to each depot. When a clinical site first opens, it receives a starting stock.
+Industry literature often cites planning ranges of 30% to 50%. Sources such as Anisimov (2010) and Peterson et al. (2004) generally use the shipment-based operational definition. Those figures should not be treated as a directly comparable benchmark for the full-chain waste rate because each measure uses a different comparison quantity.
 
-Choosing the starting quantity is an important planning decision. Too little stock can cause an early stock-out before the first resupply arrives. Too much stock can expire if the site recruits slowly. A site expected to enroll quickly may justify more starting stock than a small site with uncertain recruitment.
+This paper uses the full-chain waste rate as its primary measure. It also examines a 30% to 50% range for planning scenarios. When this range is applied to the full-chain measure, it is an analysis range rather than an industry benchmark supported by the cited literature. Both waste measures are reported where useful. Section 4 explains why the full-chain measure provides the more complete view for this analysis.
 
-After initiation, sites usually follow automatic resupply rules. When usable stock falls below a set minimum, the site requests more drug from the depot. The word “usable” is important. A kit may be physically present but unavailable for dispensing.
+Anisimov (2010) and Lefew, Ninh, and Anisimov (2021) provide the academic foundation for the simulation and uncertainty methods used later in this paper.
 
-Sites follow **First Expired, First Out (FEFO)**. This means staff dispense the kit with the earliest expiry date first. They also apply a **Do Not Dispense (DND)** period. In the example used in this paper, a kit that will expire within 13 days cannot be given to a patient. It remains physically on the shelf, but it no longer protects the site from a stock-out.
+#### Service, cost, and sustainability
 
-Most trials manage these activities through **Interactive Response Technology (IRT)**. IRT is the electronic system used to manage patient randomization and drug supply. When a patient is randomized, IRT assigns the patient to a treatment arm and identifies the kit to dispense. It also tracks site inventory and can trigger automatic resupply requests.
+Waste cannot be reduced without considering patient care. A stock-out can cause a missed visit, interrupt treatment, or extend the trial timeline. Delays may also shorten the remaining period in which an approved drug has patent-protected sales. Many sponsors use a stock-out tolerance of 0% to 5% for planning. The acceptable level depends on disease severity, patient vulnerability, and whether alternative treatments are available.
 
-The rules configured in IRT must closely match the rules used in the supply simulation. These include minimum stock levels, kit assignment logic, and resupply thresholds. If the simulation assumes one rule while IRT uses another, the simulation results will not reflect actual trial operations.
+Shipment policy creates another trade-off. Smaller, more frequent shipments can reduce expiry. They also increase freight, labor, and packaging costs. For example, assume the smallest shipping carton holds four kits and each shipment has a similar base charge. Sending four kits in four separate one-kit shipments may cost about four times as much as sending all four kits in one shipment.
 
-#### Why supply is difficult to plan
+Cold-chain requirements make this trade-off more important. Cold chain means temperature-controlled transport and storage. Some drugs made from living cells or organisms, known as biologic drugs, require ultra-cold conditions. This can make each shipment extremely expensive.
 
-Several uncertainties act at the same time:
+This paper assesses the cost trade-off qualitatively. A precise calculation would require study-specific freight rates, packaging costs, destination charges, and temperature-control requirements. Section 6 presents quantified cost modeling as a future extension.
 
-- Sites enroll faster or slower than forecast.
-- Randomization determines the required treatment arm only when the patient enters the trial.
-- Manufacturing, transport, customs, and final delivery can take longer than planned.
-- Every kit has a limited shelf life.
+The analysis tracks three main performance measures:
 
-Together, these conditions create a **shelf-life-constrained supply chain**. In plain terms, inventory loses its usefulness over time. Unlike many commercial supply chains, ordering more drug earlier does not always improve performance. Extra stock may expire before patients arrive.
+| Measure | Definition and planning use |
+|---|---|
+| **Stock-out rate** | Percentage of scheduled patient visits with no usable kit for the correct treatment group. Target: below 5% |
+| **Full-chain waste rate** | Percentage of total drug produced that expires or is damaged at any supply-chain location. This paper examines 30% to 50% as a planning scenario range, not as a directly comparable literature benchmark |
+| **Logistics cost** | Cost driven by shipment frequency, shipment size, and cold-chain requirements. Assessed qualitatively in this paper; quantified modeling is future work |
 
-Some causes of waste are largely fixed and outside the study team's control. These include the number of countries and depots, customs requirements, and the drug's shelf life. Label language requirements can also force separate kit production for different regions.
-
-Other choices are adjustable. Teams can change the initial quantities sent to depots and sites. They can also change the stock thresholds that trigger ongoing resupply. Separating fixed factors from adjustable factors helps teams focus optimization work where it can make a practical difference.
-
-#### Waste, cost, and patient service
-
-Clinical supply teams use more than one waste definition. A common operational measure compares the number of kits shipped with the number used:
-
-**Waste percentage = kits shipped but not used, divided by kits used, expressed as a percentage.**
-
-For example, if a study ships 140 kits and uses 100, this measure reports 40% waste. A planning range of 30% to 50% is common for clinical trials. The appropriate range varies by study design, shelf life, and the waste definition used. This level is not automatically a sign of failure. Some extra inventory is necessary to protect patients against uncertain enrollment and treatment assignment.
-
-This paper also uses a broader full-chain waste measure. It includes drug that expires or is damaged at the central depot, regional depots, and sites. It reports that loss as a percentage of total drug produced. Because the two measures use different denominators, teams should always state which definition they are reporting.
-
-Waste must also be balanced against logistics cost. Smaller, more frequent shipments can reduce expiry, but they increase freight, packaging, and handling costs. If the smallest shipping carton holds four kits, sending one kit at a time requires four shipments instead of one shipment containing all four kits. When fixed packaging and freight costs apply to every shipment, the total shipping cost can approach four times the cost of the consolidated shipment. Actual costs depend on carrier rates, routes, and handling requirements.
-
-Cold-chain requirements make this trade-off more severe. Cold chain means temperature-controlled transport and storage. Some biologic drugs require ultra-cold conditions, making each shipment extremely expensive. A team may reasonably accept somewhat higher drug waste in exchange for fewer, better-consolidated shipments.
-
-Stock-outs carry serious consequences. Patients may miss visits or receive treatment late. Sites may need extra monitoring and coordination. Recruitment timelines may extend. For a successful product, supply delays can also consume part of the remaining patent exclusivity period and shorten the commercial window after approval.
-
-Expiry also has an environmental cost. Every discarded kit represents materials and energy used in manufacturing, packaging, storage, and transport. Disposal then adds to pharmaceutical waste streams. As trials become larger and more global, sponsors increasingly consider this environmental footprint alongside financial cost.
-
-#### Measures used in this paper
-
-| Key performance indicator | Practical definition | Planning guide |
-|---|---|---|
-| **Stock-out rate** | Percentage of patient visits where no usable drug was available for the patient's assigned treatment | Target below 5% |
-| **Full-chain waste rate** | Drug that expired or was damaged at the central depot, regional depots, or sites, as a percentage of total drug produced | A 30%–50% planning range is common, but results depend on study design and the waste definition used |
-| **Logistics cost** | Cost driven mainly by shipment frequency, shipment size, and cold-chain requirements | Lower cost must be balanced against waste and stock-out risk |
-
-These measures capture the central planning challenge: protect patients while limiting waste and controlling delivery cost. The simulation approach described later builds on the clinical trial supply modeling foundation presented by Anisimov (2010) and Lefew, Ninh, and Anisimov (2021).
+Finally, expiry has an environmental as well as a financial cost. Every discarded kit represents wasted manufacturing materials, packaging, energy, transport, and disposal effort. This paper does not directly model environmental impact. However, sustainability provides an additional reason, beyond cost, to reduce avoidable waste.
 
 ---
 
 ### 3. Stochastic Simulation Framework {#simulation-framework}
 
-A supply forecast often shows one expected enrollment curve and one expected demand total. Real trials rarely follow that exact path. Some sites open late. Some recruit quickly. Others enroll no patients. Patients may also leave treatment early.
+A clinical trial rarely follows one fixed plan. Some sites recruit quickly, while others recruit slowly or not at all. Patients may leave treatment early. Visits and supply needs also occur at different times.
 
-A **stochastic simulation** reflects this uncertainty by allowing events to vary from one simulation run to another. In plain terms, it creates many realistic versions of how the trial could unfold. The model then shows how the supply chain performs across those different versions.
+The simulation represents this uncertainty through repeated trial scenarios. Each scenario follows the same operating rules but includes different chance events. This approach is called **stochastic simulation** (simulation that includes chance and uncertainty).
 
-The example in this paper represents a trial with:
-
-- 250 patients
-- 23 clinical sites
-- Two treatment arms
-- A 52-week treatment period
-- An overall simulation horizon of about 850 days
-
-The longer horizon allows the model to capture enrollment, treatment, final patient visits, and drug expiry after recruitment slows or stops.
+The model follows the trial for about 850 days. This period covers enrollment, the 52-week treatment period, and the later supply activity needed to complete the study.
 
 #### 3.1 Modeling patient enrollment
 
-Sites do not all recruit at the same pace. Treating every site as an “average site” would hide an important source of supply risk.
+Sites do not recruit at the same pace. The simulation assigns each recruiting site to one of three enrollment tiers.
 
-The simulation therefore assigns each active site to one of three recruitment tiers:
-
-| Recruitment tier | Average enrollment pace | Practical example |
+| Enrollment tier | Successful enrollments per month | Practical example |
 |---|---:|---|
-| Low | 1 patient per month | A small site with a limited patient pool |
-| Medium | 2 patients per month | A typical established research site |
-| High | 4 patients per month | A large specialist center with strong recruitment |
+| Low | 1 | A small site with a limited patient pool |
+| Medium | 2 | A typical recruiting site |
+| High | 4 | A large or highly experienced site |
 
-These rates describe successful enrollment after screening. The model draws each site's rate from a realistic mix of the three tiers. It also assumes that 15% of sites never enroll a patient. These zero-enrolling sites still matter. They may receive initial stock that remains unused and eventually expires.
+These rates describe patients who successfully enroll after screening. They do not describe the total number of patients screened.
 
-The model separates screening from enrollment. Screening is the process used to determine whether a potential patient meets the trial requirements. In this example, 35% of screened patients fail screening. They do not enter the trial and do not create treatment demand.
+The model assumes that 35% of screened patients fail screening. These patients may not meet the eligibility criteria or may decide not to continue. They do not enter the trial and do not create treatment-kit demand. Because the enrollment tiers already represent successful enrollment, the model does not reduce those rates by another 35%. The screen-failure assumption instead shows how much screening activity may be needed to achieve the enrollment rates.
 
-For example, a site may screen 20 people but enroll only about 13. A supply plan based on all 20 would overstate demand. The simulation accounts for this screening loss while maintaining the assigned pace of successful enrollment.
+The simulation also assumes that 15% of sites never enroll a patient. These sites still matter to the supply plan. A non-enrolling site may receive initial stock when it opens. If no patients arrive, those kits can remain on the shelf until they expire. This creates waste even though the site contributes no enrollment.
 
-Patient dropout creates another important source of variation. The simulation assumes that 20% of enrolled patients leave treatment before completing the 52-week period. It determines when each dropout occurs and stops future dispensing for that patient.
+This issue is common in practice. A supply team often cannot know in advance which sites will recruit successfully. Sending no opening stock could delay treatment for the first patient. Sending stock to every site protects patient service but increases expiry risk.
 
-Dropout must be modeled directly. If the model assumes that every patient completes every visit, it overestimates total drug demand. In this trial, omitting dropout can increase the demand estimate by about 10% to 15%. That difference could lead to unnecessary manufacturing and higher expiry.
+Patient participation also changes after enrollment. The model assumes that 20% of enrolled patients drop out during the 52-week treatment period. Once a patient drops out, that patient no longer requires kits for future visits.
+
+Modeling dropout directly is important. In this modeling setup, assuming that every patient completes treatment overstates total drug demand by about 10% to 15%. The supply plan may then call for unnecessary manufacturing or excessive depot stock. Those extra kits may eventually expire.
+
+The model therefore separates three events:
+
+- **Screen failure:** The patient does not enter the trial.
+- **Successful enrollment:** The patient enters the trial and begins treatment.
+- **Dropout:** The enrolled patient stops treatment before completing 52 weeks.
+
+This separation produces a more realistic estimate of demand over time.
 
 #### 3.2 How the simulation runs day by day
 
-The simulation advances one day at a time for about 850 days. This approach works like a detailed operational calendar. Each day, the model checks what could happen and updates inventory throughout the network.
+The model moves forward one day at a time for about 850 days. This daily approach allows it to reflect patient visits, shipment arrivals, resupply decisions, and kit expiry in the correct order.
 
-Events occur in a defined sequence:
+Each simulated day follows the same sequence.
 
-1. **New patients may enroll.**  
-   Each site may screen and enroll patients based on its assigned recruitment pace.
+| Daily step | What the model does |
+|---|---|
+| 1. Enrollment | Adds newly enrolled patients at recruiting sites |
+| 2. Visit attendance | Identifies patients scheduled to attend that day |
+| 3. Kit dispensing | Checks for a usable kit in the correct treatment group and dispenses it if available |
+| 4. Weekly inventory review | On the site's review day, checks stock and places a resupply order when needed |
+| 5. Depot processing and shipping | Processes open orders and moves available kits through the supply chain |
+| 6. Manufacturing arrivals | Adds newly released manufacturing batches to the EU central depot |
+| 7. Expiry sweep | Removes expired kits and records them as waste |
 
-2. **Existing patients may attend visits.**  
-   Active patients return according to the trial visit schedule. Visit timing can vary within the rules of the protocol.
-
-3. **Sites dispense drug.**  
-   The model identifies the patient's treatment arm and required kit type. It then selects the usable kit with the earliest expiry date.
-
-4. **Sites review inventory when scheduled.**  
-   A site checks whether its usable stock is below the required level. If so, it places a resupply order.
-
-5. **Depots process pending orders.**  
-   Regional depots prepare and ship available stock to sites. International transfers may also move from the EU depot to China.
-
-6. **Scheduled manufacturing batches may arrive.**  
-   On planned arrival days, newly released kits enter inventory at the EU central depot.
-
-7. **Expired drug is removed and recorded.**  
-   The model logs where the expiry occurred. This allows teams to distinguish waste at the central depot, regional depot, and site levels.
+Before dispensing, the model applies the 13-day Do Not Dispense, or DND, rule described in Section 2. A kit that will expire within 13 days does not count as usable stock. Among the remaining usable kits, the site follows First Expired, First Out, or FEFO. It selects the usable kit with the earliest expiry date.
 
 The model tracks every kit separately. Each kit has:
 
 - A kit type: 5 ml, 2.5 ml, or 7.5 ml
-- A treatment arm: A or B
+- A treatment group: A or B
 - An expiry date
-- A current location and shipment status
+- A current location
+- A status, such as available, in transit, dispensed, expired, or damaged
 
-Individual tracking matters because kits are not interchangeable in every situation. A site may have many kits in total but still lack the correct type or treatment arm for a patient.
+This level of detail matters. A site may have kits on the shelf but still experience a stock-out. For example, the available kits may belong to treatment group A when the patient needs treatment group B. Kits may also be expired or too close to expiry under the DND rule.
 
-The model follows First Expired, First Out. It dispenses the eligible kit with the earliest expiry date first. It also applies the 13-day Do Not Dispense period. A kit within that period remains in physical inventory but cannot be given to a patient. It therefore does not count as usable stock when the site reviews its inventory.
+Sites review inventory once each week rather than every day. When usable stock falls below the resupply threshold, the site orders enough kits to return to its target level. This calculation includes stock already in transit.
 
-Sites review stock once each week rather than triggering orders every day. When a site orders, it requests enough drug to reach its target inventory level. The calculation includes usable stock already at the site and stock already in transit.
-
-This weekly review reduces over-ordering. Daily triggers can create several overlapping orders before the first shipment arrives. It is similar to repeatedly ordering groceries online without checking what is already on the delivery truck.
+Including in-transit stock prevents duplicate orders. Without this check, repeated reviews could trigger additional shipments while an earlier shipment was still on the way. Weekly review also reflects a controlled IRT process and reduces unnecessary over-ordering.
 
 #### 3.3 Manufacturing and replenishment policy
 
-Manufacturing follows a fixed schedule. The model includes eight batches, with one batch arriving every 60 days starting on Day 0.
+The baseline manufacturing plan contains eight batches. The manufacturer releases one batch every 60 days.
 
-Each batch is sized to cover approximately 210 days of expected demand. This planning quantity includes:
+Each batch is sized to cover about 210 days of expected demand. This includes:
 
-- A 150-day planned coverage window
-- An additional 60 days of safety stock
+- 150 days of planned demand coverage
+- 60 days of additional safety stock
 
-Safety stock is extra inventory held to protect the trial against higher demand or delayed supply. However, this protection has a limit. Too much early production increases the chance that kits will expire before use.
+Safety stock is extra inventory held to protect against uncertainty. It provides a buffer if enrollment is faster than expected or if a later batch is delayed. Because batches arrive every 60 days but each batch provides longer coverage, their coverage overlaps. This offers strong supply protection but can also increase inventory and expiry risk when demand is lower than expected.
 
-When a manufacturing batch reaches the EU central depot, the model automatically calculates how much stock the China depot needs. It then prepares a transfer, subject to one important protection rule.
+The model also applies an **EU protection rule**, labeled EU_PROTECT in the simulation. Before transferring stock from the EU central depot to China, the EU depot reserves enough inventory to cover 90 days of expected EU demand. This rule reduces the risk that a transfer to China will create a shortage in the EU.
 
-The EU depot must keep enough inventory to cover its own expected demand for the next 90 days before sending stock to China. This setting is called **EU_PROTECT**. Section 4 examines how changing this parameter affects patient service and waste.
+The China depot has an additional daily top-up trigger. If its available stock falls below seven days of expected demand, the model can initiate replenishment from the EU depot, subject to the EU protection rule. This provides a short-term safeguard between broader inventory decisions.
 
-The model also performs a daily safety check on the China depot. If China falls below seven days of expected supply, the system sends a top-up shipment when suitable EU stock is available. This rule provides a safety net between the larger transfers linked to manufacturing batch arrivals.
-
-Together, these rules balance two needs. China requires enough local stock to manage long international lead times. At the same time, the EU depot must not transfer so much that European sites face shortages.
+These rules balance two needs. The EU depot retains a defined supply buffer, while the China depot receives additional stock when its available inventory becomes low. Clinical sites continue to receive stock according to their weekly inventory rules.
 
 #### 3.4 What the simulation produces
 
-One simulation run represents only one possible trial outcome. It might include unusually fast recruitment, fewer dropouts, or several delayed visits. A different run may produce the opposite pattern.
+One simulated trial cannot show the full range of possible outcomes. It may happen to produce unusually fast enrollment, favorable visit timing, or fewer early dropouts.
 
-The framework therefore runs 100 independent replications. A replication is one complete simulated version of the trial. Each replication uses different random draws for:
+The analysis therefore runs 100 separate replications. A replication is one complete simulated version of the trial. Each replication uses different random selections for enrollment, visit timing, and dropout. One replication does not affect another.
 
-- Site enrollment rates
-- Patient arrival patterns
-- Visit timing
-- Patient dropout events
+The final results use the average across all 100 replications. This reduces the risk that one unusually favorable or unfavorable scenario drives the conclusion.
 
-The result is a range of possible outcomes rather than one fixed forecast. This helps teams see whether a supply policy performs reliably under uncertainty, not only under average conditions.
+One hundred replications provided stable average estimates for the main performance measures. The observed results across individual baseline replications were:
 
-The main outputs include:
+- Stock-out rates of about 0% to 2%
+- Full-chain waste rates of about 38% to 49%
 
-| Output | What it shows |
-|---|---|
-| Visit-level stock-out rate | Percentage of patient visits where the correct usable drug was unavailable |
-| Full-chain waste rate | Percentage of produced drug that expired or was damaged anywhere in the network |
-| Kits dispensed | Total kits provided to patients |
-| Kits expired by location | Expiry at the EU depot, China depot, or clinical sites |
-| Kits damaged in transit | Shipped kits lost under the assumed 1% damage rate for each shipment |
+These ranges show the spread of individual trial outcomes. The reported baseline results are averages across all replications.
 
-For the baseline trial design, the average stock-out rate across the 100 replications was **0.68%**. The average full-chain waste rate was **43.5%**.
+The **stock-out rate** is the percentage of scheduled patient visits at which the dispensing site has no usable kit for the patient's treatment group on that day. Kits assigned to the wrong treatment group, expired kits, and kits inside the DND window do not prevent a stock-out.
 
-Both results fall within the planning ranges used in this paper. The stock-out rate is well below the 5% target and indicates strong patient protection. The waste rate is within the 30% to 50% planning range. It reflects the extra inventory needed to support 23 sites, two treatment arms, multiple kit types, and uncertain enrollment.
+All waste results use the full-chain definition established in Section 2. The model counts expired and damaged kits at the EU central depot, regional depots, and clinical sites. It compares those losses with the total quantity of drug produced.
 
-These baseline results provide the starting point for the sensitivity analysis and optimization in Section 4.
+The baseline scenario represents 250 patients, 23 sites, and two treatment groups.
+
+| Baseline result | Average across 100 replications |
+|---|---:|
+| Stock-out rate | 0.68% |
+| Full-chain waste rate | 43.5% |
+
+The baseline provides strong patient service, with fewer than 1% of scheduled visits affected by a stock-out. However, it also produces substantial waste. Section 4 uses this baseline to test which adjustable supply settings can reduce waste without pushing the stock-out rate above the planning limit.
 
 ---
 
@@ -276,115 +260,121 @@ These baseline results provide the starting point for the sensitivity analysis a
 
 #### 4.1 What sensitivity analysis means here
 
-A simulation shows how one supply policy may perform. A **sensitivity analysis** tests how much the results change when the team adjusts that policy.
+Sensitivity analysis shows how strongly individual supply settings affect trial performance. The analysis changes one setting at a time and keeps the other settings fixed. It then runs 100 simulated trials for each setting and compares the average results with the baseline.
 
-The process is straightforward:
+This approach answers practical questions such as:
 
-1. Start with the baseline supply settings.
-2. Change one setting at a time.
-3. Run the simulation repeatedly under the new setting.
-4. Compare stock-outs and waste with the baseline.
-5. Identify changes that improve performance without creating unacceptable risk.
+- Can the team hold less stock at sites without causing unacceptable shortages?
+- Does a stricter shelf-life rule reduce total waste?
+- How much stock should the EU depot reserve?
+- Should manufacturing use fewer large batches or more small batches?
 
-Each setting is tested across many simulated versions of the trial. In total, this requires hundreds of simulation runs. Changing one setting at a time helps the team identify which setting caused the difference and how large that difference was.
-
-The trial in this example includes:
+The modeled trial includes:
 
 - 250 patients
-- 23 sites, including 13 in the EU and 10 in China
-- Two treatment arms
-- A double-blind design, where patients and blinded study staff do not know the assigned treatment
-- About 27 months of study operations within an overall simulation horizon of about 850 days
+- 23 sites: 13 in the EU and 10 in China
+- Two treatment groups in a double-blind design, meaning that treatment assignments are concealed from patients and relevant study staff
+- About 27 months of trial operations within an 850-day simulation period
 
-Under the baseline settings, the average visit-level stock-out rate was **0.68%**. Full-chain waste was **43.5%**. The analysis then tested whether different operating settings could reduce waste while keeping the stock-out rate below the 5% target.
+The baseline overall stock-out rate is 0.68%. The baseline full-chain waste rate is 43.5%.
 
-Four parameters had the greatest practical effect.
+Unless stated otherwise, all waste results in this section use the full-chain definition from Section 2. This measure counts expired and damaged kits at the EU central depot, the China regional depot, and clinical sites. It compares these losses with all drug produced.
+
+The analysis focuses on settings that the supply team can adjust. The goal is not simply to find the lowest waste or the lowest stock-out rate. It is to find a practical balance that keeps the stock-out rate below the 5% planning limit.
 
 #### 4.2 The four parameters that matter most
 
 ##### Site reorder target
 
-The first parameter is **THRESH top**, or the site reorder target. It defines how much stock a site aims to hold after resupply.
+The site reorder target is labeled **THRESH top** in the model. Despite that label, it is the stock level that a resupply order aims to restore. It is not the lower inventory level that triggers the order. The default target is 105 kits.
 
-The default target was 105 kits. This gave sites a large inventory cushion, but some kits remained unused at slower-recruiting sites. Lowering the target to 70 kits reduced full-chain waste from 43.5% to about 40%. The stock-out rate increased from 0.68% to about 1.4%, but it remained well below the 5% limit.
+Reducing the EU site target to 70 kits lowers the full-chain waste rate from 43.5% to about 40%. The overall stock-out rate rises from 0.68% to about 1.4%, but remains well below the 5% planning limit.
 
-This was the strongest waste-reduction opportunity identified in the analysis. It reduced the amount of drug held at the point where inventory is least flexible. Once drug reaches a site, it usually cannot be moved elsewhere for use.
+This setting was the strongest single waste-reduction lever identified.
 
-The change is similar to stocking less product on each store shelf while keeping replacement stock available nearby. The shelf holds less excess inventory, but customers still receive the product because resupply remains active.
+The reason is straightforward. A target of 105 kits places a large buffer at each site. This protects against uncertain demand. However, slow-enrolling sites may not use the kits before they expire. A target of 70 kits still provides protection while leaving less drug exposed to expiry on site shelves.
 
-**Recommendation:** Reduce the EU site reorder target from 105 kits to 70 kits. Monitor actual enrollment and delivery performance after implementation.
+**Recommendation:** Reduce the EU site reorder target from 105 kits to 70 kits. Confirm both the target and the separate reorder trigger in the Interactive Response Technology, or IRT, system. Monitor enrollment, inventory, and stock-outs after implementation. This result applies to the tested EU setting and should not automatically be extended to China sites.
 
 ##### Minimum shelf life at site receipt
 
-The second parameter is **MIN_SHELF**, or the minimum remaining shelf life that a site will accept when a shipment arrives.
+The minimum shelf-life setting, labeled **MIN_SHELF**, defines how much shelf life a kit must have remaining when a site receives it. The default is 30 days.
 
-At first, a stricter rule appears helpful. If sites accept only newer kits, fewer kits should expire at sites. However, the simulation showed that this change does not reduce waste across the full supply chain.
+It may appear that tightening this rule would reduce expiry. In practice, it mostly moves the waste to another location.
 
-When sites reject kits with shorter remaining shelf life, those kits stay at the regional depot. In China, this near-expiry inventory then accumulates and expires at the depot instead. Site expiry falls, but depot expiry rises. Total waste barely changes.
+For example, a site may reject a kit because it has too little shelf life remaining. The kit then stays at the regional depot. If no other site can use it, it expires there instead. Site expiry falls, but depot expiry rises. Full-chain waste barely changes.
 
-This is like moving food that is close to expiry from a kitchen shelf back into a warehouse. The kitchen looks better, but the food still expires.
+This is similar to moving unwanted stock from one shelf to another. The first shelf looks cleaner, but the organization still owns the same unusable stock.
 
-The shelf-life rule remains important for quality and patient protection. A kit must have enough remaining shelf life to support shipment, dispensing, and protocol requirements. However, tightening the rule should not be presented as a waste-reduction action.
-
-**Recommendation:** Keep the 30-day minimum. Treat it as a quality control setting, not a waste-reduction lever.
+**Recommendation:** Keep the 30-day default. Treat MIN_SHELF as a quality-control setting, not as a tool for reducing total waste.
 
 ##### EU inventory protection
 
-The third parameter is **EU_PROTECT**. It defines how many days of expected EU demand the central depot must reserve before transferring stock to China.
+The **EU_PROTECT** setting defines how many days of expected EU demand the central depot reserves before transferring stock to China. The baseline setting is 90 days.
 
-At the default setting of 90 days, the China stock-out rate was only 0.08%. When the reserve fell to 30 days, the China stock-out rate rose to 3.0%. Based on the underlying simulation results before rounding, this was approximately a 39-fold increase. Full-chain waste barely changed.
+At 90 days, the China-specific stock-out rate is 0.08%. At 30 days, the modeled China-specific stock-out rate rises to 3.0%. This is 37.5 times the rate at the 90-day setting. Full-chain waste barely changes.
 
-This result may appear surprising because a lower EU reserve allows more stock to move to China earlier. However, doing so can leave too little suitable stock at the EU depot for later transfers. The network then has less ability to respond when demand or shipment timing differs from the forecast.
+This result requires a model logic check before the team assigns a cause. Under the rule described in Section 3, reducing the EU reserve from 90 days to 30 days should normally make more stock eligible for transfer to China, not less. The reported increase in China stock-outs may reflect transfer timing, another linked inventory rule, in-transit stock, or an implementation issue. The team should review order records, transfer decisions, available inventory, stock in transit, and the exact rule used in the simulation.
 
-The 30-day setting remained below the overall 5% planning limit, but it created a large and unnecessary increase in risk. It also provided less protection against delays not fully captured by the model.
+Long delivery times still make China vulnerable to any interruption in replenishment. Transport, customs, and import activities may take weeks or months. Once site inventory becomes low, the supply chain may not have enough time to prevent a missed dispensing visit.
 
-**Recommendation:** Never set EU protection below 60 days. Keep the 90-day default as the safe operating point.
+The 3.0% result remains below the general 5% planning limit. However, it leaves less room for customs delays or an unexpected increase in enrollment.
+
+**Recommendation:** Keep the 90-day default while the result and model logic are validated. As an interim operating guardrail, do not reduce EU_PROTECT below 60 days without study-specific simulation and a review of transfer records. The analysis presented here does not establish 60 days as the optimal setting.
 
 ##### Manufacturing batch frequency
 
-The fourth parameter is manufacturing frequency. This analysis held total production volume fixed and changed how that volume was divided across batches.
+The analysis also tested different manufacturing schedules while holding total production volume fixed. The same total quantity was produced, but it was divided among different numbers of batches.
 
-Four large batches produced the lowest observed stock-out rate, at about 0.08%. However, full-chain waste increased to 56%. Large quantities arrived early and remained at the depot for long periods. Many kits expired before patients needed them.
+| Manufacturing schedule | Overall stock-out rate | Full-chain waste rate | Practical effect |
+|---|---:|---:|---|
+| 4 large batches | 0.08% | 56% | Strong early buffer, but substantial depot expiry |
+| 8 batches at 60-day intervals | 0.68% | 43.5% | Best observed balance of service and waste |
+| 15 small batches | 3.8% | About 43% | Similar waste to baseline, but higher stock-out risk |
 
-At the other extreme, 15 small batches increased the stock-out rate to 3.8%. Each batch provided a smaller supply cushion. A period of fast enrollment or higher demand could use the available stock before the next manufacturing arrival.
+Four large batches place more supply into the network early. This large buffer protects against high demand. However, much of the drug waits at depots and expires before patients need it. The very low stock-out rate therefore comes with a large increase in waste.
 
-Eight batches arriving at 60-day intervals provided the best balance. They avoided the heavy expiry associated with four large batches while maintaining a stronger supply cushion than 15 small batches.
+Fifteen smaller batches do not materially reduce waste. They also provide less protection between arrivals. A delayed batch release or an increase in demand can use the available stock before the next batch arrives. The stock-out rate rises to 3.8%.
 
-**Recommendation:** Keep the schedule of eight batches at 60-day intervals.
+**Recommendation:** Keep the eight-batch schedule with 60-day intervals.
 
 #### 4.3 Why the right waste metric matters
 
-The analysis compared two waste measures:
+A narrow waste measure can lead the team toward the wrong decision.
 
-- **Site-only waste, or V1:** Counts drug that expires at clinical sites only.
-- **Full-chain waste, or V2:** Counts drug that expires or is damaged at the EU central depot, regional depots, and clinical sites. It reports this loss as a percentage of total drug produced.
+**Site-only waste**, called V1 in the analysis, counts expiry at clinical sites. It does not show what happens at depots. A stricter site shelf-life rule may improve V1 because fewer near-expiry kits reach sites. However, those kits may remain at the regional depot and expire there.
 
-V1 can give a misleading result. For example, a stricter shelf-life acceptance rule reduces the number of kits that expire at sites. Under V1, this looks like an improvement.
+**Full-chain waste**, called V2, counts expiry and damage at every modeled location. It compares these losses with total drug production. V2 shows whether a decision truly reduces waste or merely moves it elsewhere.
 
-V2 shows what actually happened. The rejected kits remained at the depot and expired there. The location of the waste changed, but the total loss barely changed.
+| Waste measure | What it shows | Main limitation |
+|---|---|---|
+| Site-only waste, V1 | Expiry at clinical sites | Can hide waste moved to a depot |
+| Full-chain waste, V2 | Expiry and damage across the modeled supply chain | Requires complete depot and site data |
 
-A site-only measure may encourage teams to solve a local problem by moving it elsewhere. It can also hide expiry caused by early manufacturing or excess regional inventory.
+V2 should remain the primary measure for optimization.
 
-**Full-chain waste should therefore be the primary waste measure.** Site-level waste remains useful for identifying where losses occur, but teams should not use it alone to select a supply policy.
+The 30% to 50% industry planning range discussed in Section 2 usually uses a shipment-based operational definition. It compares unused shipped kits with used kits. V2 instead compares expiry and damage with all drug produced. The measures use different comparison quantities and are not directly comparable. This paper reports both definitions where useful and clearly identifies which one applies.
 
 #### 4.4 Recommended operating configuration
 
-| Parameter | Default | Recommended | Expected outcome |
+| Operating parameter | Baseline | Recommendation | Reason |
 |---|---:|---:|---|
-| THRESH top, EU site target | 105 kits | 70 kits | Full-chain waste falls from 43.5% to about 40%; stock-outs rise from 0.68% to about 1.4% |
-| MIN_SHELF | 30 days | 30 days | No change needed |
-| EU_PROTECT | 90 days | 90 days | No change needed |
-| Manufacturing batch schedule | 8 batches at 60-day intervals | 8 batches at 60-day intervals | No change needed |
+| EU site reorder target | 105 kits | Reduce to 70 kits | Reduces full-chain waste to about 40% while keeping the overall stock-out rate near 1.4% |
+| Minimum shelf life at site receipt | 30 days | Keep 30 days | Tighter rules move waste to depots rather than reducing total waste |
+| EU protection buffer | 90 days | Keep 90 days; use 60 days as an interim lower guardrail pending further testing | The 30-day setting was linked to higher China stock-outs, but the model logic requires validation |
+| Manufacturing schedule | 8 batches, 60 days apart | Keep baseline | Provides the best observed balance between stock-outs and waste |
 
-Only the EU site target requires adjustment. The other baseline settings already provide a sound balance between patient service and waste.
+The analysis did not vary initial site stock. Initial stock is separate from the ongoing reorder target. It may be especially important at non-enrolling and slow-enrolling sites because these sites can receive stock that is never used. Initial site stock should therefore be included in future sensitivity work.
 
 #### 4.5 Connection to the academic literature
 
-The findings are consistent with Anisimov (2010). That work showed that excess supply rises steeply when planners try to drive stock-out risk close to zero. The simulation confirms the same practical lesson. The four-batch schedule achieved very low stock-outs, but waste rose to 56%.
+The findings are directionally consistent with the pattern described by Anisimov (2010). Plans designed to bring stock-outs close to zero generally require more extra stock, also called overage. In this analysis, four large batches reduce the overall stock-out rate to 0.08%, but increase full-chain waste to 56%.
 
-The literature also shows that **center-stratified randomization** can require less excess inventory than unstratified randomization. Center-stratified randomization keeps treatment assignments more balanced within each site. Unstratified randomization balances assignments mainly across the trial as a whole. Both the published formulas and the simulation indicate that better local balance reduces the extra stock needed at individual sites.
+Overage and full-chain waste are related but are not identical measures. Overage describes supply above expected patient demand. Full-chain waste counts drug that expires or is damaged. The comparison should therefore be treated as a shared operational pattern rather than a direct comparison of measures.
 
-Finally, both approaches show that adding depots or treatment arms increases the required overage when other trial conditions remain similar. Each additional location and treatment arm divides inventory into smaller pools. A kit in the wrong location or treatment-arm pool cannot meet an immediate patient need. Careful parameter optimization therefore becomes more valuable as trial networks become more complex.
+The literature also indicates that site-stratified randomization, sometimes called center-stratified randomization, may require less extra stock than unstratified randomization. This approach balances treatment assignments within each site. It reduces the chance that one site will receive a large imbalance between treatment groups.
+
+Finally, required extra stock tends to rise as the network becomes more complex. More depots create more places where inventory can wait and expire. More treatment groups divide inventory into kit types that cannot always replace one another. These findings reinforce the need to optimize the full supply network rather than each location in isolation.
 
 ---
 
@@ -392,256 +382,225 @@ Finally, both approaches show that adding depots or treatment arms increases the
 
 #### 5.1 The challenge of building a simulation from scratch
 
-A faithful clinical trial drug supply simulation is not a simple spreadsheet. It must represent patients, visits, kits, expiry dates, shipments, depots, and resupply decisions. Depending on the study, a working model may require 500 to 1,000 lines of computer code.
+A faithful clinical trial drug supply simulation is difficult to build. A typical model may require 500 to 1,000 lines of computer instructions. It must connect enrollment, patient visits, treatment assignments, shipments, depot inventory, site stock, expiry, and resupply rules.
 
-Writing that code manually can take several weeks. Testing unusual situations can take even longer. For example:
+Writing the first version by hand can take weeks. Testing can take even longer. Problems often appear only in unusual situations. For example:
 
-- A patient misses a scheduled visit.
-- A kit expires while it is in transit.
-- A site has drug on the shelf, but none is usable because of the Do Not Dispense period.
-- A patient discontinues treatment between visits.
-- The correct treatment-arm kit is unavailable even though the site has other kits.
-- Two resupply orders overlap because the first shipment has not yet arrived.
+- A patient arrives when only the wrong treatment group is available.
+- A kit is on the shelf but falls inside the 13-day Do Not Dispense window.
+- A shipment is already in transit when the weekly review occurs.
+- A patient discontinues treatment between scheduled visits.
+- A depot has stock, but some kits will expire before they can reach the site.
 
-The larger challenge is not the coding itself. It is translating study rules into precise instructions.
+The required information is also rarely stored in one place. The protocol may define patient visits. The supply specification may describe kit types and shipment routes. Interactive Response Technology, or IRT, documents may contain dispensing and resupply rules. Emails and meeting notes may record later decisions.
 
-The required information is rarely in one place. Enrollment assumptions may be in the protocol. Kit details may be in the supply specification. Shipment rules may be in an Interactive Response Technology document. An important clarification about customs may exist only in an approved email or meeting record.
+This creates a translation problem. The analyst must turn scattered operating knowledge into one consistent set of model rules. A small misunderstanding can change the results. For example, treating the site reorder target as the order trigger could place much more stock at sites than intended.
 
-Important rules can therefore become scattered across many sources. These rules include:
+Artificial intelligence, or AI, can accelerate this work. However, asking an AI assistant to “build a supply simulation” is not enough. The AI may fill missing information with a reasonable-sounding assumption. That assumption may be wrong for the study.
 
-- First Expired, First Out dispensing
-- The 13-day Do Not Dispense window
-- The weekly site inventory review
-- EU inventory protection before transfers to China
-- Treatment-arm and kit-type requirements
-- Blinding controls that limit access to treatment assignments
-
-A programmer may know how to build a simulation but not know which operational details matter. A supply expert may understand the process but not know how to express every rule in computer code. This gap creates a high risk of hidden assumptions and incorrect results.
-
-AI coding assistants can shorten the development process. However, a broad request such as “write a clinical supply simulation” is not enough. The AI may fill information gaps with assumptions that sound reasonable but do not match the study.
-
-The **SKILL approach** addresses this problem by controlling how the AI works.
+The implementation therefore needs a controlled process. The AI should help with drafting and checking. It should not make hidden clinical or operational decisions.
 
 #### 5.2 What the SKILL approach is
 
-A **skill** is a structured set of instructions given to an AI coding assistant. In this example, the assistant is Amazon Kiro. The skill captures clinical supply knowledge and turns it into a reusable workflow.
+The **SKILL approach** provides that controlled process. A skill is a structured set of instructions given to Amazon Kiro, an AI coding assistant. It captures supply-chain knowledge as a reusable workflow.
 
-The analyst does not simply ask the AI to generate a simulation. Instead, the SKILL instructs the AI to:
+The SKILL tells the AI what to do, in what order, and when to stop for human confirmation. It directs the AI to:
 
-1. Read the study documents and approved clarifications.
+1. Read the source documents.
 2. Identify missing or unclear information.
-3. Present its proposed assumptions.
-4. Confirm difficult dispensing scenarios.
-5. Generate the simulation only after approval.
-6. Review the results for possible errors.
-7. Record confirmed decisions and lessons for future work.
+3. Confirm assumptions with the analyst.
+4. Check difficult dispensing situations.
+5. Generate the simulation code.
+6. Help interpret the output.
+7. Record lessons for future work.
 
-The AI follows the same steps each time. This makes the process more consistent and easier to review.
+This structure reduces silent assumptions. For example, the AI cannot simply decide how partial shipments should work. It must identify that decision and ask the analyst to confirm it.
 
-A useful analogy is the difference between giving a new employee a single task and giving that employee an operations manual. Without the manual, the employee may complete the task quickly but miss important controls. With the manual, the employee knows what to check, when to ask questions, and how to document the work.
+The SKILL also supports consistency across studies and work sessions. A team does not need to explain every standard rule again each time. Rules such as First Expired, First Out, or FEFO, can remain part of the standard workflow. Study-specific details still require confirmation.
 
-Under the SKILL approach, the AI acts less like a code generator and more like a junior analyst who has read the operations manual. The human analyst still owns the assumptions, reviews the model, interprets the outputs, and approves the final recommendations.
+The AI can produce an initial code draft much faster than a person starting from a blank page. It may turn a detailed 13-page specification into an initial working draft within a short period. That speed is useful, but it must not be confused with validation.
 
-#### 5.3 The workflow in practice
+A program can run successfully and still represent the supply chain incorrectly. A simulation becomes trustworthy only after people test its logic, compare it with known examples, review its outputs, and approve its use.
 
-The SKILL uses six phases. The phase numbers include intermediate checkpoints because the team added these controls during development.
+#### 5.3 The six-phase workflow in practice
 
-| Phase | Main activity | Why it matters |
+The SKILL uses six phases numbered 0, 0.5, 0.7, 1, 2, and 3. The numbering reflects how the workflow developed. Phases 0.5 and 0.7 were added after practical experience showed that early confirmation prevents errors that are costly to find later.
+
+These two phases act as mandatory quality gates. The process cannot move to coding until the analyst approves them.
+
+| Phase | Main activity | Required output |
 |---|---|---|
-| 0 | Read before writing | Prevents the AI from coding from an incomplete summary |
-| 0.5 | Confirm every assumption | Makes hidden decisions visible |
-| 0.7 | Verify dispensing edge cases | Checks unusual but important patient scenarios |
-| 1 | Generate the simulation | Builds the model using confirmed rules |
-| 2 | Run and interpret | Checks results and identifies possible anomalies |
-| 3 | Produce a structured report | Converts technical output into operational findings |
+| 0 | Read before writing | Summary of the study, source documents, and analysis goal |
+| 0.5 | Confirm every assumption | Approved table of major modeling decisions |
+| 0.7 | Verify dispensing edge cases | Approved checklist of unusual but important situations |
+| 1 | Generate code | Initial simulation draft that follows required supply rules |
+| 2 | Run and interpret | Reviewed results, checks, and explanations of anomalies |
+| 3 | Produce a structured report | Performance summary, recommendations, and open questions |
 
 ##### Phase 0 — Read before writing
 
-The AI first reads the full trial protocol, supply specification, IRT rules, and relevant approved clarifications. It does this before writing any code.
+The AI first reads the full protocol and supply specification. It identifies the type of analysis required. For example, the request may involve a baseline forecast, a comparison of resupply settings, or a manufacturing sensitivity analysis.
 
-It identifies the type of analysis required. For example, the request may involve a baseline simulation, a sensitivity analysis, or a comparison of resupply policies.
+The AI also checks a persistent context file. This is a saved record of decisions and lessons from earlier work sessions. It may include confirmed definitions, known model limitations, and preferred reporting formats.
 
-The AI also checks for a persistent context file. This is a saved record of decisions from earlier work sessions. In this implementation, the file is named `supply_chain_context.md`. It may contain confirmed definitions, agreed assumptions, previous errors, and lessons learned.
-
-This step reduces the risk that the team will revisit the same question or apply different rules in different sessions. The team should store and manage this file in an approved environment, using the same access and document controls applied to other study materials.
+This step prevents the team from starting to write code before it understands the operating problem.
 
 ##### Phase 0.5 — Confirm every assumption
 
-Next, the AI produces a table of the major decisions required to build the model. It does not proceed until the analyst approves or corrects each item.
+The AI next prepares a table of major modeling decisions. The table covers items such as:
 
-For example, the table may state:
+- Enrollment rates and study limits
+- Site opening dates
+- Visit frequency
+- Patient dropout
+- Treatment allocation
+- Kit demand by visit
+- Shipment times
+- Shelf life and the DND window
+- Initial stock and resupply rules
+- Manufacturing dates and batch sizes
+- Stock-out and waste definitions
 
-- How patient dropout will be spread across the treatment period
-- Whether missed visits are skipped or rescheduled
-- How stock already in transit affects a resupply order
-- When a kit becomes unusable under the Do Not Dispense rule
-- Whether shipment damage occurs before or after receipt
-- How the model protects EU inventory before transferring stock to China
+The analyst must approve or correct each item. The AI does not move forward based on silence.
 
-Nothing is assumed silently. If a protocol statement is unclear, the AI highlights it as an open question.
-
-This checkpoint may feel slower than immediate code generation. In practice, it saves time. Correcting an assumption in a review table takes minutes. Finding the same error after hundreds of simulation runs may take days.
+This checkpoint is similar to reviewing a building plan before construction begins. Correcting a doorway on the plan is easy. Moving it after the wall is built is expensive.
 
 ##### Phase 0.7 — Verify dispensing edge cases
 
-The AI then reviews a dedicated checklist of more than 10 dispensing scenarios. These are situations that are easy to overlook but can materially change the results.
+The next checkpoint focuses on situations that standard process descriptions often overlook. The SKILL uses a checklist containing more than ten dispensing scenarios.
 
-The checklist includes questions such as:
+Examples include:
 
-- What happens when a patient misses a visit?
-- What happens when the required kit is unavailable?
-- Can a visit be partly completed if it requires several kits and stock runs out?
-- What happens to future visits after a patient discontinues?
-- Does a kit inside the Do Not Dispense window count as usable stock?
-- Which kit is selected when several suitable kits are available?
-- Can stock intended for one treatment arm be used for another?
-- How are kits handled if they expire on the day of a visit?
-- Does an order include inventory already in transit?
-- What happens when the depot cannot fill the complete order?
+- A patient misses a visit.
+- A patient discontinues treatment before the next visit.
+- Stock runs out partway through a visit.
+- Only kits for the wrong treatment group are available.
+- A kit is unexpired but falls inside the DND window.
+- The site has enough stock for only part of the required dispensing.
+- A shipment arrives on the same day as a patient visit.
+- Several usable kits have different expiry dates.
+- Stock is in transit during the weekly inventory review.
+- A site has not enrolled any patients.
+- A replacement or unscheduled visit requires additional drug.
 
-The analyst must confirm every scenario before coding begins. This creates a clear operational record and supports later testing.
+The analyst confirms what should happen in each case. This prevents uncommon events from being handled through unspoken assumptions.
 
-##### Phase 1 — Generate the simulation
+##### Phase 1 — Generate code
 
-Only after approval does the AI create the simulation. In this case, it produces R code. R is a programming language commonly used for data analysis and simulation.
+After approval, the AI writes the initial model in R, a software language commonly used for data analysis and simulation.
 
-The SKILL contains non-negotiable rules. These include:
+The SKILL requires several operating rules. These include:
 
-- Use First Expired, First Out dispensing.
-- Apply the Do Not Dispense window when counting usable stock.
-- Review site inventory weekly.
-- Pull shipped kits from existing depot inventory.
-- Track treatment arms internally while protecting blinding in operational outputs and user access.
-- Validate total enrollment before calculating performance measures.
-- Record expiry and damage at every inventory level.
+- FEFO dispensing
+- Weekly site inventory review
+- Correct treatment-group matching
+- Application of the DND window
+- Deduction of shipped kits from available depot stock and recording of those kits as in transit
+- Validation of total enrollment
+- Tracking of stock in transit
+- Reporting of full-chain waste
 
-These controls make the generated model more consistent across studies and analysts. They do not remove the need for testing and human review.
+The AI can also prepare the code needed for the repeated scenario runs and parameter comparisons described in Sections 3 and 4. However, the draft remains subject to human testing and review.
 
 ##### Phase 2 — Run and interpret
 
-The analyst runs the simulation in the approved computing environment and provides the output for review. The AI then explains the findings in plain English.
+The analyst runs the model in the sponsor-approved computer environment. This protects data, preserves control over software versions, and supports a clear review record.
 
-It checks whether:
+The analyst then shares the output with the AI. The AI summarizes the findings in plain English and flags unusual patterns. Examples include enrollment far above the study target, depot stock that never declines, or a policy change that produces the opposite of the expected result.
 
-- Enrollment matches the trial target.
-- Dispensing volumes are reasonable.
-- Depot inventory decreases when shipments occur.
-- Waste is recorded at all locations.
-- Stock-out and waste rates fall within agreed planning ranges.
-- Any result appears too high, too low, or internally inconsistent.
-
-The AI can also help prepare and review sensitivity analyses across many parameter combinations. This reduces repetitive manual work and the risk of copying the wrong settings. However, the analyst must still confirm that each tested combination is valid and that the results make operational sense.
+The analyst investigates these warnings before accepting the results.
 
 ##### Phase 3 — Produce a structured report
 
-The final phase converts the output into a format that the supply team can use. The report includes:
+The final phase converts the reviewed output into a decision-focused report. It includes:
 
-- A summary of the confirmed assumptions
-- A table of key performance indicators
+- A summary of key performance measures
 - Comparisons with the baseline
-- Anomalies or limitations
+- The main service and waste trade-offs
 - Prioritized recommendations
-- Decisions that require human approval
+- Model limitations
+- Open questions that require human judgment
 
-This step helps prevent technical output from being shared without operational interpretation.
+This format helps operational teams focus on decisions rather than computer output.
 
-#### 5.4 What AI handles well—and where humans must stay involved
+#### 5.4 What AI handles well—and where people must stay involved
 
-AI provides the most value in repetitive, structured work.
+AI and human reviewers have different strengths.
 
-| AI strengths | Human responsibilities |
+| AI can support | Human decision remains essential |
 |---|---|
-| Produces an initial code draft from a 13-page supply specification in minutes | Decides whether the completed model reflects the actual study |
-| Applies confirmed rules across many parameter combinations | Sets acceptable patient-service and safety limits |
-| Reduces fatigue and manual transcription errors | Interprets unclear protocol language |
-| Reviews outputs for possible logical inconsistencies | Judges whether recommendations are operationally feasible |
-| Records confirmed decisions across sessions | Reviews and approves any change affecting patient safety |
+| Producing an initial draft from a detailed specification | Interpreting unclear or conflicting protocol language |
+| Preparing parameter comparisons without fatigue | Setting a clinically acceptable stock-out tolerance |
+| Checking whether the same rule is applied consistently | Deciding whether an operational risk is acceptable |
+| Comparing output patterns and flagging anomalies | Approving changes that could affect patient safety |
+| Retaining lessons in a persistent context file | Confirming that the model reflects actual IRT and supply processes |
 
-The persistent context file also helps retain institutional knowledge. It records why a decision was made, not only what the decision was. This can support handovers between analysts and reduce repeated errors.
+The persistent context file can provide useful institutional memory. It records why a rule was chosen and what problems occurred previously. It does not replace formal study documents, approved specifications, or controlled change records.
 
-However, an initial code draft is not the same as a validated simulation. AI can introduce errors even when its output appears reasonable. Teams must test the model before trusting its results.
+Final accountability remains with the study team. Clinical operations, supply, IRT, quality, and relevant technical reviewers should approve the assumptions that affect their areas.
 
-Human judgment remains essential. An acceptable stock-out rate depends on the disease, patient population, treatment alternatives, and regulatory setting. AI cannot decide what level of patient risk is acceptable.
+#### 5.5 Hard lessons and how the SKILL addressed them
 
-The same rule applies to ambiguous study language. A person who knows the study must determine the intended meaning. Any supply strategy that could affect patient safety requires formal human review and sign-off before implementation.
+Early development produced three practical lessons.
 
-#### 5.5 Hard lessons from building the simulation
-
-Three early errors show why AI-generated simulations require strong validation.
-
-| Practical lesson | What happened | Control added to the SKILL |
+| Lesson | What went wrong | SKILL response |
 |---|---|---|
-| Validate enrollment first | An early model enrolled three to four times too many patients. The results looked plausible but were meaningless. | The model must compare simulated enrollment with the study target before any result is interpreted. |
-| Confirm that shipments reduce depot stock | An early model created new kit records when shipping to sites. Depot inventory did not decrease. This produced “phantom drug” that had never been manufactured. | Every shipment must pull identified kits from existing depot inventory. |
-| Use full-chain waste | An early report counted only site expiry. It missed expiry at central and regional depots, making waste appear artificially low. | Full-chain waste is the required primary measure. Expiry by location may be shown as a supporting breakdown. |
+| Validate enrollment first | An early model enrolled three to four times the intended patient count. The outputs looked plausible but were meaningless. | Enrollment totals must pass validation before any result is interpreted. |
+| Every shipment must come from real stock | One version created new kit records when shipping. Depot inventory did not fall. This “phantom drug” made supply appear stronger than it was. | Depot-pull logic is a mandatory coding rule. Every shipped kit must be deducted from available depot stock and recorded as in transit. |
+| Report waste across the full chain | Early reports counted only site expiry. They missed expiry at depots and made waste appear artificially low. | Full-chain waste is the primary reported waste measure. Location-level results remain supporting detail. |
 
-These problems were found through repeated human and AI review. The AI helped identify inconsistencies, but human analysts challenged results that did not make operational sense.
+These examples show why a successful computer run is not proof of a correct model. AI-generated code can contain serious logic errors without displaying an error message.
 
-The main lesson is simple: fast code generation is not the same as a trustworthy simulation. Teams should test AI-generated models against known patient totals, inventory movements, and benchmark scenarios before using them for supply decisions.
+Human testing is therefore mandatory. The team should test simple cases with known answers. It should confirm that enrollment stops at the target, shipped stock leaves the depot, expired kits cannot be dispensed, and waste totals include every modeled location.
 
-The SKILL approach makes those checks part of the standard workflow. It combines AI speed with human control, documented assumptions, and repeatable validation.
+The SKILL approach makes AI useful by placing it inside a controlled workflow. AI provides speed, consistency, and drafting support. People provide clinical judgment, operational knowledge, testing, and approval. Both are needed before simulation results can support a real supply decision.
 
 ---
 
 ### 6. Discussion {#discussion}
 
-Clinical trial supply optimization is a strategic capability. It is not simply a back-office logistics task. Supply decisions affect patient continuity, trial timelines, and development costs.
+Supply chain optimization is a strategic capability, not a back-office logistics task. The right configuration protects patients, supports trial timelines, and reduces avoidable cost per patient. Faster trial completion can also preserve more commercial time during the drug’s patent-protected period. It does not extend the patent itself. The wrong configuration can cause missed dispensing visits, delay the trial, and waste valuable drug.
 
-A shortage of the correct kit can disrupt a treatment visit. Repeated disruptions can slow trial delivery and reduce the time available to sell a medicine under patent protection. At the other extreme, excessive supply raises manufacturing, storage, shipping, and destruction costs. It also increases the supply cost for each patient treated.
+The results show why teams must balance patient service and waste. The baseline achieved a 0.68% stock-out rate but produced 43.5% full-chain waste. Reducing the EU site reorder target from 105 to 70 kits lowered waste to about 40%. The stock-out rate increased to about 1.4% but remained below the 5% planning limit. By contrast, four large manufacturing batches reduced the stock-out rate to 0.08% but increased waste to 56%. These findings show that pushing stock-outs close to zero can require a large and costly inventory buffer.
 
-The simulation shows why teams must balance these risks. The baseline policy achieved a low stock-out rate of 0.68%, but full-chain waste reached 43.5%. Reducing the EU site target from 105 to 70 kits lowered waste to about 40%. Stock-outs increased to about 1.4%, but remained below the 5% target.
+Formula-based methods and simulation are complementary. They support different stages of planning. Methods such as those described by Anisimov provide fast scenario comparisons during early trial design. They can help teams compare broad choices before detailed operating rules are available.
 
-By contrast, four large manufacturing batches reduced stock-outs to about 0.08% while increasing waste to 56%. The safest-looking policy was therefore not the best overall policy. It protected strongly against shortages but produced too much drug too early.
+Simulation adds operational detail during planning and execution. In this study, it represented:
 
-These findings have a broader business meaning. A well-designed supply plan supports reliable trial delivery while controlling the cost per patient. A poorly designed plan can delay treatment, slow the study, and leave large quantities of unused drug to expire.
+- First Expired, First Out dispensing, which uses the kit with the earliest acceptable expiry date first
+- Sites that enroll no patients but may still hold opening stock
+- Weekly inventory reviews rather than continuous review
+- Replenishment rules that respond to current and in-transit stock
+- Expiry dates and status tracked for each kit
+- Dropout and other changes in patient demand over time
 
-#### Simulation and formula-based methods serve different needs
+These details help teams understand where waste occurs and why a shortage happens. For example, a site may appear to have stock but still be unable to dispense because the kits belong to the wrong treatment group, have expired, or fall within the 13-day Do Not Dispense window.
 
-Simulation and formula-based methods are complementary. Teams should not treat them as competing approaches.
+The framework also has important limitations:
 
-Anisimov’s formulas provide fast comparisons during study design. They can help teams assess how the number of sites, treatment arms, or depots affects the amount of supply required. This is useful when the trial is still being planned and detailed operating data are limited.
+- **One trial design:** The model represents one trial design with 250 patients, 23 sites, and two treatment groups. Every new study needs its own calibrated assumptions and settings.
+- **Need for AI tools and iteration:** The SKILL approach requires access to suitable AI tools and an analyst who is willing to test, review, and revise the model. AI assistance does not remove the need for human judgment.
+- **Dependence on input quality:** Results depend on the quality of the inputs. Incorrect enrollment, dropout, lead-time, or shelf-life assumptions will produce unreliable supply plans.
+- **No historical validation:** The model has not been validated against historical trial data. This is a known limitation. Retrospective validation against actual enrollment, shipment, dispensing, inventory, and expiry records would strengthen confidence in the framework.
+- **Limited coverage of rare outcomes:** One hundred replications produced stable average estimates, but they cannot capture every rare and severe outcome. Teams should review the range across replications, not only the mean. In the baseline, individual stock-out rates ranged from about 0% to 2%, while full-chain waste rates ranged from about 38% to 49%.
 
-Simulation provides more operational detail. For example, the model in this paper can represent:
+The SKILL workflow can also support other complex clinical trial simulation tasks. Examples include:
 
-- Different recruitment rates across sites, including the 15% of sites assumed to enroll no patients
-- First Expired, First Out dispensing, which uses the eligible kit with the earliest expiry date first
-- Weekly inventory reviews rather than daily ordering
-- Reorder thresholds that can be tested or adjusted as enrollment develops
-- Shipment lead times and damage
-- Patient dropout and differences in visit timing
-- Expiry at central depots, regional depots, and clinical sites
+- Recruitment forecasting
+- Adaptive trial scenario testing, where trial rules may change in response to accumulating information
+- Biomarker-driven randomization, where a biological test result helps determine treatment assignment
 
-Formula-based methods provide a quick map. Simulation provides a detailed route plan. A practical approach is to use formulas for early study design choices and simulation for detailed planning, policy testing, and updates during trial execution.
-
-#### Important limitations
-
-Teams should apply the findings with appropriate caution:
-
-- **The model represents one trial design.** The findings should not be transferred directly to another study. Each new trial needs its own assumptions for enrollment, dropout, visits, shipping, shelf life, treatment assignment, and manufacturing.
-- **The SKILL approach requires suitable resources.** Teams need access to an AI coding assistant. They also need an analyst who is willing to test, review, and improve the model through repeated cycles. AI can support implementation, but it does not remove the need for human review.
-- **Results depend on input quality.** If enrollment estimates are too high or too low, the supply plan may also be wrong. The same applies to assumptions about dropout, delivery times, damage, and shelf life. Teams should compare assumptions with actual study data and update the model as the trial progresses.
-
-These limitations do not reduce the value of simulation. They define how teams should use it. Simulation is a decision aid, not a fixed prediction of exactly what will happen.
-
-#### Broader use across clinical operations
-
-The SKILL workflow is not limited to drug supply. Clinical operations teams can use the same structured collaboration between people and AI for other complex simulation tasks, including:
-
-- **Patient recruitment modeling:** Testing how site openings, recruitment rates, and screen failures may affect enrollment timelines
-- **Adaptive trial scenario testing:** Exploring trial designs that allow planned changes based on accumulating study information
-- **Biomarker-driven randomization:** Testing treatment assignment rules that depend on a patient’s biological characteristics
-
-The common principle is simple. Clinical and operational experts define the problem and the decision rules. AI helps build and refine the implementation. People validate the model, challenge its assumptions, and remain responsible for all decisions.
+Quantified logistics cost modeling is a natural next step. This paper describes cost trade-offs in practical terms but does not calculate them. A future model could include study-specific freight, customs, storage, and packaging costs. Teams could then optimize three measures together: patient service, drug waste, and logistics cost.
 
 ---
 
 ### 7. Conclusion {#conclusion}
 
-Clinical trial supply teams must balance three competing goals: avoid waste, control cost, and prevent stock-outs that could disrupt patient treatment. Simulation makes these trade-offs visible and manageable. In the trial examined here, lowering the EU site reorder target from 105 to 70 kits reduced full-chain waste from 43.5% to about 40%. The visit-level stock-out rate rose from 0.68% to about 1.4%, but remained well below the 5% planning threshold. The analysis also showed that EU_PROTECT—the inventory reserved at the EU depot before transfers to China—is the most critical setting for continuity of supply in China. Reducing it too far created a large and unnecessary increase in stock-out risk.
+Clinical trial supply teams must balance three competing goals: reduce drug waste, control supply costs, and prevent stock-outs that could affect patients. This study measured waste and stock-outs directly. It did not calculate logistics costs. Simulation made the trade-off between service and waste visible before changes reached patients or live inventory. Reducing the EU site reorder target from 105 to 70 kits lowered full-chain waste from 43.5% to about 40%. The overall stock-out rate rose from 0.68% to about 1.4%, which remained well below the 5% planning limit. The EU protection buffer also appeared to be important for China supply continuity. Reducing it from 90 to 30 days increased the China-specific stock-out rate from 0.08% to 3.0%, a 37.5-fold increase, with almost no waste benefit. However, this counterintuitive result may reflect linked inventory rules or a model implementation issue. Teams should validate the logic before changing the buffer.
 
-The SKILL approach made detailed simulation more practical. It reduced the time needed to move from protocol and supply documents to a working simulation from weeks to days. Human review remained central at every stage. Analysts confirmed assumptions, checked difficult dispensing scenarios, tested the model, and approved recommendations. Early failures also became permanent safeguards. The SKILL now checks for excessive enrollment, confirms that shipments reduce depot inventory, and requires full-chain waste reporting. These controls prevent over-enrollment, “phantom drug,” and misleading site-only waste measures from quietly distorting results.
+The SKILL approach made development faster and more controlled. It shortened the path from protocol and supply specifications to an initial simulation draft from weeks to days. Human review checkpoints confirmed assumptions, difficult dispensing cases, model logic, and results. Three early failures became permanent guardrails: prevent enrollment above the study target, require every shipment to come from actual depot stock, and measure waste across the full supply chain. These controls can make future simulations safer and faster. They do not replace human testing, investigation, or approval.
 
-Supply teams should treat simulation-based planning as a standard operating tool, not a research exercise. Teams can use it to test policies before implementation, update plans as actual trial data arrive, and explain decisions with clear evidence. Rigorous modeling, combined with structured AI assistance and human oversight, is ready for operational use today.
+Supply teams should treat simulation-based planning as a standard operational tool. It can test supply policies before patients or live inventory face the consequences. Rigorous modeling, structured AI assistance, and accountable human oversight are ready for operational use today when teams apply them within a controlled, tested, and approved process.
 ---
 
 ### References
