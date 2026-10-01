@@ -29,6 +29,8 @@ knitr::opts_chunk$set(echo = FALSE)
 5. [SKILL Approach](#skill-approach)
 6. [Discussion](#discussion)
 7. [Conclusion](#conclusion)
+
+[Appendix A](#appendix)
 :::
 
 ### 1. Introduction {#introduction}
@@ -43,7 +45,7 @@ Cold-chain biologics add further pressure. Biologics are drugs made from living 
 
 Many supply teams still manage uncertainty through fixed extra quantities and rules of thumb. These methods can provide useful protection, but they do not show how connected decisions affect the full supply chain. A rule that lowers expiry at sites may simply move expiry to a depot. A large manufacturing buffer may reduce shortages while creating substantial waste.
 
-This paper presents a better way. First, it provides a practical simulation framework that tests uncertain enrollment, patient dropout, treatment assignment, resupply, shipping, and expiry for a trial with 250 patients and 23 sites. It quantifies the trade-off between drug waste and stock-outs and assesses shipping cost implications in practical terms. Second, it presents the SKILL approach, a structured workflow for using an artificial intelligence coding assistant. The approach helps clinical operations teams build and run simulations with less dependence on a dedicated programming resource, while keeping human review, testing, and approval central.
+This paper presents a better way. First, it provides a practical simulation framework applied to a hypothetical but realistic trial design: a 250-patient, double-blind, weight-based dose-finding study across 23 global sites. This type of design — where patients are stratified by body weight and receive different kit quantities accordingly — is common in Phase 3 development. The framework tests uncertain enrollment, patient dropout, treatment assignment, resupply, shipping, and expiry, and quantifies the trade-off between drug waste and stock-outs. Second, it presents the SKILL approach, a structured workflow for using an artificial intelligence coding assistant. The approach helps clinical operations teams build and run simulations with less dependence on a dedicated programming resource, while keeping human review, testing, and approval central.
 
 Section 2 describes the supply chain structure and challenges; Section 3 presents the simulation framework; Section 4 reports sensitivity analysis findings; Section 5 describes the AI-assisted implementation approach; Sections 6 and 7 discuss implications and conclusions.
 
@@ -145,6 +147,13 @@ A clinical trial rarely follows one fixed plan. Some sites recruit quickly, whil
 
 The simulation represents this uncertainty through repeated trial scenarios. Each scenario follows the same operating rules but includes different chance events. This approach is called **stochastic simulation** (simulation that includes chance and uncertainty).
 
+To demonstrate the framework, the paper uses a **hypothetical trial design** that reflects a common Phase 3 pattern: a weight-based dose-finding study in which patients receive different kit quantities depending on body weight. This type of design is frequently seen in oncology, rare disease, and metabolic indications where dosing is calibrated to patient size. The design is constructed to be realistic and representative, not to describe any specific approved or ongoing study. Full design parameters are listed in Appendix A. The key features are:
+
+- 250 patients across 23 global sites (13 EU, 10 China)
+- Two treatment arms, double-blind, randomized 1:1
+- Weekly dosing for the first 13 weeks; bi-weekly thereafter, based on body weight
+- Three kit types (5 ml, 2.5 ml, 7.5 ml) matched to dose and weight stratum
+
 The model follows the trial for about 850 days. This period covers enrollment, the 52-week treatment period, and the later supply activity needed to complete the study.
 
 #### 3.1 Modeling patient enrollment
@@ -245,7 +254,7 @@ The **stock-out rate** is the percentage of scheduled patient visits at which th
 
 All waste results use the full-chain definition established in Section 2. The model counts expired and damaged kits at the EU central depot, regional depots, and clinical sites. It compares those losses with the total quantity of drug produced.
 
-The baseline scenario represents 250 patients, 23 sites, and two treatment groups.
+The baseline scenario represents the hypothetical trial design described above: 250 patients, 23 sites, and two treatment groups.
 
 | Baseline result | Average across 100 replications |
 |---|---:|
@@ -614,6 +623,94 @@ Supply teams should treat simulation-based planning as a standard operational to
 4. Anisimov VV, Fedorov VV, Heiberger R, Saha S, Kothapalli M. Drug Supply Modeling Software: User Manual. GSK DDS Technical Report 2010-01. GlaxoSmithKline Pharmaceuticals; 2010.
 
 5. Peterson M, Byrom B, Dowlman N, McEntegart D. Optimizing clinical trial supply requirements: simulation of computer-controlled supply chain management. *Clinical Trials*. 2004;1(4):399–412.
+
+---
+
+### Appendix A: Example Trial Design and Simulation Parameters {#appendix}
+
+The following tables describe the hypothetical trial design used throughout this paper. The design reflects a common Phase 3 pattern — a weight-based dose-finding study with a global site network — and is intended to be realistic and representative. It does not describe any specific approved or ongoing study. Teams applying the simulation framework to their own study should replace these parameters with their own protocol and supply specification values.
+
+#### A.1 Trial Overview
+
+| Parameter | Value |
+|---|---|
+| Trial type | Randomized, double-blind, placebo-controlled, parallel-group |
+| Treatment arms | 2 (Arms A and B; 1:1 ratio) |
+| Total patients | 250 |
+| EU patients | 100 |
+| China patients | 150 |
+| Total sites | 23 (13 EU, 10 China) |
+| Treatment duration | 52 weeks |
+| Recruitment duration | 450 days (~15 months) |
+| Overall simulation horizon | ~850 days |
+
+#### A.2 Patient Recruitment
+
+| Parameter | Value |
+|---|---|
+| Site enrollment tiers | Low: 1/month; Medium: 2/month; High: 4/month (one-third of sites each) |
+| Screen failure rate | 35% |
+| Inactive sites (zero enrollment) | 15% of sites |
+| Patient dropout | 20% over 52-week treatment period |
+| Missing visit rate | 10% per scheduled visit |
+| Unscheduled visit rate | 10% |
+
+#### A.3 Stratification and Randomization
+
+| Parameter | Value |
+|---|---|
+| Stratification factors | Region (EU / China) × Body weight (<90 kg / ≥90 kg) |
+| EU patients <90 kg | 70% |
+| China patients <90 kg | 80% |
+| Randomization method | Stratified block randomization; block sizes 4 or 6 |
+
+#### A.4 Dosing and Kit Configuration
+
+| Treatment phase | Body weight | Kit type | Kits per visit |
+|---|---|---|---:|
+| Weeks 1–13 (weekly) | <90 kg | 5 ml | 3 |
+| Weeks 1–13 (weekly) | ≥90 kg | 5 ml | 5 |
+| Weeks 14–52 (bi-weekly) | <90 kg | 2.5 ml | 1 |
+| Weeks 14–52 (bi-weekly) | ≥90 kg | 7.5 ml | 1 |
+
+#### A.5 Drug Shelf Life and Dispensing Rules
+
+| Parameter | Value |
+|---|---|
+| Kit shelf life | 720 days (24 months) |
+| Do Not Dispense (DND) window | 13 days (sponsor-defined quality threshold) |
+| Minimum remaining shelf life at EU depot receipt | 195 days (6.5 months) |
+| Minimum remaining shelf life at China depot receipt | 270 days (9 months) |
+| Minimum remaining shelf life at site receipt | 180 days (6 months) |
+| Dispensing rule | First Expired, First Out (FEFO) |
+
+#### A.6 Lead Times
+
+| Shipment leg | Lead time |
+|---|---:|
+| Manufacturer → EU central depot | 7 days |
+| EU central depot → EU clinical site | 7 days |
+| EU central depot → China regional depot | 60 days |
+| China regional depot → China clinical site | 7 days |
+
+#### A.7 Inventory and Replenishment Settings
+
+| Parameter | Value |
+|---|---|
+| Site minimum stock threshold (per kit type × arm) | 20 kits |
+| Site target stock threshold (per kit type × arm) | 60 kits |
+| Site inventory review frequency | Weekly |
+| EU central depot safety reserve before China transfer (EU_PROTECT) | 90 days of expected EU demand |
+| China depot daily top-up trigger | 7 days of expected supply |
+
+#### A.8 Manufacturing Plan
+
+| Parameter | Value |
+|---|---|
+| Number of planned batches | 8 |
+| Batch interval | 60 days (Day 0, 60, 120, … 420) |
+| Batch size basis | 150-day coverage window + 60-day safety stock = 210 days of expected demand |
+| Shipment damage rate | 1% per shipment |
 
 ## Generation Pipeline
 
