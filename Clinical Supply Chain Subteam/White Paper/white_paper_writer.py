@@ -135,46 +135,66 @@ full paper. Do not use abbreviations that are not spelled out here.
     "sgl": {
         "id": "sgl",
         "title": "Glossary",
-        "target_length": "~0.5 page (~200 words)",
+        "target_length": "~0.6 page (~250 words)",
         "depends_on": ["s2", "s3", "s4", "s5"],
         "brief": """
-Write a Glossary of key terms used in this paper. Present as a two-column
-table: Term | Definition. Keep each definition to 1–2 plain-English sentences.
-Include all of the following terms, in alphabetical order:
+Write a Glossary of key terms. Present as a two-column table: Term | Definition.
+Keep each definition to 1–2 plain-English sentences. Alphabetical order.
+Explicitly flag sponsor/system-specific terms (DND, DNS, DNC) as such.
+Include ALL of the following terms:
 
-- DNC (Do Not Count): inventory that exists physically but is excluded from
-  usable stock counts — typically kits that have entered the DND window or
-  are quarantined pending quality review.
-- DND (Do Not Dispense): a sponsor-defined rule that prohibits dispensing
-  a kit if it will expire within a set number of days (13 days in this paper).
-  Kits inside this window remain physically on the shelf but cannot be given
-  to patients. Note: in some systems, DND also covers kits that have not yet
-  completed receipt confirmation in the RTSM system after site delivery.
-- DNS (Do Not Ship): a rule that prevents shipping a kit if its remaining
-  shelf life at the time of expected arrival would be too short to be useful.
-  The minimum remaining shelf life required at receipt differs by tier
-  (e.g., 180 days at site, 270 days at regional depot in this paper's example).
-- FEFO (First Expired, First Out): dispensing rule requiring staff to use the
-  kit with the earliest expiry date first, to minimize avoidable expiry.
+- DNC (Do Not Count): sponsor/system-specific status for inventory that
+  physically exists but is excluded from usable stock counts. Typically
+  includes kits in the DND window or quarantined pending quality review.
+  Terminology and exact scope vary by IRT/RTSM system.
+- DND (Do Not Dispense): sponsor-defined rule preventing dispensing of a kit
+  expiring within a set period (13 days in this paper). These kits remain
+  physically on the shelf but cannot be given to patients. Some systems also
+  apply DND until RTSM receipt confirmation is complete. Duration and triggers
+  are sponsor-configured, not universal industry standards.
+- DNS (Do Not Ship): sponsor/system-specific rule preventing shipment when
+  a kit's remaining shelf life at expected arrival would fall below a minimum
+  threshold. Thresholds are trial-specific (180 days at site, 270 days at
+  regional depot in this paper's example).
+- EU_PROTECT: the number of days of expected EU demand that the EU central
+  depot reserves before transferring stock to the China regional depot. Set
+  to 90 days at baseline. The most sensitive tested parameter for China supply
+  continuity in this analysis.
+- FEFO (First Expired, First Out): dispensing rule requiring the kit with
+  the earliest expiry date to be used first, to minimize avoidable expiry.
 - Full-chain waste rate: drug that expires or is damaged at any supply chain
-  location (central depot, regional depot, or clinical site), expressed as a
-  percentage of total drug produced.
+  location (central depot, regional depots, or clinical sites), expressed as
+  a percentage of total drug produced.
 - IMP (Investigational Medicinal Product): the drug being studied in a
   clinical trial.
 - IRT / RTSM (Interactive Response Technology / Randomization and Trial
-  Supply Management): the electronic system used to manage patient
-  randomization and drug supply in clinical trials.
-- Long window: the extended look-ahead period used to forecast demand for
-  resupply planning (typically covering 60–90 days in this paper's example).
-- Operational waste ratio: kits shipped but not used, divided by kits used —
-  a common industry measure using a shipped-based denominator.
-- Short window: the near-term look-ahead period used to detect urgent
-  resupply needs (typically 7–37 days in this paper's example).
-- Stock-out: a situation where no usable kit of the correct treatment group
-  is available at a clinical site when a patient visit is scheduled.
-- Stochastic simulation: a model that includes random variation, running
-  many independent replications to produce a range of possible outcomes
-  rather than a single fixed forecast.
+  Supply Management): the electronic system managing patient randomization
+  and drug supply in clinical trials.
+- Long window: an extended look-ahead period used to forecast demand for
+  resupply planning. Typically 60–90 days in this paper; a configurable
+  parameter.
+- Operational waste ratio: kits shipped minus kits used, divided by kits
+  used. A common industry measure using a shipped-based denominator. Published
+  planning ranges of 30–50% typically use this definition.
+- Replication: one complete simulated version of a trial, run with a
+  different random draw for enrollment, visit timing, and discontinuation.
+  Running many replications produces a range of outcomes. This paper uses
+  100 replications, acknowledged as a lower bound.
+- Short window: a near-term look-ahead period for detecting urgent resupply
+  needs. Typically 7–37 days in this paper; a configurable parameter.
+- SKILL: the structured six-step AI-assisted workflow described in Section 5.
+  It provides a repeatable process for translating protocol and supply
+  documents into a working simulation, with mandatory human confirmation at
+  each step. The acronym refers to the structured instructions given to the
+  AI assistant that encode domain knowledge as a reusable workflow.
+- Stochastic simulation: a model including random variation that runs many
+  independent replications to produce a range of outcomes rather than a
+  single fixed forecast.
+- Stock-out: a situation where a clinical site has no usable kit of the
+  correct treatment arm when a patient visit is scheduled.
+- THRESH (Reorder target): the stock level a site aims to restore after a
+  resupply order. Set to 105 kits per kit type per treatment arm at baseline,
+  tested at 70 kits. This is the replenishment target, not the order trigger.
 """
     },
 
@@ -454,58 +474,61 @@ Write Section 5. Cover:
 5.1 The challenge of building a simulation from scratch
 - A faithful IMP supply chain simulation is 500-1,000 lines of code.
   Writing manually takes weeks; debugging edge cases takes longer.
-- Domain knowledge is scattered across protocol, supply spec, IRT documents,
-  emails, meeting notes — hard to translate into code without mistakes.
+- Domain knowledge is scattered across protocol, supply spec, IRT/RTSM
+  documents, emails, meeting notes — hard to translate into code without
+  mistakes. A small misunderstanding about how in-transit stock is counted
+  in a reorder calculation can produce results that look plausible but are
+  operationally wrong.
 
-5.2 What the SKILL approach is
+5.2 What the SKILL approach is and what makes it different
 - A "skill" is a structured set of instructions given to Amazon Kiro (an AI
   coding assistant) that encodes domain expertise as a reusable workflow.
-- The SKILL defines a step-by-step process the AI follows every time:
-  read the spec, confirm assumptions, generate code, interpret results,
-  record lessons. It prevents the AI from filling gaps with silent assumptions.
+- Most approaches to AI-assisted simulation ask the AI to generate code from
+  a prompt. The SKILL is different in two ways: (1) it defines a mandatory
+  sequence of human-confirmation steps BEFORE any code is written, so the
+  model is built on agreed and documented assumptions rather than AI guesses;
+  (2) it encodes hard-won domain rules (FEFO, weekly review, depot-pull logic,
+  full-chain waste reporting) as non-negotiable coding requirements rather
+  than hoping the AI infers them. The result is not just faster drafting — it
+  is a more reliable translation of operational knowledge into simulation logic.
 - The AI produces an initial code draft quickly, but that draft is not
   the same as a validated simulation. It still requires human testing,
-  review, and approval before any results can be trusted.
+  review, verification, validation, and approval under the sponsor's
+  procedures before any results can inform supply decisions.
 
-5.3 The workflow in practice — six phases
+5.3 The six-step workflow in practice
+(Use the clean 1-6 step numbering, not 0/0.5/0.7/1/2/3.)
 
-The SKILL uses six phases, numbered 0, 0.5, 0.7, 1, 2, and 3. The
-non-standard numbering reflects the iterative way this workflow was
-developed: phases 0.5 and 0.7 are intermediate checkpoints added after
-practical experience revealed that early confirmation prevents errors that
-are expensive to find later. Think of them as mandatory quality gates that
-were inserted between the reading and coding stages.
+Step 1 — Read the study: AI reads full protocol and supply spec before
+writing any code. Checks persistent context file from prior sessions.
 
-Phase 0 — Read before writing: AI reads full protocol and supply spec.
-Identifies analysis type. Checks persistent context file from prior sessions.
-
-Phase 0.5 — Confirm every assumption: AI presents a table of every major
+Step 2 — Confirm every assumption: AI presents a table of every major
 modeling decision and waits for explicit analyst approval. Nothing assumed
 silently.
 
-Phase 0.7 — Verify dispensing edge cases: Dedicated checklist of 10+
-scenarios (missed visits, mid-visit stock-out, patient discontinuation,
-DND-window kits, partial fills, etc.). All must be confirmed before coding.
+Step 3 — Verify dispensing scenarios: Dedicated checklist of 10+ scenarios
+(missed visits, mid-visit stock-out, patient discontinuation, DND-window
+kits, partial fills, etc.). All must be confirmed before coding.
 
-Phase 1 — Generate code: AI writes R code following mandatory rules
+Step 4 — Generate the model: AI writes R code following mandatory rules
 (FEFO dispensing, weekly review, depot-pull logic, enrollment validation,
 full-chain waste reporting).
 
-Phase 2 — Run and interpret: Analyst runs code in approved environment,
+Step 5 — Run and interpret: Analyst runs code in approved environment,
 shares output. AI explains results in plain English, flags anomalies.
 
-Phase 3 — Structured report: KPI summary, comparisons, prioritized
+Step 6 — Produce a structured report: KPI summary, comparisons, prioritized
 recommendations, open questions for human decision.
 
 5.4 What the AI handles well — and where humans must stay involved
 
-AI strengths: initial code draft from a 13-page spec; parameter sweeps
-without fatigue; logical consistency checks; institutional memory via
+AI strengths: initial code draft from a detailed specification; parameter
+sweeps without fatigue; logical consistency checks; institutional memory via
 persistent context file.
 
 Human responsibilities: deciding clinically acceptable stock-out tolerance;
 interpreting ambiguous protocol language; approving any change affecting
-patient safety.
+patient safety; all verification, validation, and sign-off steps.
 
 5.5 Hard lessons — and how the SKILL fixed them
 Frame as practical lessons, not debugging notes.
@@ -551,17 +574,23 @@ Cover:
       assumptions produce wrong supply plans.
     * Model has not been validated against historical trial data. This is
       a known limitation. Retrospective validation against actual trial
-      supply records would strengthen confidence in the framework.
+      supply records would strengthen confidence in the framework. Such
+      validation requires a completed trial with available supply records,
+      which was not available for this hypothetical design. Teams applying
+      the framework to real trials should plan a validation step.
     * 100 replications provide stable mean estimates but do not capture
       all possible tail outcomes; teams should review the replication range,
       not only the mean.
+    * Logistics cost in this analysis covers shipping, packaging, and handling
+      only. IMP manufacturing cost — often the largest cost component — is
+      excluded because it requires study-specific bill-of-materials and
+      manufacturing cost data that were not available. Future work can layer
+      IMP cost on top of the logistics analysis.
 - Broader applicability: the SKILL workflow applies to other complex
   clinical simulation tasks — recruitment forecasting, adaptive trial
   scenario testing, biomarker-driven randomization.
-- Quantified logistics cost modeling is a natural next step. This paper
-  describes cost trade-offs qualitatively; a future extension could
-  incorporate study-specific freight and packaging costs to complete
-  the three-KPI optimization framework.
+- Quantified logistics cost modeling including IMP manufacturing cost is a
+  natural next step for future work.
 """
     },
 
