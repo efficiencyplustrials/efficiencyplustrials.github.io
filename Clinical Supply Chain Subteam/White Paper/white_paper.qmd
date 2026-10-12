@@ -572,7 +572,7 @@ Clinical trial supply optimization is a strategic capability, not a back-office 
 
 The results show the size of these trade-offs. Reducing the EU site reorder target from 105 to 70 kits lowered full-chain waste from 43.5% to about 40%. The stock-out rate increased from 0.68% to about 1.4%. In contrast, four large manufacturing batches reduced the stock-out rate to 0.08%, but waste rose to 56%. These findings show why teams should evaluate patient service and waste together. Optimizing only one measure can produce a poor overall decision.
 
-Formula-based methods and simulation serve complementary roles. Simulation has been recognized as a valuable tool for supporting decisions in drug development under uncertainty (Shafer and Derendorf, 2010). Methods such as those described by Anisimov allow teams to compare supply needs quickly during trial design. They can help estimate how much extra stock is needed under different design assumptions.
+Formula-based methods and simulation serve complementary roles. Simulation has been recognized as a valuable tool for supporting decisions in drug development under uncertainty (Holford et al., 2010). Methods such as those described by Anisimov allow teams to compare supply needs quickly during trial design. They can help estimate how much extra stock is needed under different design assumptions.
 
 Simulation provides greater operational detail during planning and execution. It can represent First Expired, First Out, or FEFO, which means using the kits that will expire soonest. It can also represent sites that enroll no patients, weekly inventory reviews, replenishment triggers that change as demand changes, and expiry dates for individual kits. These details help teams see how protocol and operating decisions affect inventory across depots and sites.
 
@@ -635,9 +635,9 @@ Supply teams should treat simulation-based planning as a standard operational to
 
 5. Peterson M, Byrom B, Dowlman N, McEntegart D. Optimizing clinical trial supply requirements: simulation of computer-controlled supply chain management. *Clinical Trials*. 2004;1(4):399–412.
 
-6. International Council for Harmonisation. ICH E6(R3): Guideline for Good Clinical Practice. ICH; 2023.
+6. International Council for Harmonisation. ICH E6(R3): Guideline for Good Clinical Practice. ICH; 2025.
 
-7. Shafer SL, Derendorf H. Predicting the future: the challenge of simulation in drug development. *Clinical Pharmacology & Therapeutics*. 2010;88(1):89–92.
+7. Holford N, Hale M, Ko HC, et al. Clinical trial simulation: a review. *Clinical Pharmacology & Therapeutics*. 2010;88(2):166–182. https://doi.org/10.1038/clpt.2010.114
 
 8. European Medicines Agency. Guideline on the requirements for quality documentation concerning biological investigational medicinal products in clinical trials. EMA/CHMP/BWP/534898/2008; 2012.
 

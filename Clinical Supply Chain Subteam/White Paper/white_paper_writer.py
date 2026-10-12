@@ -895,9 +895,9 @@ REFERENCES = """
 
 5. Peterson M, Byrom B, Dowlman N, McEntegart D. Optimizing clinical trial supply requirements: simulation of computer-controlled supply chain management. *Clinical Trials*. 2004;1(4):399–412.
 
-6. International Council for Harmonisation. ICH E6(R3): Guideline for Good Clinical Practice. ICH; 2023.
+6. International Council for Harmonisation. ICH E6(R3): Guideline for Good Clinical Practice. ICH; 2025.
 
-7. Shafer SL, Derendorf H. Predicting the future: the challenge of simulation in drug development. *Clinical Pharmacology & Therapeutics*. 2010;88(1):89–92.
+7. Holford N, Hale M, Ko HC, et al. Clinical trial simulation: a review. *Clinical Pharmacology & Therapeutics*. 2010;88(2):166–182. https://doi.org/10.1038/clpt.2010.114
 
 8. European Medicines Agency. Guideline on the requirements for quality documentation concerning biological investigational medicinal products in clinical trials. EMA/CHMP/BWP/534898/2008; 2012.
 """
