@@ -52,19 +52,27 @@ You are helping write a ~10-page white paper titled:
   "Simulation-Based Optimization of Clinical Trial Drug Supply Chains:
    A Practical Framework with AI-Assisted Implementation"
 
-AUDIENCE: Clinical trial operationalists — supply chain managers, clinical
-operations leads, study managers. Non-technical readers. No statistics or
-coding background assumed.
+AUDIENCE: Cross-functional clinical trial professionals — supply chain
+managers, clinical operations leads, study managers, and statisticians.
+The paper must bridge the knowledge gap between these disciplines: supply
+chain teams are fluent in depot hierarchy, replenishment triggers, and lead
+time variability but may be less familiar with simulation methodology;
+statisticians understand stochastic processes but may lack operational
+supply chain knowledge; clinical operations teams understand trial design
+but may not see how visit schedule changes propagate through inventory.
+Write so all three groups can follow without assuming deep expertise in
+the others' domains. Explain cross-discipline terms at first use.
 
 TONE & STYLE RULES (strictly enforced):
 - Plain English. No jargon without a plain-language explanation in parentheses.
 - Short sentences and active voice.
 - No equations or code snippets in the main text.
-- Use concrete examples and analogies rather than abstract descriptions.
+- Use concrete examples rather than abstract descriptions.
 - Use tables and bullet points for findings and comparisons.
 - Each section should read like a practitioner article, not an academic paper.
 
 PAPER STRUCTURE (for orientation — write only the assigned section):
+  Executive Summary
   1. Introduction
   2. Clinical Trial Supply Chain: Structure and Challenges
   3. Stochastic Simulation Framework
@@ -72,6 +80,8 @@ PAPER STRUCTURE (for orientation — write only the assigned section):
   5. AI-Assisted Implementation: The SKILL Approach
   6. Discussion
   7. Conclusion
+  Glossary
+  Appendix A
 """
 
 # ── Section definitions ───────────────────────────────────────────────────────
@@ -82,6 +92,92 @@ PAPER STRUCTURE (for orientation — write only the assigned section):
 # into the writing and review prompts.
 
 SECTIONS = {
+    "sex": {
+        "id": "sex",
+        "title": "Executive Summary",
+        "target_length": "~0.5 page (~250 words)",
+        "depends_on": ["s2", "s3", "s4", "s5", "s6", "s7"],
+        "brief": """
+Write a concise Executive Summary — written LAST after all sections are
+finalized, so it accurately reflects the paper's actual content.
+
+Cover these four points in 4–5 short paragraphs:
+
+1. THE PROBLEM: Clinical trial supply teams must balance three competing
+   goals — minimize drug waste, control logistics costs, and prevent
+   stock-outs that could interrupt patient treatment. No single supply
+   policy wins on all three. This challenge grows harder as trials become
+   more global and complex.
+
+2. THE APPROACH: This paper presents a stochastic simulation framework
+   applied to a hypothetical but realistic Phase 2b/3 trial design
+   (250 patients, 23 global sites, two treatment arms, weight-based dosing).
+   The simulation runs 100 replications to quantify how supply policies
+   affect waste, stock-outs, and logistics cost under uncertainty.
+
+3. KEY FINDING: Reducing the EU site reorder target from 105 to 70 kits
+   cuts full-chain waste from 43.5% to ~40% while keeping the stock-out
+   rate at ~1.4% — well within the 5% planning threshold. The EU inventory
+   protection buffer (EU_PROTECT) is the most critical setting for China
+   supply continuity.
+
+4. THE SKILL APPROACH: A structured six-step AI-assisted workflow
+   (the SKILL approach, using Amazon Kiro) translates protocol and supply
+   specification documents into a working simulation in days rather than
+   weeks. Human review checkpoints at every step ensure the model reflects
+   actual trial operations before results are used for supply decisions.
+
+The Executive Summary should be self-contained and readable without the
+full paper. Do not use abbreviations that are not spelled out here.
+"""
+    },
+
+    "sgl": {
+        "id": "sgl",
+        "title": "Glossary",
+        "target_length": "~0.5 page (~200 words)",
+        "depends_on": ["s2", "s3", "s4", "s5"],
+        "brief": """
+Write a Glossary of key terms used in this paper. Present as a two-column
+table: Term | Definition. Keep each definition to 1–2 plain-English sentences.
+Include all of the following terms, in alphabetical order:
+
+- DNC (Do Not Count): inventory that exists physically but is excluded from
+  usable stock counts — typically kits that have entered the DND window or
+  are quarantined pending quality review.
+- DND (Do Not Dispense): a sponsor-defined rule that prohibits dispensing
+  a kit if it will expire within a set number of days (13 days in this paper).
+  Kits inside this window remain physically on the shelf but cannot be given
+  to patients. Note: in some systems, DND also covers kits that have not yet
+  completed receipt confirmation in the RTSM system after site delivery.
+- DNS (Do Not Ship): a rule that prevents shipping a kit if its remaining
+  shelf life at the time of expected arrival would be too short to be useful.
+  The minimum remaining shelf life required at receipt differs by tier
+  (e.g., 180 days at site, 270 days at regional depot in this paper's example).
+- FEFO (First Expired, First Out): dispensing rule requiring staff to use the
+  kit with the earliest expiry date first, to minimize avoidable expiry.
+- Full-chain waste rate: drug that expires or is damaged at any supply chain
+  location (central depot, regional depot, or clinical site), expressed as a
+  percentage of total drug produced.
+- IMP (Investigational Medicinal Product): the drug being studied in a
+  clinical trial.
+- IRT / RTSM (Interactive Response Technology / Randomization and Trial
+  Supply Management): the electronic system used to manage patient
+  randomization and drug supply in clinical trials.
+- Long window: the extended look-ahead period used to forecast demand for
+  resupply planning (typically covering 60–90 days in this paper's example).
+- Operational waste ratio: kits shipped but not used, divided by kits used —
+  a common industry measure using a shipped-based denominator.
+- Short window: the near-term look-ahead period used to detect urgent
+  resupply needs (typically 7–37 days in this paper's example).
+- Stock-out: a situation where no usable kit of the correct treatment group
+  is available at a clinical site when a patient visit is scheduled.
+- Stochastic simulation: a model that includes random variation, running
+  many independent replications to produce a range of possible outcomes
+  rather than a single fixed forecast.
+"""
+    },
+
     "s2": {
         "id": "s2",
         "title": "2. Clinical Trial Supply Chain: Structure and Challenges",
@@ -115,12 +211,23 @@ THREE-TIER INVENTORY SYSTEM AND OPERATIONAL RULES
 - DND (Do Not Dispense): drug expiring within 13 days cannot be dispensed,
   even if physically on the shelf. This 13-day window is a sponsor-defined
   quality threshold reflecting the minimum usable life needed to support
-  patient visits and dispensing safety checks.
-- IRT (Interactive Response Technology): electronic system managing
-  randomization and drug supply. Assigns treatment arm, identifies kit to
-  dispense, tracks inventory, triggers resupply. IRT rules must closely match
-  simulation assumptions — a mismatch means simulation results will not
-  reflect actual trial operations.
+  patient visits and dispensing safety checks. Note that in practice, kits
+  arriving at a site are also not eligible for dispensing until the site
+  pharmacist completes receipt confirmation in the RTSM system — including
+  verification of quantity, packaging integrity, labeling, temperature logs,
+  and shelf life. This paper models the shelf-life DND rule; the receipt
+  confirmation step is an additional operational layer not captured here.
+- DNS (Do Not Ship): a related rule that prevents shipping a kit whose
+  remaining shelf life at the expected arrival time would fall below the
+  minimum required for that tier. In this paper this is implemented as the
+  minimum remaining shelf life at site/depot receipt (see Appendix A).
+- DNC (Do Not Count): kits that are physically present but excluded from
+  usable inventory counts — for example kits inside the DND window.
+- IRT (Interactive Response Technology) / RTSM (Randomization and Trial
+  Supply Management): the electronic system managing randomization and drug
+  supply. Assigns treatment arm, identifies kit to dispense, tracks inventory,
+  triggers resupply. IRT rules must closely match simulation assumptions — a
+  mismatch means simulation results will not reflect actual trial operations.
 
 WHAT MAKES SUPPLY HARD TO PLAN
 - Enrollment unpredictable; randomization uncertain; lead times variable;
@@ -156,10 +263,12 @@ LOGISTICS COST
   Cold-chain requirements (temperature-controlled transport/storage) amplify
   this further — some biologics require ultra-cold conditions, making each
   shipment extremely expensive.
-- This paper describes the cost trade-off qualitatively. Quantified cost
-  modeling requires study-specific freight rates and packaging costs, and
-  is beyond the scope of the current analysis; it is presented as a future
-  extension in Section 6.
+- This paper uses "logistics cost" to mean shipping, packaging, and handling
+  costs only. It does not include IMP (Investigational Medicinal Product)
+  manufacturing costs, which are a separate and often much larger cost driver.
+  Quantified logistics cost modeling requires study-specific freight rates and
+  packaging costs, and is beyond the scope of the current analysis; it is
+  presented as a future extension in Section 6.
 
 STOCK-OUT CONSEQUENCES AND TOLERANCE
 - Missed visits, extended timelines, patent exclusivity erosion.
@@ -193,7 +302,17 @@ KPI DEFINITIONS
         "target_length": "~2 pages (~950 words)",
         "depends_on": ["s2"],
         "brief": """
-Write Section 3. Cover:
+Write Section 3. Open with a brief paragraph introducing the hypothetical
+trial design used to demonstrate the framework. State clearly that this is
+a hypothetical but realistic design — not a specific approved or ongoing
+study. Describe it as a Phase 2b/3 confirmatory study with weight-based
+dosing (patients are stratified by body weight and receive different kit
+quantities accordingly, which is a common design feature in late-stage
+development — note: stratification is by body weight, not BMI). This type
+of design is common in oncology, metabolic, and rare disease indications.
+Refer readers to Appendix A for the full parameter list.
+
+Then cover:
 
 3.1 Modeling patient enrollment
 - Sites do not all recruit at the same pace. The simulation assigns each
@@ -203,8 +322,8 @@ Write Section 3. Cover:
 - 35% of screened patients fail screening and are not enrolled.
 - 15% of sites never enroll a single patient. They still receive initial
   stock, which can expire unused.
-- 20% of enrolled patients drop out over the 52-week treatment period.
-  Modeling dropout explicitly is important: omitting it overestimates
+- 20% of enrolled patients discontinue treatment over the 52-week period.
+  Modeling discontinuation explicitly is important: omitting it overestimates
   total drug demand by about 10–15%, leading to unnecessary production.
 
 3.2 How the simulation runs day by day
@@ -225,15 +344,19 @@ Write Section 3. Cover:
 
 3.4 What the simulation produces
 - 100 independent replications, each with different random draws for
-  enrollment, visit timing, and dropout. Results are summarized as means
-  across replications.
+  enrollment, visit timing, and treatment discontinuation. Results are
+  summarized as means across replications.
 - The stock-out rate is defined as the percentage of scheduled patient
   visits where no usable kit of the correct treatment arm was available
   at the dispensing site on the visit day.
-- 100 replications were chosen to provide stable mean estimates; results
-  showed low variance across replications for the main KPIs at baseline
-  (stock-out rates ranged from approximately 0% to 2% across replications,
-  waste rates from approximately 38% to 49%).
+- 100 replications are used here as a computationally feasible lower bound.
+  Analysts in simulation-intensive fields typically use 1,000 or more
+  replications for greater precision, particularly for low-probability events.
+  With more computational resources, increasing to 1,000+ replications would
+  reduce the uncertainty in reported means. The baseline results showed low
+  variance across replications (stock-out rates ranged from ~0% to 2%;
+  waste rates from ~38% to 49%), suggesting the 100-replication means are
+  reasonably stable for this study design.
 - All waste results use the full-chain definition: expired and damaged kits
   at all locations, as a percentage of total drug produced.
 - Baseline (250 patients, 23 sites, 2 arms): stock-out 0.68%,
@@ -257,12 +380,15 @@ Write Section 4. Cover:
   Baseline: stock-out 0.68%, full-chain waste 43.5%.
 - All waste results use the full-chain definition from Section 2:
   expired and damaged kits at ALL locations / total produced.
+- Where available, also report the operational waste ratio (kits shipped
+  but not used / kits used) alongside full-chain waste, so readers can
+  compare against the industry planning range introduced in Section 2.
 
 4.2 The four parameters that matter most
 
 THRESH top — the site reorder target:
-- Default: 105 kits. Lowering to 70 kits reduces waste from 43.5% to
-  ~40% while keeping stock-out at ~1.4% — well within the 5% limit.
+- Default: 105 kits. Lowering to 70 kits reduces full-chain waste from
+  43.5% to ~40% while keeping stock-out at ~1.4% — well within the 5% limit.
 - Strongest single waste-reduction lever identified.
 - Recommendation: reduce EU site target to 70 kits.
 
@@ -295,12 +421,12 @@ MFG batch frequency (total production volume held fixed):
 - Recommendation: keep 8-batch schedule.
 
 4.3 Why the right waste metric matters
-- Site-only waste (V1): counts expiry at sites only. Can mislead — tightening
+- Site-only waste: counts expiry at sites only. Can mislead — tightening
   shelf-life rules reduces site expiry but raises depot expiry. Total unchanged.
-- Full-chain waste (V2): counts expiry and damage at ALL locations / total
-  produced. Always use V2 as the primary metric.
+- Full-chain waste: counts expiry and damage at ALL locations / total
+  produced. Always use full-chain as the primary metric.
 - Note: the industry planning range of 30–50% cited in Section 2 uses the
-  shipped-based operational definition. The full-chain (V2) metric used in
+  shipped-based operational waste ratio. The full-chain metric used in
   this paper uses total produced as the denominator and is not directly
   comparable to that benchmark. This paper reports both definitions where
   relevant and makes clear which applies.
@@ -474,28 +600,31 @@ oversight is ready for operational use today.
         "depends_on": ["s2", "s3", "s4", "s5", "s6", "s7"],
         "brief": """
 Write the Introduction — LAST, after all other sections are finalized.
-You have the full paper text available as context. Use it to write an
-introduction that accurately previews what the paper actually delivers.
+You have the full paper text available as context.
 
 Cover:
 - Open with the core tension: clinical trial supply teams must deliver the
   right drug to the right patient at the right time — but three competing
-  goals make this hard: minimize drug waste, control shipping costs, and
+  goals make this hard: minimize drug waste, control logistics costs, and
   avoid stock-outs. No single setting wins on all three simultaneously.
+- Acknowledge the cross-functional challenge: effective supply planning sits
+  at the intersection of supply chain operations, clinical trial management,
+  and statistical modeling. These disciplines use different mental models and
+  vocabularies. This paper is written to bridge that gap — it explains supply
+  chain concepts for readers with a statistics or clinical background, and
+  statistical concepts for readers with a supply chain or operations background.
 - Why this is getting harder: trials are increasingly global and complex —
-  many now involve adaptive designs that change in response to accumulating
-  data, multiple dosing arms, cold-chain biologics, and patient enrollment
-  that is impossible to predict precisely. Sponsors also face mounting
-  scrutiny over the environmental footprint of discarded drug product:
-  every kit that expires unused represents both wasted investment and
-  wasted manufacturing resources.
-- The gap: most supply teams still rely on fixed overages and rules of
-  thumb. This paper shows a better way.
-- What this paper delivers: (1) a practical simulation framework that
-  quantifies the waste/cost/stock-out trade-offs for a real trial design,
-  and (2) the SKILL approach — a structured AI-assisted coding workflow
-  that makes building and running the simulation accessible to clinical
-  operations teams without a dedicated programming resource.
+  adaptive designs, multiple dosing arms, cold-chain biologics, unpredictable
+  enrollment. Sponsors also face scrutiny over the environmental footprint
+  of discarded drug.
+- The gap: most supply teams still rely on fixed overages and rules of thumb.
+- What this paper delivers: (1) a practical simulation framework applied to
+  a hypothetical Phase 2b/3 trial (weight-based dosing, global sites) that
+  quantifies the waste/stock-out trade-off under uncertainty; and (2) the
+  SKILL approach — the paper's central methodological contribution — a
+  structured six-step AI-assisted workflow that translates protocol and supply
+  specification documents into a working simulation in days, not weeks, while
+  keeping human judgment, testing, and approval central at every step.
 - End with a one-sentence roadmap: "Section 2 describes the supply chain
   structure and challenges; Section 3 presents the simulation framework;
   Section 4 reports sensitivity analysis findings; Section 5 describes the
@@ -506,10 +635,10 @@ Cover:
 }
 
 # Execution order — respects dependencies
-EXECUTION_ORDER = ["s2", "s3", "s4", "s5", "s6", "s7", "s1"]
+EXECUTION_ORDER = ["s2", "s3", "s4", "s5", "s6", "s7", "s1", "sex", "sgl"]
 
 # Final assembly order
-ASSEMBLY_ORDER = ["s1", "s2", "s3", "s4", "s5", "s6", "s7"]
+ASSEMBLY_ORDER = ["sex", "s1", "s2", "s3", "s4", "s5", "s6", "s7", "sgl"]
 
 # ── Reviewer system prompt ────────────────────────────────────────────────────
 REVIEWER_SYSTEM = """
@@ -736,6 +865,12 @@ REFERENCES = """
 4. Anisimov VV, Fedorov VV, Heiberger R, Saha S, Kothapalli M. Drug Supply Modeling Software: User Manual. GSK DDS Technical Report 2010-01. GlaxoSmithKline Pharmaceuticals; 2010.
 
 5. Peterson M, Byrom B, Dowlman N, McEntegart D. Optimizing clinical trial supply requirements: simulation of computer-controlled supply chain management. *Clinical Trials*. 2004;1(4):399–412.
+
+6. International Council for Harmonisation. ICH E6(R3): Guideline for Good Clinical Practice. ICH; 2023.
+
+7. Shafer SL, Derendorf H. Predicting the future: the challenge of simulation in drug development. *Clinical Pharmacology & Therapeutics*. 2010;88(1):89–92.
+
+8. European Medicines Agency. Guideline on the requirements for quality documentation concerning biological investigational medicinal products in clinical trials. EMA/CHMP/BWP/534898/2008; 2012.
 """
 
 
